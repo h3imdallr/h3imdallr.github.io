@@ -22,21 +22,23 @@ image: https://www.google.co.kr/images/branding/googlelogo/2x/googlelogo_color_2
 Anomaly Detection 은 그 자체가 알고리즘이라기 보다는 ‘목표하는바/기대하는 결과’에 해당하며, 여러 알고리즘과 분석론을 활용한 ‘분석 application’ 이라고 볼 수 있다. 따라서, 해결하고자 하는 문제의 목적과 컨텍스트에 따라 이상탐지 목적은 상이해 질 수 있다.   
 이상탐지의 문제 특징(Problem Characteristics) 파악 및 구체적 분석방법론 수립시 고려할 사항들은 아래와 같다.
 
-(1) 목적(Objectives)
+(1) 목적(Objectives)  
+
 - 기회 탐지 Chance discovery (Positive anomaly)
 - 오류 탐지 Fault Discovery (Negative Anomaly)
 - 새로움의 탐지 Novelty Detection
 - 노이즈 제거 Noise Removal
 
-(2) 입력 데이터의 특성(Nature of input data)
+(2) 입력 데이터의 특성(Nature of input data)  
+
 - 시계열 Time-Series(sequential) vs Static
 - 단변량/다변량 Univariate vs Multivariate
 - 데이터 타입 Data Type (Binary /Categorical /Continuous /Hybrid)
 - 상호의존적/독립적 Relational vs Independent
-- (기존 룰의 적용이 가능할 만큼) 잘 알려진/알려져 있지 않은
-Well-known or not (rule existing or not)
+- (기존 룰의 적용이 가능할 만큼) 잘 알려진/알려져 있지 않은 Well-known or not (rule existing or not)
 
-(3) 이상값의 종류(Type of anomaly)
+(3) 이상값의 종류(Type of anomaly)  
+
 이상값의 종류는 보는 시간에 따라 다를 수 있어 엄밀한 규정을 하긴 어렵다.  
 미네소타 대학의 Survey paper에는 아래와 같이 규정하고 있다. _(source: <Anomaly Detection: A Survey>, 2009, Varun Chandola)_
 

@@ -6,8 +6,8 @@
 </description>
     <link>http://h3imdallr.github.io//</link>
     <atom:link href="http://h3imdallr.github.io//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 01 Dec 2016 15:31:44 +0900</pubDate>
-    <lastBuildDate>Thu, 01 Dec 2016 15:31:44 +0900</lastBuildDate>
+    <pubDate>Thu, 01 Dec 2016 15:59:35 +0900</pubDate>
+    <lastBuildDate>Thu, 01 Dec 2016 15:59:35 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -26,22 +26,28 @@
 &lt;p&gt;Anomaly Detection 은 그 자체가 알고리즘이라기 보다는 ‘목표하는바/기대하는 결과’에 해당하며, 여러 알고리즘과 분석론을 활용한 ‘분석 application’ 이라고 볼 수 있다. 따라서, 해결하고자 하는 문제의 목적과 컨텍스트에 따라 이상탐지 목적은 상이해 질 수 있다. &lt;br /&gt;
 이상탐지의 문제 특징(Problem Characteristics) 파악 및 구체적 분석방법론 수립시 고려할 사항들은 아래와 같다.&lt;/p&gt;
 
-&lt;p&gt;(1) 목적(Objectives)
-- 기회 탐지 Chance discovery (Positive anomaly)
-- 오류 탐지 Fault Discovery (Negative Anomaly)
-- 새로움의 탐지 Novelty Detection
-- 노이즈 제거 Noise Removal&lt;/p&gt;
+&lt;p&gt;(1) 목적(Objectives)  &lt;/p&gt;
 
-&lt;p&gt;(2) 입력 데이터의 특성(Nature of input data)
-- 시계열 Time-Series(sequential) vs Static
-- 단변량/다변량 Univariate vs Multivariate
-- 데이터 타입 Data Type (Binary /Categorical /Continuous /Hybrid)
-- 상호의존적/독립적 Relational vs Independent
-- (기존 룰의 적용이 가능할 만큼) 잘 알려진/알려져 있지 않은
-Well-known or not (rule existing or not)&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;기회 탐지 Chance discovery (Positive anomaly)&lt;/li&gt;
+  &lt;li&gt;오류 탐지 Fault Discovery (Negative Anomaly)&lt;/li&gt;
+  &lt;li&gt;새로움의 탐지 Novelty Detection&lt;/li&gt;
+  &lt;li&gt;노이즈 제거 Noise Removal&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;(3) 이상값의 종류(Type of anomaly)
-이상값의 종류는 보는 시간에 따라 다를 수 있어 엄밀한 규정을 하긴 어렵다.&lt;br /&gt;
+&lt;p&gt;(2) 입력 데이터의 특성(Nature of input data)  &lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;시계열 Time-Series(sequential) vs Static&lt;/li&gt;
+  &lt;li&gt;단변량/다변량 Univariate vs Multivariate&lt;/li&gt;
+  &lt;li&gt;데이터 타입 Data Type (Binary /Categorical /Continuous /Hybrid)&lt;/li&gt;
+  &lt;li&gt;상호의존적/독립적 Relational vs Independent&lt;/li&gt;
+  &lt;li&gt;(기존 룰의 적용이 가능할 만큼) 잘 알려진/알려져 있지 않은 Well-known or not (rule existing or not)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;(3) 이상값의 종류(Type of anomaly)  &lt;/p&gt;
+
+&lt;p&gt;이상값의 종류는 보는 시간에 따라 다를 수 있어 엄밀한 규정을 하긴 어렵다.&lt;br /&gt;
 미네소타 대학의 Survey paper에는 아래와 같이 규정하고 있다. _(source: &lt;anomaly detection:=&quot;&quot; a=&quot;&quot; survey=&quot;&quot;&gt;, 2009, Varun Chandola)_&lt;/anomaly&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/figure-post/20161123-taxonomy.png&quot; alt=&quot;taxonomy of anomaly detection&quot; /&gt;&lt;/p&gt;
