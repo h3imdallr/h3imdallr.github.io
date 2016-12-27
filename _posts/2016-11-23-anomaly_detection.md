@@ -153,6 +153,6 @@ STL은 시계열 데이터에서 계절성, 추세, 잔차 세가지 패턴요�
 
 
 **구현**
-- twitter R code
-- Pyculiarity
-- Example
+* twitter R code
+* Pyculiarity
+* Example
