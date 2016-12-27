@@ -1,64 +1,25 @@
-#for MATHJAX -YMJUNG
-# markdown: redcarpet
+# Site settings
+title: After Image
+header-img: img/home-bg.jpg
+email: ymjung.joshua@gmail.com
+copyright_name: Your/Project/Corporate Name
+description: "Technology, Data Science and Investment"
+baseurl: ""
+url: "http://h3imdallr.github.io"
+twitter_username:
+github_username:  h3imdallr
+facebook_username:  Josh Jung
+email_username:  ymjung.joshua@gmail.com
+
+# Google Analytics
+# To enable google analytics, uncomment below line with a valid Google Tracking ID
+# google_tracking_id:
 
 # Build settings
-gems:
-  - jemoji
-  - jekyll-paginate
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+paginate: 5
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
 
-# Site settings
-title: "AfterImage"
-description: > # this means to ignore newlines until "email:"
-   Thoughts on Techonology, Investment and Data Science
-
-email: ymjung.joshua@gmail.com
-#blog logo
-# logo: "/assets/images/df_logo.jpg"
-logo: https://avatars3.githubusercontent.com/u/4724055?v=3&s=460
-# blog cover
-cover: "/assets/images/cA4aKEIPQrerBnp1yGHv_IMG_9534-3-2.jpg"
-
-name: 'Josh Jung'
-author: 'Josh Jung'
-author_image: https://avatars3.githubusercontent.com/u/4724055?v=3&s=460
-# author_image: "/assets/images/author.jpg"
-
-paginate:	5
-
-url: "http://h3imdallr.github.io/" # the base hostname & protocol for your site
-baseurl: ""
-#used to display twitter cards
-# twitter_handle: '@dirkfabisch'
-
-#fill in disqus shortname to use disqus
-#disqus: disqus-shortname
-
-# social icons and sharing options
-social:
-  - icon:	facebook
-    url:	https://www.google.com
-    desc: Connect with me facebook
-    share_url: http://twitter.com/share
-    share_title: ?text=
-    share_link: "&amp;url="
-
- # - icon:	facebook
- #   url:	https://www.google.com
- #   desc: Connect with me facebook
- #   share_url: https://www.facebook.com/sharer.php
- #   share_title: ?t=
- #   share_link: "&amp;u="
-
-  - icon:	github
-    url:	https://github.com/h3imdallr
-    desc:	Fork me on github
-    share_url:
-    share_title:
-    share_link:
-
-#  - icon:	google-plus
-#    url:	https://google.com/???
-#    desc:	Add me on google+
-#    share_url:
-#    share_title:
-#    share_link:
+gems: [jekyll-paginate, jekyll-feed]

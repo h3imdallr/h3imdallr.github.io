@@ -1,11 +1,13 @@
 ---
-layout: post
+layout:     post
 published: True
-title:  "anomaly_detection"
+title:      "Anomaly Detection"
+subtitle:   "time series anomaly detection"
 date:   2016-12-23 14:34:25
+author:     "h3imdallr"
 categories: data_science
 tags: data_science, anomaly_detection
-image: https://www.google.co.kr/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png
+header-img: ""
 ---
 
 
@@ -44,7 +46,7 @@ Anomaly Detection 은 그 자체가 알고리즘이라기 보다는 ‘목표하
 (3) 이상값의 종류(Type of anomaly)  
 
 이상값의 종류는 보는 시간에 따라 다를 수 있어 엄밀한 규정을 하긴 어렵다.  
-미네소타 대학의 Survey paper에는 아래와 같이 규정하고 있다. *(source: <Anomaly Detection: A Survey>, 2009, Varun Chandola)*
+미네소타 대학의 Survey paper에는 아래와 같이 규정하고 있다. (source: <Anomaly Detection: A Survey>, 2009, Varun Chandola)
 
 ![taxonomy of anomaly detection](/figure-post/20161123-taxonomy.png)
 
@@ -56,6 +58,7 @@ Anomaly Detection 은 그 자체가 알고리즘이라기 보다는 ‘목표하
 | Contextual anomaly  | Statistics(Gaussian Process Regression, S-H-ESD ...) |  
 
 
+
 앞서 밝혔듯, 이는 굉장히 단순화 시킨 구분이고, 결국 이상탐지를 위해선 '정상 상태'를 규정해야하고, 이는 당면한 과제, 도메인 특성에 따라 상이하게 달라진다. 아래는 다양한 방법으로 이상탐지가 분석 될 수 있음을 내포한다.
 
 ![schema](/figure-post/20161123-schema.png)
@@ -64,7 +67,7 @@ Anomaly Detection 은 그 자체가 알고리즘이라기 보다는 ‘목표하
 #### A. 시계열 데이터 이해
 
 본 글에서 소개하는 이상탐지 기법(S-H-ESD)의 이해를 위해서는 시계열 패턴 요소의 선행적 이해가 요구된다.  
-![TSpattern](/figure-posts/20161123-TS_pattern.png)
+![TSpattern](/figure-post/20161123-TS_pattern.png)
 
 - 추세(Trend): 장기적으로 나타나는 변동 패턴
 - 계절성(Seasonal): 주,월,분기,반기 단위 등 이미 알려진 시간의 주기로 나타나는 패턴
@@ -76,14 +79,18 @@ Anomaly Detection 은 그 자체가 알고리즘이라기 보다는 ‘목표하
 SNS 서비스인 트위터는 기존의 통계적 방법들을 조합하여 시계열의 이상값을 탐지하는 방법을 제안한다. (S-H-ESD)
 간략히 요약하면, 아래와 같이 기존 방법의 문제에 대응하는 새로운 방법을 제안한다.
 
-| 기존 이상탐지 방법의 한계  |
+| **기존 이상탐지 방법의 한계**  |
 | :------------ |
 | 1. 잘못된 계산 지표 (Using Wrong Metric): 기존의 단순 평균$\mu$, 표준편차$\sigma$를 이용하는 방식 자체가 outlier를 포괄하여 계산하므로 이상값에 취약   |
 | 2. Multi-modality에 취약: 평규과 표준편차가 seasonality, trend 등에 의해 변화되어 outlier를 놓치게 되는 경우가 발생|
-||
+
+
 | **S-H-ESD 기법의 이상탐지 방법** |
-| 1. Use Robust Statistics/Metric: <br/> a. Median Absolute Deviation(MAD) <br/> b. Grubb’s Test& Generalized Extreme Studentized Deviate (ESD)|
-| 2. Remove impact of seasonality and trend (Multi-modality aware): <br/> a. Seasonal Trend decomposition using Loess(STL) |
+| :------------ |
+| 1. Use Robust Statistics/Metric: <br/> &nbsp; a. Median Absolute Deviation(MAD) <br/>&nbsp; b. Grubb’s Test& Generalized Extreme Studentized Deviate (ESD)|
+| 2. Remove impact of seasonality and trend (Multi-modality aware): <br/> &nbsp; a. Seasonal Trend decomposition using Loess(STL) |
+
+
 
 위 표에서 밝힌 S-H-ESD 기법을 좀더 자세히 이해하려면, 다음과 같은 통계학적 개념들의 이해가 요구된다.
 
@@ -95,44 +102,57 @@ SNS 서비스인 트위터는 기존의 통계적 방법들을 조합하여 시�
 * Seasonal Trend decomposition using Loess(STL)
 
 
-** Median Absolute Deviation(MAD); 중위수(중앙값) 절대 편차 : **  
-중위수 절대 편차는 표본그룹의 중앙값( $ 𝑋 $ )과 각 표본( $ \bar { X } $ )의 차이값의 절대값을 취해서 중앙값을 추출하는 방법. 양적 자료의 퍼짐을 알고 싶을 때, 표본분산과 표준편차 보다 이상치에 덜 영향을 받는 강건성 robustness 있는 분산 측정 방법.
+**Median Absolute Deviation(MAD)** - 중위수(중앙값) 절대 편차 :   
+중위수 절대 편차는 표본그룹의 중앙값( $𝑋$ )과 각 표본( $ \bar { X } $ )의 차이값의 절대값을 취해서 중앙값을 추출하는 방법. 양적 자료의 퍼짐을 알고 싶을 때, 표본분산과 표준편차 보다 이상치에 덜 영향을 받는 강건성 robustness 있는 분산 측정 방법.   
+
+$$MAD = median_{i} |X_{i} - \bar{X}|
+\\ \sigma_{MAD} = K \cdot MAD
+\\ \text{where } K = 1.4826 \text{ for normal distributed data}$$
 
 
+**Student t-distribution:**
+
+t-분포는 정규분포 $$(\mu, {\sigma}^{2})$$에서 $$n$$ 개의 표본들을 확률변수로 정의 $$(\bar{X} = 𝑋_{1},...𝑋_{n})$$한 확률 분포이다. 이 확률 분포 또한 정규분포$$(\mu, {\sigma}^{2}/n)$$이며, 이를 수식으로 나타내면 아래와 같다.
+
+$$ \bar{X} \sim  N(\mu, {\sigma}^{2}/n ) $$  
+
+$$\\ T = \frac { \bar{X} - /mu }{ S/\sqrt{n}  } $$
 
 
+**Grubb's test(=ESD test)**
+
+단일 이상치를 테스트 하는데 ESD test 방법은 널리 알려진 기법이다. ESD 검증 방법의 상세한 설명은 본 보고서에서 생략하며, 주요 수식표현은 아래와 같다. - [참고:wiki](https://en.wikipedia.org/wiki/Grubbs%27_test_for_outliers )  
+ESD 검정은 아래와 같은 귀무가설/대립가설을 통해 검정한다.  
+
+$$ H_{0}: \text{데이터 셋에 이상치가 없다} $$
+$$ H_{\alpha}: \text{ 데이터 셋에 최소한 하나의 이상치가 존재한다.}$$  
+
+아래 정의와 같은 G 값을 통해 outlier 인지 판별한다.
+
+ $$ G = max |Y_{i} - \bar{Y}|/s \\ Y: sample mean, s: standard deviation$$
+
+최대값과 최소값을 둘 다 검정하는 two-sided test 에서, 이상치가 없다는 귀무가설은 significance level( $\alpha$ ) 가 아래를 만족할시 기각된다.  
+
+$$ G > \frac{N-1}{\sqrt{N}} \sqrt{\frac{t^{2}_{\alpha(2N), N-2}}{N-2+t^{2}_{\alpha(2N), N-2}}}
+\\ t^{2}_{\alpha(2N), N-2}: \text{upper critical value of the 't-test' with}
+\\ \text{ N-2 degrees of freedom and significance level of} \alpha/{2N} $$  
+
+ESD 테스트는 정상성 (normality) 를 가정하고, 단일 이상치를 탐지하는데 적합하다는 한계 때문에, 시계열과 같은 연속적 데이터에서 지속적으로 이상탐지를 해야하는 경우, 아래와 같은 Generalized ESD 의 사용이 권장된다.
 
 
+**Generalized Extreme Studentized Deviate (Generalized ESD):**
+Generalized ESD 는 Grubb's test와 달리 여러개의 outlier를 가정한 검정방법임. 가장 높은 G 밸류를 제거해 나가면서 지속적으로 순회하여 평균과 표준편차를 업데이트해나가는 방식.
+
+$$ R_{i} = max |x_{i} -\bar{x}|/s
+\\ \lambda_{i} > \frac{(N-1)\cdot t_{p,n-i-1}}{\sqrt{(N-i-1+t^{2}_{p,n-i-1}) (n-i+1)}}$$
+
+위에 명시된 Critical Value($\lambda_{i}$) 또한 지속적으로 업데이트 되며, $R_{i} > \lambda_{i} $를 만족하는 $i$ 가 이상값의 개수를 결정하게됨. 본 검정방법은 앞선 Grubb's test 보다 여러개의 outlier를 검출 할 수 있다는 장점이 있으나, 여전히 정규성을 가정하고 있으므로, 정규성 테스트 선행이 되어야 하고, 계절성(seasonality)을 고려하지 않는 단점이 있다.
+
+**Seasonal Trend decomposition using Loess(STL):**  
+STL은 시계열 데이터에서 계절성, 추세, 잔차 세가지 패턴요소로 분해하는 기법으로 (본문 전반부 참조), seasonality와 trend를 제거하면, 이상탐지에 적합한 residual만 남게 된다.
 
 
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve --watch`, which launches a web server and auto-regenerates your site when a file is updated.
-
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
-
-Jekyll also offers powerful support for code snippets:
-
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
-
-Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll’s dedicated Help repository][jekyll-help].
-
-{% highlight js %}
-
-<footer class="site-footer">
- <a class="subscribe" href="{{ "/feed.xml" | prepend: site.baseurl }}"> <span class="tooltip"> <i class="fa fa-rss"></i> Subscribe!</span></a>
-  <div class="inner">a
-   <section class="copyright">All content copyright <a href="mailto:{{ site.email}}">{{ site.name }}</a> &copy; {{ site.time | date: '%Y' }} &bull; All rights reserved.</section>
-   <section class="poweredby">Made with <a href="http://jekyllrb.com"> Jekyll</a></section>
-  </div>
-</footer>
-{% endhighlight %}
-
-
-[jekyll]:      http://jekyllrb.com
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-help]: https://github.com/jekyll/jekyll-help
+**구현**
+- twitter R code
+- Pyculiarity
+- Example

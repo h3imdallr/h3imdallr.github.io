@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Technology, Data Science and Investment">
+
+    <title>Anomaly Detection - After Image</title>
+
+    <link rel="canonical" href="http://localhost:4000/data_science/2016/12/23/anomaly_detection/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/clean-blog.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="After Image" />
+
+</head>
+
+<!-- MATHJAX ENABLE - YMJUNG -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: {
+      equationNumbers: {
+        // autoNumber: "AMS"
+      }
+    },
+    tex2jax: {
+      // inlineMath: [ ['$','$'], ['\(', '\)'] ],
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true,
+    }
+  });
+</script>
+<script type="text/javascript"
+        src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<body>
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">After Image</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                
+				
+                <li>
+                    <a href="/about/">About</a>
+                </li>
+				
+                
+				
+                <li>
+                    <a href="/contact/">Contact</a>
+                </li>
+				
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+
+    <!-- Post Header -->
+<header class="intro-header" style="background-image: url('/')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Anomaly Detection</h1>
+                    
+                    <h2 class="subheading">time series anomaly detection</h2>
+                    
+                    <span class="meta">Posted by h3imdallr on December 23, 2016</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+				<h4 id="abstract">abstract</h4>
+<ul>
+  <li><em>이상탐지의 기초적인 개념, 시계열 데이터의 기본적 이해, 이를 통한 시계열 이상탐지 방법 소개</em></li>
+  <li><em>code/ipynb provided (github link)</em></li>
+</ul>
+
+<h4 id="reference">reference</h4>
+<ul>
+  <li><a href="http://www.slideshare.net/arunkejariwal/statistical-learning-based-anomaly-detection-twitter">Statistical Learning Based Anomaly Detection @Twitter</a></li>
+  <li><a href="https://github.com/twitter/AnomalyDetection">Anomaly Detection Twitter Github</a></li>
+  <li><a href="https://blog.twitter.com/2015/introducing-practical-and-robust-anomaly-detection-in-a-time-series">Twitter’s Blog on Anomaly Detection </a></li>
+</ul>
+
+<h4 id="anomaly-definition">Anomaly Definition:</h4>
+<p>기존 관측과는 상이하여 다른 매커니즘에 의해 생성되었다고 판단할만한 관측값. (An anomaly is an observation that deviates so much from other observations so as to arouse suspicious that it is was generated by different mechanism.)</p>
+
+<h4 id="approaches-on-anomaly-detection">Approaches on Anomaly Detection:</h4>
+
+<p>Anomaly Detection 은 그 자체가 알고리즘이라기 보다는 ‘목표하는바/기대하는 결과’에 해당하며, 여러 알고리즘과 분석론을 활용한 ‘분석 application’ 이라고 볼 수 있다. 따라서, 해결하고자 하는 문제의 목적과 컨텍스트에 따라 이상탐지 목적은 상이해 질 수 있다. <br />
+이상탐지의 문제 특징(Problem Characteristics) 파악 및 구체적 분석방법론 수립시 고려할 사항들은 아래와 같다.</p>
+
+<p>(1) 목적(Objectives)</p>
+
+<ul>
+  <li>기회 탐지 Chance discovery (Positive anomaly)</li>
+  <li>오류 탐지 Fault Discovery (Negative Anomaly)</li>
+  <li>새로움의 탐지 Novelty Detection</li>
+  <li>노이즈 제거 Noise Removal</li>
+</ul>
+
+<p>(2) 입력 데이터의 특성(Nature of input data)</p>
+
+<ul>
+  <li>시계열 Time-Series(sequential) vs Static</li>
+  <li>단변량/다변량 Univariate vs Multivariate</li>
+  <li>데이터 타입 Data Type (Binary /Categorical /Continuous /Hybrid)</li>
+  <li>상호의존적/독립적 Relational vs Independent</li>
+  <li>(기존 룰의 적용이 가능할 만큼) 잘 알려진/알려져 있지 않은 Well-known or not (rule existing or not)</li>
+</ul>
+
+<p>(3) 이상값의 종류(Type of anomaly)</p>
+
+<p>이상값의 종류는 보는 시간에 따라 다를 수 있어 엄밀한 규정을 하긴 어렵다.<br />
+미네소타 대학의 Survey paper에는 아래와 같이 규정하고 있다. (source: <Anomaly Detection:="" A="" Survey="">, 2009, Varun Chandola)</Anomaly></p>
+
+<p><img src="/figure-post/20161123-taxonomy.png" alt="taxonomy of anomaly detection" /></p>
+
+<p>위의 분류를 최대한 간소화 시키면, 결국 축적된 시간동안 정적인 점분포에 초점을 맞추는 Point anomaly 와, 시계열적인 동적인 특성에 주안을 두는 Context anomaly로 구분 지을수 있다.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">분류</th>
+      <th style="text-align: center">특징</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Point anomaly</td>
+      <td style="text-align: center">Statistics(Gaussian distribution) , Clustering, Classification</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Contextual anomaly</td>
+      <td style="text-align: center">Statistics(Gaussian Process Regression, S-H-ESD …)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>앞서 밝혔듯, 이는 굉장히 단순화 시킨 구분이고, 결국 이상탐지를 위해선 ‘정상 상태’를 규정해야하고, 이는 당면한 과제, 도메인 특성에 따라 상이하게 달라진다. 아래는 다양한 방법으로 이상탐지가 분석 될 수 있음을 내포한다.</p>
+
+<p><img src="/figure-post/20161123-schema.png" alt="schema" /></p>
+
+<h3 id="contextual-anomaly---">Contextual Anomaly 분석 방법의 이해</h3>
+<h4 id="a---">A. 시계열 데이터 이해</h4>
+
+<p>본 글에서 소개하는 이상탐지 기법(S-H-ESD)의 이해를 위해서는 시계열 패턴 요소의 선행적 이해가 요구된다.<br />
+<img src="/figure-post/20161123-TS_pattern.png" alt="TSpattern" /></p>
+
+<ul>
+  <li>추세(Trend): 장기적으로 나타나는 변동 패턴</li>
+  <li>계절성(Seasonal): 주,월,분기,반기 단위 등 이미 알려진 시간의 주기로 나타나는 패턴</li>
+  <li>주기(Cyclic): 최소 2 년 단위로 나타나는 고정된 기간이 아닌 장기적인 변동</li>
+  <li>랜덤요소/잔차 (Random/Residual/Remainder): 그 이외의 성분</li>
+</ul>
+
+<h4 id="b-s-h-esd--">B. S-H-ESD 기법의 이해</h4>
+
+<p>SNS 서비스인 트위터는 기존의 통계적 방법들을 조합하여 시계열의 이상값을 탐지하는 방법을 제안한다. (S-H-ESD)
+간략히 요약하면, 아래와 같이 기존 방법의 문제에 대응하는 새로운 방법을 제안한다.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left"><strong>기존 이상탐지 방법의 한계</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">1. 잘못된 계산 지표 (Using Wrong Metric): 기존의 단순 평균$\mu$, 표준편차$\sigma$를 이용하는 방식 자체가 outlier를 포괄하여 계산하므로 이상값에 취약</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">2. Multi-modality에 취약: 평규과 표준편차가 seasonality, trend 등에 의해 변화되어 outlier를 놓치게 되는 경우가 발생</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left"><strong>S-H-ESD 기법의 이상탐지 방법</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">1. Use Robust Statistics/Metric: <br />   a. Median Absolute Deviation(MAD) <br />  b. Grubb’s Test&amp; Generalized Extreme Studentized Deviate (ESD)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">2. Remove impact of seasonality and trend (Multi-modality aware): <br />   a. Seasonal Trend decomposition using Loess(STL)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>위 표에서 밝힌 S-H-ESD 기법을 좀더 자세히 이해하려면, 다음과 같은 통계학적 개념들의 이해가 요구된다.</p>
+
+<ul>
+  <li>Median Absolute Deviation(MAD)</li>
+  <li>Student t-distribution</li>
+  <li>Extreme Studentized Deviate (ESD) test</li>
+  <li>Generalized ESD</li>
+  <li>Seasonal Trend decomposition using Loess(STL)</li>
+</ul>
+
+<p><strong>Median Absolute Deviation(MAD)</strong> - 중위수(중앙값) 절대 편차 : <br />
+중위수 절대 편차는 표본그룹의 중앙값( $𝑋$ )과 각 표본( $ \bar { X } $ )의 차이값의 절대값을 취해서 중앙값을 추출하는 방법. 양적 자료의 퍼짐을 알고 싶을 때, 표본분산과 표준편차 보다 이상치에 덜 영향을 받는 강건성 robustness 있는 분산 측정 방법.</p>
+
+<script type="math/tex; mode=display">MAD = median_{i} |X_{i} - \bar{X}|
+\\ \sigma_{MAD} = K \cdot MAD
+\\ \text{where } K = 1.4826 \text{ for normal distributed data}</script>
+
+<p><strong>Student t-distribution:</strong></p>
+
+<p>t-분포는 정규분포 <script type="math/tex">(\mu, {\sigma}^{2})</script>에서 <script type="math/tex">n</script> 개의 표본들을 확률변수로 정의 <script type="math/tex">(\bar{X} = 𝑋_{1},...𝑋_{n})</script>한 확률 분포이다. 이 확률 분포 또한 정규분포<script type="math/tex">(\mu, {\sigma}^{2}/n)</script>이며, 이를 수식으로 나타내면 아래와 같다.</p>
+
+<script type="math/tex; mode=display">\bar{X} \sim  N(\mu, {\sigma}^{2}/n )</script>
+
+<script type="math/tex; mode=display">\\ T = \frac { \bar{X} - /mu }{ S/\sqrt{n}  }</script>
+
+<p><strong>Grubb’s test(=ESD test)</strong></p>
+
+<p>단일 이상치를 테스트 하는데 ESD test 방법은 널리 알려진 기법이다. ESD 검증 방법의 상세한 설명은 본 보고서에서 생략하며, 주요 수식표현은 아래와 같다. - <a href="https://en.wikipedia.org/wiki/Grubbs%27_test_for_outliers">참고:wiki</a><br />
+ESD 검정은 아래와 같은 귀무가설/대립가설을 통해 검정한다.</p>
+
+<p><script type="math/tex">H_{0}: \text{데이터 셋에 이상치가 없다}</script>
+<script type="math/tex">H_{\alpha}: \text{ 데이터 셋에 최소한 하나의 이상치가 존재한다.}</script></p>
+
+<p>아래 정의와 같은 G 값을 통해 outlier 인지 판별한다.</p>
+
+<script type="math/tex; mode=display">G = max |Y_{i} - \bar{Y}|/s \\ Y: sample mean, s: standard deviation</script>
+
+<p>최대값과 최소값을 둘 다 검정하는 two-sided test 에서, 이상치가 없다는 귀무가설은 significance level( $\alpha$ ) 가 아래를 만족할시 기각된다.</p>
+
+<script type="math/tex; mode=display">G > \frac{N-1}{\sqrt{N}} \sqrt{\frac{t^{2}_{\alpha(2N), N-2}}{N-2+t^{2}_{\alpha(2N), N-2}}}
+\\ t^{2}_{\alpha(2N), N-2}: \text{upper critical value of the 't-test' with}
+\\ \text{ N-2 degrees of freedom and significance level of} \alpha/{2N}</script>
+
+<p>ESD 테스트는 정상성 (normality) 를 가정하고, 단일 이상치를 탐지하는데 적합하다는 한계 때문에, 시계열과 같은 연속적 데이터에서 지속적으로 이상탐지를 해야하는 경우, 아래와 같은 Generalized ESD 의 사용이 권장된다.</p>
+
+<p><strong>Generalized Extreme Studentized Deviate (Generalized ESD):</strong>
+Generalized ESD 는 Grubb’s test와 달리 여러개의 outlier를 가정한 검정방법임. 가장 높은 G 밸류를 제거해 나가면서 지속적으로 순회하여 평균과 표준편차를 업데이트해나가는 방식.</p>
+
+<script type="math/tex; mode=display">R_{i} = max |x_{i} -\bar{x}|/s
+\\ \lambda_{i} > \frac{(N-1)\cdot t_{p,n-i-1}}{\sqrt{(N-i-1+t^{2}_{p,n-i-1}) (n-i+1)}}</script>
+
+<p>위에 명시된 Critical Value($\lambda_{i}$) 또한 지속적으로 업데이트 되며, $R_{i} &gt; \lambda_{i} $를 만족하는 $i$ 가 이상값의 개수를 결정하게됨. 본 검정방법은 앞선 Grubb’s test 보다 여러개의 outlier를 검출 할 수 있다는 장점이 있으나, 여전히 정규성을 가정하고 있으므로, 정규성 테스트 선행이 되어야 하고, 계절성(seasonality)을 고려하지 않는 단점이 있다.</p>
+
+<p><strong>Seasonal Trend decomposition using Loess(STL):</strong><br />
+STL은 시계열 데이터에서 계절성, 추세, 잔차 세가지 패턴요소로 분해하는 기법으로 (본문 전반부 참조), seasonality와 trend를 제거하면, 이상탐지에 적합한 residual만 남게 된다.</p>
+
+<p><strong>구현</strong></p>
+<ul>
+  <li>twitter R code</li>
+  <li>Pyculiarity</li>
+  <li>Example</li>
+</ul>
+
+
+                <hr>
+
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/2014/09/24/man-must-explore/" data-toggle="tooltip" data-placement="top" title="Man must explore, and this is exploration at its greatest">&larr; Previous Post</a>
+                    </li>
+                    
+                    
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</article>
+
+<hr>
+
+
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    <li>
+                        <a href="/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://www.facebook.com/Josh Jung">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://github.com/h3imdallr">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="mailto:ymjung.joshua@gmail.com">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+                <p class="copyright text-muted">Copyright &copy; Your/Project/Corporate Name 2016</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js "></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js "></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/clean-blog.min.js "></script>
+
+
+    
+
+
+</body>
+
+</html>
