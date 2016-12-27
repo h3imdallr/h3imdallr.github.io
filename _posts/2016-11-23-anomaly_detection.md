@@ -64,6 +64,8 @@ Anomaly Detection 은 그 자체가 알고리즘이라기 보다는 ‘목표하
 ![schema](/figure-post/20161123-schema.png)
 
 ### Contextual Anomaly 분석 방법의 이해
+
+
 #### A. 시계열 데이터 이해
 
 본 글에서 소개하는 이상탐지 기법(S-H-ESD)의 이해를 위해서는 시계열 패턴 요소의 선행적 이해가 요구된다.  
@@ -152,7 +154,7 @@ $$ R_{i} = max |x_{i} -\bar{x}|/s
 STL은 시계열 데이터에서 계절성, 추세, 잔차 세가지 패턴요소로 분해하는 기법으로 (본문 전반부 참조), seasonality와 trend를 제거하면, 이상탐지에 적합한 residual만 남게 된다.
 
 
-**구현**
-* twitter R code
-* Pyculiarity
-* Example
+**구현**  
+- twitter R code  
+- Pyculiarity  
+- Example  
