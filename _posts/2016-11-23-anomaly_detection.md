@@ -1,6 +1,6 @@
 ---
 layout:     post
-published: True
+published: False
 title:      "Anomaly Detection"
 subtitle:   "time series anomaly detection"
 date:   2016-12-23 14:34:25
@@ -13,7 +13,7 @@ header-img: "figure-post/20161123-header-anomaly.jpg"
 
 #### abstract
 - _이상탐지의 기초적인 개념, 시계열 데이터의 기본적 이해, 이를 통한 시계열 이상탐지 방법 소개_
-- _code/ipynb provided (github link)_
+- _code/ipynb provided_ - [STL decomposition](http://nbviewer.jupyter.org/github/h3imdallr/Portfolio-DataAnalysis/blob/master/TimeS_Anomaly_Detection/STL_decomposition_NABdata.ipynb)
 
 #### reference
 - [Statistical Learning Based Anomaly Detection @Twitter](http://www.slideshare.net/arunkejariwal/statistical-learning-based-anomaly-detection-twitter)
@@ -149,6 +149,7 @@ $$ R_{i} = max |x_{i} -\bar{x}|/s
 
 **Seasonal Trend decomposition using Loess(STL):**   
 STL은 시계열 데이터에서 계절성, 추세, 잔차 세가지 패턴요소로 분해하는 기법으로 (본문 전반부 참조), seasonality와 trend를 제거하면, 이상탐지에 적합한 residual만 남게 된다.
+[(github code)](http://nbviewer.jupyter.org/github/h3imdallr/Portfolio-DataAnalysis/blob/master/TimeS_Anomaly_Detection/STL_decomposition_NABdata.ipynb)
 
 
 **구현**  
