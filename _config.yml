@@ -1,15 +1,15 @@
 # Site settings
 title: After Image
 header-img: img/home-bg.jpg
-email: ymjung.joshua@gmail.com
+email: ymjung@hotmail.com
 copyright_name: Your/Project/Corporate Name
 description: "Technology, Data Science and Investment"
 baseurl: ""
 url: "http://h3imdallr.github.io"
 twitter_username:
 github_username:  h3imdallr
-facebook_username:  Josh Jung
-email_username:  ymjung.joshua@gmail.com
+facebook_username: josh.jung.1986
+email_username:  ymjung@hotmail.com
 
 # Google Analytics
 # To enable google analytics, uncomment below line with a valid Google Tracking ID
