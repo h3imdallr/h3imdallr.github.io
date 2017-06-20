@@ -1,9 +1,9 @@
 ---
 layout:     post
-published: False
+published: True
 title:      "Anomaly Detection"
 subtitle:   "time series anomaly detection"
-date:   2016-12-23 14:34:25
+date:   2017-06-20 00:00:00
 author:     "h3imdallr"
 categories: data_science
 tags: data_science, anomaly_detection
