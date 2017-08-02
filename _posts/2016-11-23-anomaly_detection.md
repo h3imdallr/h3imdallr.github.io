@@ -243,10 +243,15 @@ Benchmark (논문)
 
 #### References
 
-1) Varun Chandola, 2009, <Anomaly Detection: A Survey>, ACM Computing Survey 09 2009 p1-72  
-2) Arindam Banerjee, <Anomaly Detection: A Tutorial>, United Technology Research Center  
-3) 이기천 한양대 교수, 2013, <시계열 데이터의 통계적 분석방법>, 강의자료  
-4) [A Complete Tutorial on Time Series Modeling](https://www.analyticsvidhya.com/blog/2015/12/complete-tutorial-time-series-modeling/)  
-5) C. E. Rasmussen & C. K. I. Williams, Gaussian Processes for Machine Learning, the MIT Press, 2006  
-6) [Problem of the Month: Anomaly Detection](https://warrenmar.wordpress.com/tag/seasonal-hybrid-esd/)  
-7) Arun Kejariwal, Statistical Learning Based Anomaly Detection @ Twitter, Nov 2014  
+1. Varun Chandola, 2009, <Anomaly Detection: A Survey>, ACM Computing Survey 09 2009 p1-72  
+
+2. Arindam Banerjee, <Anomaly Detection: A Tutorial>, United Technology Research Center  
+
+3. 이기천 한양대 교수, 2013, <시계열 데이터의 통계적 분석방법>, 강의자료  
+
+4. [A Complete Tutorial on Time Series Modeling](https://www.analyticsvidhya.com/blog/2015/12/complete-tutorial-time-series-modeling/)  
+
+5. C. E. Rasmussen & C. K. I. Williams, Gaussian Processes for Machine Learning, the MIT Press, 2006  
+
+6. [Problem of the Month: Anomaly Detection](https://warrenmar.wordpress.com/tag/seasonal-hybrid-esd/)  
+7. Arun Kejariwal, Statistical Learning Based Anomaly Detection @ Twitter, Nov 2014  
