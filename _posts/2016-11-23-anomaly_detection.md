@@ -1,8 +1,8 @@
 ---
 layout:     post
 published: True
-title:      "Anomaly Detection"
-subtitle:   "time series anomaly detection"
+title:      "이상탐지 Anomaly Detection"
+subtitle:   "시계열 이상탐지 중심으로 time series anomaly detection"
 date:   2017-06-20 00:00:00
 author:     "h3imdallr"
 categories: data_science
@@ -149,10 +149,104 @@ $$ R_{i} = max |x_{i} -\bar{x}|/s
 
 **Seasonal Trend decomposition using Loess(STL):**   
 STL은 시계열 데이터에서 계절성, 추세, 잔차 세가지 패턴요소로 분해하는 기법으로 (본문 전반부 참조), seasonality와 trend를 제거하면, 이상탐지에 적합한 residual만 남게 된다.
-[(github code)](http://nbviewer.jupyter.org/github/h3imdallr/Portfolio-DataAnalysis/blob/master/TimeS_Anomaly_Detection/STL_decomposition_NABdata.ipynb)
+[(github code)](http://nbviewer.jupyter.org/github/h3imdallr/Portfolio-DataAnalysis/blob/master/Anomaly_Detection/anom_output.ipynb)
 
 
-**구현**  
-- twitter R code  
-- Pyculiarity  
-- Example  
+**Python 을 이용한 S-H-ESD 알고리즘 구현**  
+
+- [구현예시: jupyter notebook](http://nbviewer.jupyter.org/github/h3imdallr/Portfolio-DataAnalysis/blob/master/Anomaly_Detection/anom_output.ipynb)  
+
+
+앞서 소개하였듯이, 이상탐지를 위한 S-H-ESD 알고리즘은 Twitter 사가 처음 제안하였으며, 이를 실제 구현한 R 코드 또한 Twitter 공식 깃헙(Github) 페이지에 오픈소스로 공개되어 있다. (GNU Public License) ([링크](https://github.com/twitter/AnomalyDetection) 본 포스팅에서는 이를 좀더 시스템 친화적인 프로그래밍 언어인 Python 으로 변환 구현해 Times Series상에서 이상값 검출 유즈케이스를 소개한다.
+
+
+Python 으로 S-H-ESD 기반의 Anomaly Detection 기능을 변환(porting)한 오픈 소스 패키지 또한 존재하므로, ( [pyculiarity / github](https://github.com/nicolasmiller/pyculiarity) ) 본 사례연구/구현에서는 해당 패키지를 기반으로 구현되어 있다. 다만 해당 패키지에서는 순수 Python 라이브러리 외에 R 의 인스톨을 요구하는 rpy2 라는 다소 불편하고 시스템 이식성이 떨어지는 라이브러리를 중심적으로 활용한다. 이에 본 사례적용 케이스에서는 Python 친화적이고 기계학습/통계에서 major 한 패키지(statsmodel) 를 활용하여 성능을 좀더 업그레이드 하였다. 아래는 패키지 구성과 기능 상세와 구현 방법에 대한 설명이다.
+
+![package](/figure-post/20161123-packages.png)
+
+“detect_ts.py” 는 anomaly detection 분석의 최상위 모듈로, 후에 resampling을 위해 시계열 데이터 granularity check을 (분/시간/일/월) 하고 기타 여러 옵션기능들에 대한 파라미터 값들의 에러핸들링(parameter sanity check)을 기본적으로 수행한다. 그리고 “detect_anoms.py”를 호출해 이상검출을 실시한다. 실제로 이상탐지에 가장 중요한 기능들은 이 “detect_anoms.py”에서 수행되는데, 다양한 주기/단위 ( e.g. 30초, 1분, 3분,1일 )로 수집된 시계열 데이터를 모두 수용할 수 있기 위해 데이터 시계열 단위를 지정하여 새로 변환하는 resampling 기능을 우선적으로 수행한다. 그리고 S-H-ESD 알고리즘의 핵심적 세가지 기능을 수행하는데, 첫째로 시계열 데이터의 multi- modality로 인한 오차를 줄이기 위해 seasonal, trend, residual로 분해한다. 이 분해된 decomposed data에서 residual을 추출하여 이 데이터의 MAD 값을 얻어낸 후, Generalized ESD를 통해 이상치를 검출한다. (STL, MAD, Generalized ESD의 이론적 이해는 본문 윗절 참조.)  
+
+STL를 통해 decomposing을 하는 방법에서, 앞서 언급하였듯이 기존 Twitter를 그대로 Porting한 pyculiarity 패키지에서는 R함수를 Python을 위해 포팅 해주는 rpy2라는 외부 패키지를 활용해 구현하였다. 하지만 rpy2는 R의 설치를 요구하고 R이 실행된 상태를 가정하기 때문에, 추가적인 종속성과 시스템 자원을 요구한다. 때문에 시스템 호환성/이식성/ 성능 등에 영향을 필연적으로 미치게 되어있다. 이러한 문제 때문에, 본 프로젝트 및 사례연구를 위해서 rpy2의 패키지를 대체하는 라이브러리를 statsmodel을 기반으로 새로 작성하였다.(ym_stl.py, ym_seasonal.py, ym_freq_to_period.py)
+
+Anomaly Detection 기능을 이용하기 위해서는 detect_ts.py를 호출하는 스크립트를 실행하면 된다. 아래는 detect_ts.py를 호출하여 anomaly를 검출하는 스크립트 예시이다. 단순히 anomaly를 검출하는데 벗어나, 검출값들을 시각화 하고자 하면, 본 절 젤 상위 예시코드 참조.
+
+```css
+from pyculiarity import detect_ts import pandas as pd
+n_file = 'filename'
+timeS_DF = pd.read_csv('./data/%s.csv'% n_file, usecols = ['col1(time)', 'col2(value)'])
+results = detect_ts(timeS_DF, max_anoms=0.02, direction='pos', only_last=None)
+
+print '>>> the number of anomaly: ', len(results['anoms']) print results['anoms']
+```
+
+아래는 MAD와 generalized ESD으로 S-H-ESD 기능을 구현한 부분이다.
+
+
+```css
+for i in range(1, max_outliers + 1):
+    if one_tail:
+        if upper_tail:
+            ares = data.value - data.value.median()
+        else:
+            ares = data.value.median() - data.value
+    else:
+        ares = (data.value - data.value.median()).abs()        
+    data_sigma = mad(data.value)
+
+    if data_sigma == 0:
+        break
+
+    ares = ares/float(data_sigma)
+    R = ares.max()
+    temp_max_idx = ares[ares == R].index.tolist()[0]
+    R_idx[i - 1] = temp_max_idx
+    data = data[data.index != R_idx[i - 1]]
+    if one_tail:
+        p = 1 - alpha / float(n - i + 1)
+    else:
+        p = 1 - alpha / float(2 * (n - i + 1))
+    t = student_t.ppf(p, (n - i - 1))
+    lam = t * (n - i) / float(sqrt((n - i - 1 + t**2) * (n - i + 1)))
+
+if R > lam:
+    num_anoms = i
+```
+**성능평가 및 검증**  
+
+현재 Twitter 사에서 개방한 R 기반 S-H-ESD 패키지에 대해서 성능평가는 다수 진행되었고, 대체로 공개 솔루션 중 가장 좋은 평가를 받는다.
+Twitter 의 Anomaly Detection 은 우선 아래와 같은 주요 특징적 기능들이 있다.(파라미터이기도 함)
+
+| **Key Features** |
+| :------------ |
+| - 이상치의 방향 (direction = positive/negative ) <br/> - 전역적&지역적 이상치 (global/local anomaly) <br/> - 최근 하루/한시간(last day/hour) <br/> - 기대값(expected value) <br/> 장기적 추세에 따른 이상탐지(long term)  |
+
+
+아래는 twitter 사의 이상탐지 패키지의 성능 벤치마크를 진행한 내용에 대한 링크이다.
+-  Anomali.io: https://anomaly.io/anomaly-detection-twitter-r/
+-  NUMENTA: Evaluating Real-time Anomaly Detection Algorithms – the Numenta Anomaly
+Benchmark (논문)  
+
+위 벤치마크에 따르면, 이상치를 잘 탐지하거나 그렇지 못한 경우는 아래와 같다.
+
+| **Detected** | **Not Detected** |
+| :------------ | :------------ |
+| - 노이즈의 증가 (More noise) <br/> - 급작스런 상승, 급등점 (Sudden grow; spike) <br/> - 하강(Break down) <br/> - 보이지 않던 희귀 값 (Activity when usually none) | - 점진적 증가 신호(seasonal grow) <br/> - 평면적 신호 (Flat signal) <br/> - 점진적 증가하는 신호에서의 음의방향 이상치 (Negative seasonal anomaly)|
+
+아래는 NUMENTA에서 제공한 데이타 셋을 통해 잘 동작하는 경우의 예시이다.
+
+![](/figure-post/20161123-test-working.png)
+
+그러나 위 벤치마킹 연구에서 알려진 사실과 같이, 아래는 잘 동작하지 않았던 경우에 대한 예임.
+
+![](/figure-post/20161123-test-notworking.png)
+
+
+#### References
+
+1) Varun Chandola, 2009, <Anomaly Detection: A Survey>, ACM Computing Survey 09 2009 p1-72
+2) Arindam Banerjee, <Anomaly Detection: A Tutorial>, United Technology Research Center
+3) 이기천 한양대 교수, 2013, <시계열 데이터의 통계적 분석방법>, 강의자료
+4) [A Complete Tutorial on Time Series Modeling](https://www.analyticsvidhya.com/blog/2015/12/complete-tutorial-time-series-modeling/)
+5) C. E. Rasmussen & C. K. I. Williams, Gaussian Processes for Machine Learning, the MIT Press, 2006
+6) [Problem of the Month: Anomaly Detection](https://warrenmar.wordpress.com/tag/seasonal-hybrid-esd/)
+7) Arun Kejariwal, Statistical Learning Based Anomaly Detection @ Twitter, Nov 2014
