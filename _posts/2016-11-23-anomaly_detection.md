@@ -1,14 +1,32 @@
 ---
 layout:     post
 published: True
+cover: 'figures-h3imdallr/20161123-header-anomaly.jpg'
 title:      "이상탐지 Anomaly Detection"
 subtitle:   "시계열 이상탐지 중심으로 time series anomaly detection"
 date:   2017-06-20 00:00:00
 author:     "h3imdallr"
-categories: data_science
-tags: data_science, anomaly_detection
-header-img: "figures-h3imdallr/20161123-header-anomaly.jpg"
+tags: datascience
+subclass: 'post tag-test tag-content'
+categories: 'h3imdallr'
+navigation: True
+logo: 'assets/images/ghost.png'
 ---
+
+<!-- ---
+layout: post
+published: True
+cover: 'assets/images/cover7.jpg'
+title: "이상탐지 Anomaly Detection"
+date:   2014-08-12 10:18:00
+tags: fables fiction
+subclass: 'post tag-test tag-content'
+categories: 'casper'
+navigation: True
+logo: 'assets/images/ghost.png'
+---
+ -->
+
 
 
 #### abstract
@@ -47,7 +65,7 @@ Anomaly Detection 은 그 자체가 알고리즘이라기 보다는 ‘목표하
 이상값의 종류는 보는 시간에 따라 다를 수 있어 엄밀한 규정을 하긴 어렵다.  
 미네소타 대학의 Survey paper에는 아래와 같이 규정하고 있다. (source: <Anomaly Detection: A Survey>, 2009, Varun Chandola)
 
-![taxonomy of anomaly detection](/figures-h3imdallr/20161123-taxonomy.png)
+![taxonomy of anomaly detection](./figures-h3imdallr/20161123-taxonomy.png)
 
 위의 분류를 최대한 간소화 시키면, 결국 축적된 시간동안 정적인 점분포에 초점을 맞추는 Point anomaly 와, 시계열적인 동적인 특성에 주안을 두는 Context anomaly로 구분 지을수 있다.
 
@@ -60,14 +78,15 @@ Anomaly Detection 은 그 자체가 알고리즘이라기 보다는 ‘목표하
 
 앞서 밝혔듯, 이는 굉장히 단순화 시킨 구분이고, 결국 이상탐지를 위해선 '정상 상태'를 규정해야하고, 이는 당면한 과제, 도메인 특성에 따라 상이하게 달라진다. 아래는 다양한 방법으로 이상탐지가 분석 될 수 있음을 내포한다.
 
-![schema](/figures-h3imdallr/20161123-schema.png)
+![schema](./figures-h3imdallr/20161123-schema.png)
 
 ### Contextual Anomaly 분석 방법의 이해  
 
 #### A. 시계열 데이터 이해
 
 본 글에서 소개하는 이상탐지 기법(S-H-ESD)의 이해를 위해서는 시계열 패턴 요소의 선행적 이해가 요구된다.  
-![TSpattern](/figures-h3imdallr/20161123-TS_pattern.png)
+
+![TSpattern](./figures-h3imdallr/20161123-TS_pattern.png)
 
 - 추세(Trend): 장기적으로 나타나는 변동 패턴
 - 계절성(Seasonal): 주,월,분기,반기 단위 등 이미 알려진 시간의 주기로 나타나는 패턴
@@ -162,7 +181,7 @@ STL은 시계열 데이터에서 계절성, 추세, 잔차 세가지 패턴요�
 
 Python 으로 S-H-ESD 기반의 Anomaly Detection 기능을 변환(porting)한 오픈 소스 패키지 또한 존재하므로, ( [pyculiarity / github](https://github.com/nicolasmiller/pyculiarity) ) 본 사례연구/구현에서는 해당 패키지를 기반으로 구현되어 있다. 다만 해당 패키지에서는 순수 Python 라이브러리 외에 R 의 인스톨을 요구하는 rpy2 라는 다소 불편하고 시스템 이식성이 떨어지는 라이브러리를 중심적으로 활용한다. 이에 본 사례적용 케이스에서는 Python 친화적이고 기계학습/통계에서 major 한 패키지(statsmodel) 를 활용하여 성능을 좀더 업그레이드 하였다. 아래는 패키지 구성과 기능 상세와 구현 방법에 대한 설명이다.
 
-![package](/figures-h3imdallr/20161123-packages.png)
+![package](./figures-h3imdallr/20161123-packages.png)
 
 “detect_ts.py” 는 anomaly detection 분석의 최상위 모듈로, 후에 resampling을 위해 시계열 데이터 granularity check을 (분/시간/일/월) 하고 기타 여러 옵션기능들에 대한 파라미터 값들의 에러핸들링(parameter sanity check)을 기본적으로 수행한다. 그리고 “detect_anoms.py”를 호출해 이상검출을 실시한다. 실제로 이상탐지에 가장 중요한 기능들은 이 “detect_anoms.py”에서 수행되는데, 다양한 주기/단위 ( e.g. 30초, 1분, 3분,1일 )로 수집된 시계열 데이터를 모두 수용할 수 있기 위해 데이터 시계열 단위를 지정하여 새로 변환하는 resampling 기능을 우선적으로 수행한다. 그리고 S-H-ESD 알고리즘의 핵심적 세가지 기능을 수행하는데, 첫째로 시계열 데이터의 multi- modality로 인한 오차를 줄이기 위해 seasonal, trend, residual로 분해한다. 이 분해된 decomposed data에서 residual을 추출하여 이 데이터의 MAD 값을 얻어낸 후, Generalized ESD를 통해 이상치를 검출한다. (STL, MAD, Generalized ESD의 이론적 이해는 본문 윗절 참조.)  
 
@@ -234,11 +253,11 @@ Benchmark (논문)
 
 아래는 NUMENTA에서 제공한 데이타 셋을 통해 잘 동작하는 경우의 예시이다.
 
-![](/figures-h3imdallr/20161123-test-working.png)
+![](./figures-h3imdallr/20161123-test-working.png)
 
 그러나 위 벤치마킹 연구에서 알려진 사실과 같이, 아래는 잘 동작하지 않았던 경우에 대한 예임.
 
-![](/figures-h3imdallr/20161123-test-notworking.png)
+![](./figures-h3imdallr/20161123-test-notworking.png)
 
 
 #### References
