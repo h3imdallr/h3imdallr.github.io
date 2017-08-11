@@ -60,8 +60,8 @@ lsi: false
 username: h3imdallr
 repo: h3imdallr
 branch: master
-relative_source: ./h3imdallr/
-destination: ./desination-h3imdallr-pages/
+relative_source: ../h3imdallr/
+destination: ../desination-h3imdallr-pages/
 production_url:  https://h3imdallr.github.io/
 source_url:      https://github.com/h3imdallr/h3imdallr.github.io
 
