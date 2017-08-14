@@ -1,10 +1,14 @@
 ---
-layout: about
-title:  "About"
+layout: page
+title: About
+class: 'post'
+navigation: True
+logo: 'assets/images/ghost.png'
+current: about
 ---
 
-#### Who am I?
-Hello, my name is Hugo Carreira, I'm from Rio de Janeiro, I have 19 years and Computer Science course at University Veiga de Almeida.
+This is a demo blog for Ghost, it contains dummy content which allows you to click around and see what a Ghost blog running the default theme looks like.
 
-#### What do I do?
-At the moment I am web development intern at [Capemisa Seguradora](http://www.capemisa.com.br). And in his spare time writing code to myself, everything is in my [Github](http://github.com/hugocarreira).
+We use this for testing and for reference!
+
+If you'd like to set up your own blog, head on over to [https://ghost.org](https://ghost.org) and sign up.
