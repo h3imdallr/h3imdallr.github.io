@@ -21,7 +21,7 @@
   
   <meta property="og:description" content="abstract  이상탐지의 기초적인 개념, 시계열 데이터의 기본적 이해, 이를 통한 시계열 이상탐지 방법 소개  code/ipynb provided - STL decomposition" />
   
-  <meta property="og:image" content="https://h3imdallr.github.io/figures-h3imdallr/20161123-header-anomaly.jpg" />
+  <meta property="og:image" content="https://h3imdallr.github.io/assets/images/df_logo.jpg" />
   <meta property="og:url" content="https://h3imdallr.github.io/data_science/2017/06/20/anomaly_detection.html" >
   <meta property="og:type" content="blog" />
   <meta property="article:published_time" content="2017-06-20T09:00:00+09:00">
@@ -46,27 +46,21 @@
     <main class="content" role="main">
       <article class="post">
         
-        <div class="article-image">
-          <div class="post-image-image" style="background-image: url(/figures-h3imdallr/20161123-header-anomaly.jpg)">
-            Article Image
-          </div>
-          <div class="post-image-image2" style="background-image: url()">
-            Article Image
-          </div>
+        <div class="noarticleimage">
           <div class="post-meta">
             <h1 class="post-title">이상탐지 Anomaly Detection</h1>
             <div class="cf post-meta-text">
               <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
-              <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">Josh Yongmin Jung</h4>
+              <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">h3imdallr</h4>
               on
-              <time datetime="2017-06-20 09:00">20 Jun 2017</time>
+              <time datetime="2017-06-20T09:00:00+09:00">20 Jun 2017</time>
               <!-- , tagged on <span class="post-tag-">, <a href="/tag/"></a></span> -->
-            </div>
-            <div style="text-align:center">
-              <a href="#topofpage" class="topofpage"><i class="fa fa-angle-down"></i></a>
             </div>
           </div>
         </div>
+        <br>
+        <br>
+        <br>
         
         <section class="post-content">
           <div class="post-reading">
@@ -140,8 +134,7 @@
   </tbody>
 </table>
 
-<p><br /><br />
-앞서 밝혔듯, 이는 굉장히 단순화 시킨 구분이고, 결국 이상탐지를 위해선 ‘정상 상태’를 규정해야하고, 이는 당면한 과제, 도메인 특성에 따라 상이하게 달라진다. 아래는 다양한 방법으로 이상탐지가 분석 될 수 있음을 내포한다.</p>
+<p>앞서 밝혔듯, 이는 굉장히 단순화 시킨 구분이고, 결국 이상탐지를 위해선 ‘정상 상태’를 규정해야하고, 이는 당면한 과제, 도메인 특성에 따라 상이하게 달라진다. 아래는 다양한 방법으로 이상탐지가 분석 될 수 있음을 내포한다.</p>
 
 <p><img src="/figures-h3imdallr/20161123-schema.png" alt="schema" /></p>
 
@@ -196,8 +189,7 @@
   </tbody>
 </table>
 
-<p><br />
-위 표에서 밝힌 S-H-ESD 기법을 좀더 자세히 이해하려면, 다음과 같은 통계학적 개념들의 이해가 요구된다.</p>
+<p>위 표에서 밝힌 S-H-ESD 기법을 좀더 자세히 이해하려면, 다음과 같은 통계학적 개념들의 이해가 요구된다.</p>
 
 <ul>
   <li>Median Absolute Deviation(MAD)</li>
@@ -246,7 +238,7 @@ Generalized ESD 는 Grubb’s test와 달리 여러개의 outlier를 가정한 �
 <script type="math/tex; mode=display"> R_{i} = max |x_{i} -\bar{x}|/s
 \\ \lambda_{i} > \frac{(N-1)\cdot t_{p,n-i-1}}{\sqrt{(N-i-1+t^{2}_{p,n-i-1}) (n-i+1)}}</script>
 
-<p>위에 명시된 Critical Value($\lambda<em>{i}$) 또한 지속적으로 업데이트 되며, $R</em>{i} &gt; \lambda_{i} $를 만족하는 $i$ 가 이상값의 개수를 결정하게됨. 본 검정방법은 앞선 Grubb’s test 보다 여러개의 outlier를 검출 할 수 있다는 장점이 있으나, 여전히 정규성을 가정하고 있으므로, 정규성 테스트 선행이 되어야 하고, 계절성(seasonality)을 고려하지 않는 단점이 있다.</p>
+<p>위에 명시된 Critical Value (<script type="math/tex">\lambda_{i}</script>) 또한 지속적으로 업데이트 되며, <script type="math/tex">R_{i}>\lambda_{i}</script> 를 만족하는 $i$ 가 이상값의 개수를 결정하게됨. 본 검정방법은 앞선 Grubb’s test 보다 여러개의 outlier를 검출 할 수 있다는 장점이 있으나, 여전히 정규성을 가정하고 있으므로, 정규성 테스트 선행이 되어야 하고, 계절성(seasonality)을 고려하지 않는 단점이 있다.</p>
 
 <p><strong>Seasonal Trend decomposition using Loess(STL):</strong> <br />
 STL은 시계열 데이터에서 계절성, 추세, 잔차 세가지 패턴요소로 분해하는 기법으로 (본문 전반부 참조), seasonality와 trend를 제거하면, 이상탐지에 적합한 residual만 남게 된다.
@@ -270,48 +262,48 @@ STL은 시계열 데이터에서 계절성, 추세, 잔차 세가지 패턴요�
 
 <p>Anomaly Detection 기능을 이용하기 위해서는 detect_ts.py를 호출하는 스크립트를 실행하면 된다. 아래는 detect_ts.py를 호출하여 anomaly를 검출하는 스크립트 예시이다. 단순히 anomaly를 검출하는데 벗어나, 검출값들을 시각화 하고자 하면, 본 절 젤 상위 예시코드 참조.</p>
 
-<p>```python<br />
-  from pyculiarity import detect_ts import pandas as pd
-  n_file = ‘filename’
-  timeS_DF = pd.read_csv(‘./data/%s.csv’% n_file, usecols = [‘col1(time)’, ‘col2(value)’])
-  results = detect_ts(timeS_DF, max_anoms=0.02, direction=’pos’, only_last=None)</p>
+<p>``` python<br />
+    from pyculiarity import detect_ts
+    import pandas as pd</p>
 
-<p>print ‘»&gt; the number of anomaly: ‘, len(results[‘anoms’]) print results[‘anoms’]
-  ```</p>
+<pre><code>n_file = 'filename'
 
-<p>아래는 MAD와 generalized ESD으로 S-H-ESD 기능을 구현한 부분이다.</p>
+timeS_DF = pd.read_csv('./data/%s.csv'% n_file, usecols =['col1(time)', 'col2(value)'])
+results = detect_ts(timeS_DF, max_anoms=0.02,direction='pos', only_last=None)
 
-<p>```python<br />
-  for i in range(1, max_outliers + 1):
-      if one_tail:
-          if upper_tail:
-              ares = data.value - data.value.median()
-          else:
-              ares = data.value.median() - data.value
-      else:
-          ares = (data.value - data.value.median()).abs()      <br />
-      data_sigma = mad(data.value)</p>
-
-<pre><code>  if data_sigma == 0:
-      break
-
-  ares = ares/float(data_sigma)
-  R = ares.max()
-  temp_max_idx = ares[ares == R].index.tolist()[0]
-  R_idx[i - 1] = temp_max_idx
-  data = data[data.index != R_idx[i - 1]]
-  if one_tail:
-      p = 1 - alpha / float(n - i + 1)
-  else:
-      p = 1 - alpha / float(2 * (n - i + 1))
-  t = student_t.ppf(p, (n - i - 1))
-  lam = t * (n - i) / float(sqrt((n - i - 1 + t**2) * (n - i + 1)))
+print '&gt;&gt;&gt; the number of anomaly: ', len(results['anoms'])
+print results['anoms'] ``` &lt;br/&gt; 아래는 MAD와 generalized ESD으로 S-H-ESD 기능을 구현한 부분이다. &lt;br/&gt;
 </code></pre>
 
-<p>if R &gt; lam:
-      num_anoms = i
-```
-<strong>성능평가 및 검증</strong>  </p>
+<p>```python<br />
+    for i in range(1, max_outliers + 1):
+        if one_tail:
+            if upper_tail:
+                ares = data.value - data.value.median()
+            else:
+                ares = data.value.median() - data.value
+        else:
+            ares = (data.value - data.value.median()).abs()      <br />
+        data_sigma = mad(data.value)</p>
+
+<pre><code>    if data_sigma == 0:
+        break
+
+    ares = ares/float(data_sigma)
+    R = ares.max()
+    temp_max_idx = ares[ares == R].index.tolist()[0]
+    R_idx[i - 1] = temp_max_idx
+    data = data[data.index != R_idx[i - 1]]
+    if one_tail:
+        p = 1 - alpha / float(n - i + 1)
+    else:
+        p = 1 - alpha / float(2 * (n - i + 1))
+    t = student_t.ppf(p, (n - i - 1))
+    lam = t * (n - i) / float(sqrt((n - i - 1 + t**2) * (n - i + 1)))
+
+if R &gt; lam:
+    num_anoms = i ``` **성능평가 및 검증**  
+</code></pre>
 
 <p>현재 Twitter 사에서 개방한 R 기반 S-H-ESD 패키지에 대해서 성능평가는 다수 진행되었고, 대체로 공개 솔루션 중 가장 좋은 평가를 받는다.
 Twitter 의 Anomaly Detection 은 우선 아래와 같은 주요 특징적 기능들이 있다.(파라미터이기도 함)</p>
@@ -329,8 +321,7 @@ Twitter 의 Anomaly Detection 은 우선 아래와 같은 주요 특징적 기�
   </tbody>
 </table>
 
-<p><br />
-아래는 twitter 사의 이상탐지 패키지의 성능 벤치마크를 진행한 내용에 대한 링크이다.
+<p>아래는 twitter 사의 이상탐지 패키지의 성능 벤치마크를 진행한 내용에 대한 링크이다.
 -  Anomali.io: https://anomaly.io/anomaly-detection-twitter-r/
 -  NUMENTA: Evaluating Real-time Anomaly Detection Algorithms – the Numenta Anomaly
 Benchmark (논문)  </p>
@@ -352,9 +343,8 @@ Benchmark (논문)  </p>
   </tbody>
 </table>
 
-<p><br /></p>
-
-<p>아래는 NUMENTA에서 제공한 데이타 셋을 통해 잘 동작하는 경우의 예시이다.</p>
+<p><br />
+아래는 NUMENTA에서 제공한 데이타 셋을 통해 잘 동작하는 경우의 예시이다.</p>
 
 <p><img src="/figures-h3imdallr/20161123-test-working.png" alt="" /></p>
 
@@ -365,11 +355,21 @@ Benchmark (논문)  </p>
 <h4 id="references">References</h4>
 
 <ol>
-  <li>Varun Chandola, 2009, <anomaly detection:="" a="" survey="">, ACM Computing Survey 09 2009 p1-72  </anomaly></li>
-  <li>Arindam Banerjee, <anomaly detection:="" a="" tutorial="">, United Technology Research Center  </anomaly></li>
-  <li>이기천 한양대 교수, 2013, <시계열 데이터의="" 통계적="" 분석방법="">, 강의자료  </시계열></li>
-  <li><a href="https://www.analyticsvidhya.com/blog/2015/12/complete-tutorial-time-series-modeling/">A Complete Tutorial on Time Series Modeling</a>  </li>
-  <li>C. E. Rasmussen &amp; C. K. I. Williams, Gaussian Processes for Machine Learning, the MIT Press, 2006  </li>
+  <li>
+    <p>Varun Chandola, 2009, <anomaly detection:="" a="" survey="">, ACM Computing Survey 09 2009 p1-72  </anomaly></p>
+  </li>
+  <li>
+    <p>Arindam Banerjee, <anomaly detection:="" a="" tutorial="">, United Technology Research Center  </anomaly></p>
+  </li>
+  <li>
+    <p>이기천 한양대 교수, 2013, <시계열 데이터의="" 통계적="" 분석방법="">, 강의자료  </시계열></p>
+  </li>
+  <li>
+    <p><a href="https://www.analyticsvidhya.com/blog/2015/12/complete-tutorial-time-series-modeling/">A Complete Tutorial on Time Series Modeling</a>  </p>
+  </li>
+  <li>
+    <p>C. E. Rasmussen &amp; C. K. I. Williams, Gaussian Processes for Machine Learning, the MIT Press, 2006  </p>
+  </li>
   <li><a href="https://warrenmar.wordpress.com/tag/seasonal-hybrid-esd/">Problem of the Month: Anomaly Detection</a>  </li>
   <li>Arun Kejariwal, Statistical Learning Based Anomaly Detection @ Twitter, Nov 2014  </li>
 </ol>

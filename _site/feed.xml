@@ -5,8 +5,8 @@
     <description>Data-Driven Journal</description>
     <link>https://h3imdallr.github.io/</link>
     <atom:link href="https://h3imdallr.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 15 Aug 2017 15:10:42 +0900</pubDate>
-    <lastBuildDate>Tue, 15 Aug 2017 15:10:42 +0900</lastBuildDate>
+    <pubDate>Tue, 15 Aug 2017 15:54:44 +0900</pubDate>
+    <lastBuildDate>Tue, 15 Aug 2017 15:54:44 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -78,8 +78,7 @@
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
-앞서 밝혔듯, 이는 굉장히 단순화 시킨 구분이고, 결국 이상탐지를 위해선 ‘정상 상태’를 규정해야하고, 이는 당면한 과제, 도메인 특성에 따라 상이하게 달라진다. 아래는 다양한 방법으로 이상탐지가 분석 될 수 있음을 내포한다.&lt;/p&gt;
+&lt;p&gt;앞서 밝혔듯, 이는 굉장히 단순화 시킨 구분이고, 결국 이상탐지를 위해선 ‘정상 상태’를 규정해야하고, 이는 당면한 과제, 도메인 특성에 따라 상이하게 달라진다. 아래는 다양한 방법으로 이상탐지가 분석 될 수 있음을 내포한다.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/figures-h3imdallr/20161123-schema.png&quot; alt=&quot;schema&quot; /&gt;&lt;/p&gt;
 
@@ -134,8 +133,7 @@
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;&lt;br /&gt;
-위 표에서 밝힌 S-H-ESD 기법을 좀더 자세히 이해하려면, 다음과 같은 통계학적 개념들의 이해가 요구된다.&lt;/p&gt;
+&lt;p&gt;위 표에서 밝힌 S-H-ESD 기법을 좀더 자세히 이해하려면, 다음과 같은 통계학적 개념들의 이해가 요구된다.&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Median Absolute Deviation(MAD)&lt;/li&gt;
@@ -184,7 +182,7 @@ Generalized ESD 는 Grubb’s test와 달리 여러개의 outlier를 가정한 �
 &lt;script type=&quot;math/tex; mode=display&quot;&gt; R_{i} = max |x_{i} -\bar{x}|/s
 \\ \lambda_{i} &gt; \frac{(N-1)\cdot t_{p,n-i-1}}{\sqrt{(N-i-1+t^{2}_{p,n-i-1}) (n-i+1)}}&lt;/script&gt;
 
-&lt;p&gt;위에 명시된 Critical Value($\lambda&lt;em&gt;{i}$) 또한 지속적으로 업데이트 되며, $R&lt;/em&gt;{i} &amp;gt; \lambda_{i} $를 만족하는 $i$ 가 이상값의 개수를 결정하게됨. 본 검정방법은 앞선 Grubb’s test 보다 여러개의 outlier를 검출 할 수 있다는 장점이 있으나, 여전히 정규성을 가정하고 있으므로, 정규성 테스트 선행이 되어야 하고, 계절성(seasonality)을 고려하지 않는 단점이 있다.&lt;/p&gt;
+&lt;p&gt;위에 명시된 Critical Value (&lt;script type=&quot;math/tex&quot;&gt;\lambda_{i}&lt;/script&gt;) 또한 지속적으로 업데이트 되며, &lt;script type=&quot;math/tex&quot;&gt;R_{i}&gt;\lambda_{i}&lt;/script&gt; 를 만족하는 $i$ 가 이상값의 개수를 결정하게됨. 본 검정방법은 앞선 Grubb’s test 보다 여러개의 outlier를 검출 할 수 있다는 장점이 있으나, 여전히 정규성을 가정하고 있으므로, 정규성 테스트 선행이 되어야 하고, 계절성(seasonality)을 고려하지 않는 단점이 있다.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Seasonal Trend decomposition using Loess(STL):&lt;/strong&gt; &lt;br /&gt;
 STL은 시계열 데이터에서 계절성, 추세, 잔차 세가지 패턴요소로 분해하는 기법으로 (본문 전반부 참조), seasonality와 trend를 제거하면, 이상탐지에 적합한 residual만 남게 된다.
@@ -208,48 +206,48 @@ STL은 시계열 데이터에서 계절성, 추세, 잔차 세가지 패턴요�
 
 &lt;p&gt;Anomaly Detection 기능을 이용하기 위해서는 detect_ts.py를 호출하는 스크립트를 실행하면 된다. 아래는 detect_ts.py를 호출하여 anomaly를 검출하는 스크립트 예시이다. 단순히 anomaly를 검출하는데 벗어나, 검출값들을 시각화 하고자 하면, 본 절 젤 상위 예시코드 참조.&lt;/p&gt;
 
-&lt;p&gt;```python&lt;br /&gt;
-  from pyculiarity import detect_ts import pandas as pd
-  n_file = ‘filename’
-  timeS_DF = pd.read_csv(‘./data/%s.csv’% n_file, usecols = [‘col1(time)’, ‘col2(value)’])
-  results = detect_ts(timeS_DF, max_anoms=0.02, direction=’pos’, only_last=None)&lt;/p&gt;
+&lt;p&gt;``` python&lt;br /&gt;
+    from pyculiarity import detect_ts
+    import pandas as pd&lt;/p&gt;
 
-&lt;p&gt;print ‘»&amp;gt; the number of anomaly: ‘, len(results[‘anoms’]) print results[‘anoms’]
-  ```&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;n_file = &#39;filename&#39;
 
-&lt;p&gt;아래는 MAD와 generalized ESD으로 S-H-ESD 기능을 구현한 부분이다.&lt;/p&gt;
+timeS_DF = pd.read_csv(&#39;./data/%s.csv&#39;% n_file, usecols =[&#39;col1(time)&#39;, &#39;col2(value)&#39;])
+results = detect_ts(timeS_DF, max_anoms=0.02,direction=&#39;pos&#39;, only_last=None)
 
-&lt;p&gt;```python&lt;br /&gt;
-  for i in range(1, max_outliers + 1):
-      if one_tail:
-          if upper_tail:
-              ares = data.value - data.value.median()
-          else:
-              ares = data.value.median() - data.value
-      else:
-          ares = (data.value - data.value.median()).abs()      &lt;br /&gt;
-      data_sigma = mad(data.value)&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;  if data_sigma == 0:
-      break
-
-  ares = ares/float(data_sigma)
-  R = ares.max()
-  temp_max_idx = ares[ares == R].index.tolist()[0]
-  R_idx[i - 1] = temp_max_idx
-  data = data[data.index != R_idx[i - 1]]
-  if one_tail:
-      p = 1 - alpha / float(n - i + 1)
-  else:
-      p = 1 - alpha / float(2 * (n - i + 1))
-  t = student_t.ppf(p, (n - i - 1))
-  lam = t * (n - i) / float(sqrt((n - i - 1 + t**2) * (n - i + 1)))
+print &#39;&amp;gt;&amp;gt;&amp;gt; the number of anomaly: &#39;, len(results[&#39;anoms&#39;])
+print results[&#39;anoms&#39;] ``` &amp;lt;br/&amp;gt; 아래는 MAD와 generalized ESD으로 S-H-ESD 기능을 구현한 부분이다. &amp;lt;br/&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;if R &amp;gt; lam:
-      num_anoms = i
-```
-&lt;strong&gt;성능평가 및 검증&lt;/strong&gt;  &lt;/p&gt;
+&lt;p&gt;```python&lt;br /&gt;
+    for i in range(1, max_outliers + 1):
+        if one_tail:
+            if upper_tail:
+                ares = data.value - data.value.median()
+            else:
+                ares = data.value.median() - data.value
+        else:
+            ares = (data.value - data.value.median()).abs()      &lt;br /&gt;
+        data_sigma = mad(data.value)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    if data_sigma == 0:
+        break
+
+    ares = ares/float(data_sigma)
+    R = ares.max()
+    temp_max_idx = ares[ares == R].index.tolist()[0]
+    R_idx[i - 1] = temp_max_idx
+    data = data[data.index != R_idx[i - 1]]
+    if one_tail:
+        p = 1 - alpha / float(n - i + 1)
+    else:
+        p = 1 - alpha / float(2 * (n - i + 1))
+    t = student_t.ppf(p, (n - i - 1))
+    lam = t * (n - i) / float(sqrt((n - i - 1 + t**2) * (n - i + 1)))
+
+if R &amp;gt; lam:
+    num_anoms = i ``` **성능평가 및 검증**  
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;현재 Twitter 사에서 개방한 R 기반 S-H-ESD 패키지에 대해서 성능평가는 다수 진행되었고, 대체로 공개 솔루션 중 가장 좋은 평가를 받는다.
 Twitter 의 Anomaly Detection 은 우선 아래와 같은 주요 특징적 기능들이 있다.(파라미터이기도 함)&lt;/p&gt;
@@ -267,8 +265,7 @@ Twitter 의 Anomaly Detection 은 우선 아래와 같은 주요 특징적 기�
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;&lt;br /&gt;
-아래는 twitter 사의 이상탐지 패키지의 성능 벤치마크를 진행한 내용에 대한 링크이다.
+&lt;p&gt;아래는 twitter 사의 이상탐지 패키지의 성능 벤치마크를 진행한 내용에 대한 링크이다.
 -  Anomali.io: https://anomaly.io/anomaly-detection-twitter-r/
 -  NUMENTA: Evaluating Real-time Anomaly Detection Algorithms – the Numenta Anomaly
 Benchmark (논문)  &lt;/p&gt;
@@ -290,9 +287,8 @@ Benchmark (논문)  &lt;/p&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;아래는 NUMENTA에서 제공한 데이타 셋을 통해 잘 동작하는 경우의 예시이다.&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;
+아래는 NUMENTA에서 제공한 데이타 셋을 통해 잘 동작하는 경우의 예시이다.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/figures-h3imdallr/20161123-test-working.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
@@ -303,11 +299,21 @@ Benchmark (논문)  &lt;/p&gt;
 &lt;h4 id=&quot;references&quot;&gt;References&lt;/h4&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;Varun Chandola, 2009, &lt;anomaly detection:=&quot;&quot; a=&quot;&quot; survey=&quot;&quot;&gt;, ACM Computing Survey 09 2009 p1-72  &lt;/anomaly&gt;&lt;/li&gt;
-  &lt;li&gt;Arindam Banerjee, &lt;anomaly detection:=&quot;&quot; a=&quot;&quot; tutorial=&quot;&quot;&gt;, United Technology Research Center  &lt;/anomaly&gt;&lt;/li&gt;
-  &lt;li&gt;이기천 한양대 교수, 2013, &lt;시계열 데이터의=&quot;&quot; 통계적=&quot;&quot; 분석방법=&quot;&quot;&gt;, 강의자료  &lt;/시계열&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.analyticsvidhya.com/blog/2015/12/complete-tutorial-time-series-modeling/&quot;&gt;A Complete Tutorial on Time Series Modeling&lt;/a&gt;  &lt;/li&gt;
-  &lt;li&gt;C. E. Rasmussen &amp;amp; C. K. I. Williams, Gaussian Processes for Machine Learning, the MIT Press, 2006  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Varun Chandola, 2009, &lt;anomaly detection:=&quot;&quot; a=&quot;&quot; survey=&quot;&quot;&gt;, ACM Computing Survey 09 2009 p1-72  &lt;/anomaly&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Arindam Banerjee, &lt;anomaly detection:=&quot;&quot; a=&quot;&quot; tutorial=&quot;&quot;&gt;, United Technology Research Center  &lt;/anomaly&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;이기천 한양대 교수, 2013, &lt;시계열 데이터의=&quot;&quot; 통계적=&quot;&quot; 분석방법=&quot;&quot;&gt;, 강의자료  &lt;/시계열&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.analyticsvidhya.com/blog/2015/12/complete-tutorial-time-series-modeling/&quot;&gt;A Complete Tutorial on Time Series Modeling&lt;/a&gt;  &lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;C. E. Rasmussen &amp;amp; C. K. I. Williams, Gaussian Processes for Machine Learning, the MIT Press, 2006  &lt;/p&gt;
+  &lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://warrenmar.wordpress.com/tag/seasonal-hybrid-esd/&quot;&gt;Problem of the Month: Anomaly Detection&lt;/a&gt;  &lt;/li&gt;
   &lt;li&gt;Arun Kejariwal, Statistical Learning Based Anomaly Detection @ Twitter, Nov 2014  &lt;/li&gt;
 &lt;/ol&gt;
@@ -318,105 +324,10 @@ Benchmark (논문)  &lt;/p&gt;
         
         <category>data_science,</category>
         
-        <category>anomaly_detection,</category>
-        
-        <category>featured</category>
+        <category>anomaly_detection</category>
         
         
         <category>data_science</category>
-        
-      </item>
-    
-      <item>
-        <title>Mediator Features</title>
-        <description>&lt;h1 id=&quot;mediator-formats-and-css-features&quot;&gt;Mediator Formats and CSS features&lt;/h1&gt;
-
-&lt;p&gt;Examples for different formats and css features&lt;/p&gt;
-
-&lt;h1 id=&quot;header-formats&quot;&gt;Header Formats&lt;/h1&gt;
-&lt;p&gt;#Header1
-##Header2&lt;/p&gt;
-
-&lt;h1 id=&quot;blockquotes&quot;&gt;Blockquotes&lt;/h1&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h1 id=&quot;lists&quot;&gt;Lists&lt;/h1&gt;
-&lt;p&gt;##orderd lists
-1. one
-2. two
-3. three&lt;/p&gt;
-
-&lt;h2 id=&quot;unorderd-lists&quot;&gt;unorderd lists&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Apple&lt;/li&gt;
-  &lt;li&gt;Banana&lt;/li&gt;
-  &lt;li&gt;Plum&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;links&quot;&gt;Links&lt;/h1&gt;
-&lt;p&gt;This is an &lt;a href=&quot;http://example.com/&quot; title=&quot;With a Title&quot;&gt;example link&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h1 id=&quot;combinations&quot;&gt;Combinations&lt;/h1&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus&lt;/p&gt;
-
-  &lt;ul&gt;
-    &lt;li&gt;Apple&lt;/li&gt;
-    &lt;li&gt;Banana&lt;/li&gt;
-    &lt;li&gt;Plum&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/blockquote&gt;
-</description>
-        <pubDate>Sun, 30 Nov 2014 23:34:25 +0900</pubDate>
-        <link>https://h3imdallr.github.io/mediator/feature/2014/11/30/mediator_features.html</link>
-        <guid isPermaLink="true">https://h3imdallr.github.io/mediator/feature/2014/11/30/mediator_features.html</guid>
-        
-        <category>featured</category>
-        
-        
-        <category>mediator</category>
-        
-        <category>feature</category>
-        
-      </item>
-    
-      <item>
-        <title>Welcome to Jekyll!</title>
-        <description>&lt;p&gt;You’ll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code&gt;jekyll serve --watch&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
-
-&lt;p&gt;To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
-
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Tom&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &amp;#39;Hi, Tom&amp;#39; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://github.com/jekyll/jekyll-help&quot;&gt;Jekyll’s dedicated Help repository&lt;/a&gt;.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;footer&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;site-footer&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
- &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;subscribe&amp;quot;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;href&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;/feed.xml&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;span&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;tooltip&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;fa fa-rss&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;/i&amp;gt; Subscribe!&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;inner&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;
-   &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;section&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;copyright&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;All&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;content&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;copyright&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;href&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;mailto:ymjung.joshua@gmail.com&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Josh&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Yongmin&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Jung&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;/a&amp;gt; &amp;amp;copy; 2017 &amp;amp;bull; All rights reserved.&amp;lt;/section&amp;gt;&lt;/span&gt;
-   &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;section&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;poweredby&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Made&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;href&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;http://jekyllrb.com&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Jekyll&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;/a&amp;gt;&amp;lt;/section&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;/div&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;/footer&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-</description>
-        <pubDate>Fri, 29 Aug 2014 23:34:25 +0900</pubDate>
-        <link>https://h3imdallr.github.io/jekyll/update/2014/08/29/welcome-to-jekyll.html</link>
-        <guid isPermaLink="true">https://h3imdallr.github.io/jekyll/update/2014/08/29/welcome-to-jekyll.html</guid>
-        
-        <category>featured</category>
-        
-        
-        <category>jekyll</category>
-        
-        <category>update</category>
         
       </item>
     
