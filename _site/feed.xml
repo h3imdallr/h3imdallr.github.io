@@ -1,186 +1,507 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-06-20T17:19:44+09:00</updated><id>http://localhost:4000//</id><title type="html">After Image</title><subtitle>Technology, Data Science and Investment</subtitle><entry><title type="html">Anomaly Detection</title><link href="http://localhost:4000/data_science/2017/06/20/anomaly_detection/" rel="alternate" type="text/html" title="Anomaly Detection" /><published>2017-06-20T09:00:00+09:00</published><updated>2017-06-20T09:00:00+09:00</updated><id>http://localhost:4000/data_science/2017/06/20/anomaly_detection</id><content type="html" xml:base="http://localhost:4000/data_science/2017/06/20/anomaly_detection/">&lt;h4 id=&quot;abstract&quot;&gt;abstract&lt;/h4&gt;
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>gradient descent</title>
+    <link>http://localhost:4000/h3imdallr</link>
+    <atom:link href="http://localhost:4000/h3imdallr/feed.xml" rel="self" type="application/rss+xml" />
+    
+      <item>
+        <title>한글 문서 스타일 샘플</title>
+        <description>&lt;p&gt;이 글은 스타일을 모아둔 것입니다. 소스 코드를 확인하여 스타일을 적용하는 방법을 알아보세요.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;section&quot;&gt;1. 제목&lt;/h2&gt;
+
+&lt;h1 id=&quot;section-1&quot;&gt;제목 1&lt;/h1&gt;
+
+&lt;h2 id=&quot;section-2&quot;&gt;제목 2&lt;/h2&gt;
+
+&lt;h3 id=&quot;section-3&quot;&gt;제목 3&lt;/h3&gt;
+
+&lt;h4 id=&quot;section-4&quot;&gt;제목 4&lt;/h4&gt;
+
+&lt;h5 id=&quot;section-5&quot;&gt;제목 5&lt;/h5&gt;
+
+&lt;h6 id=&quot;section-6&quot;&gt;제목 6&lt;/h6&gt;
+
+&lt;h3 id=&quot;section-7&quot;&gt;1-1. 제목 정렬&lt;/h3&gt;
+
+&lt;h5 id=&quot;section-8&quot;&gt;왼쪽(기본)&lt;/h5&gt;
+
+&lt;h5 class=&quot;center&quot; id=&quot;section-9&quot;&gt;가운데&lt;/h5&gt;
+
+&lt;h5 class=&quot;right&quot; id=&quot;section-10&quot;&gt;오른쪽&lt;/h5&gt;
+
+&lt;h2 id=&quot;section-11&quot;&gt;2. 본문&lt;/h2&gt;
+
+&lt;p&gt;탄핵소추의 의결을 받은 자는 탄핵심판이 있을 때까지 &lt;a href=&quot;#&quot;&gt;링크&lt;/a&gt; 그 권한행사가 정지된다. 제2항과 제3항의 처분에 대하여는 &lt;strong&gt;굵게&lt;/strong&gt; 법원에 제소할 수 없다. 선거와 국민투표의 공정한 관리 &lt;em&gt;기울임&lt;/em&gt; 및 정당에 관한 사무를 처리하기 위하여 5&lt;sup&gt;3&lt;/sup&gt; = 125 선거관리위원회를 둔다. 국무총리는 대통령을 보좌하며, H&lt;sub&gt;2&lt;/sub&gt;O 행정에 관하여 대통령의 명을 받아 행정각부를 통할한다. 정당은 법률이 정하는 바에 의하여 &lt;u&gt;밑줄&lt;/u&gt; 국가의 보호를 받으며, 국가는 법률이 정하는 바에 의하여 &lt;code class=&quot;highlighter-rouge&quot;&gt;파일명&lt;/code&gt; 정당운영에 필요한 자금을 보조할 수 있다. 모든 국민은 종교의 자유를 가진다. 국회의원은 법률이 정하는 직을 겸할 수 없다. 감사원은 &lt;del&gt;가운데 줄&lt;/del&gt; 세입·세출의 결산을 매년 검사하여 대통령과 차년도국회에 &lt;mark&gt;형광펜&lt;/mark&gt; 그 결과를 보고하여야 한다.&lt;/p&gt;
+
+&lt;h2 id=&quot;section-12&quot;&gt;3. 이미지&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://placehold.it/800x400&quot; alt=&quot;큰 이미지&quot; /&gt;
+&lt;img src=&quot;http://placehold.it/400x200&quot; alt=&quot;중간 이미지&quot; /&gt;
+&lt;img src=&quot;http://placehold.it/200x200&quot; alt=&quot;작은 이미지&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;section-13&quot;&gt;3-1. 이미지 가운데 정렬&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;http://placehold.it/200x200&quot; alt=&quot;이미지 가운데 정렬&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;section-14&quot;&gt;4. 인용구&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;나는 헌법을 준수하고 국가를 보위하며 조국의 평화적 통일과 국민의 자유와 복리의 증진 및 민족문화의 창달에 노력하여 대통령으로서의 직책을 성실히 수행할 것을 국민 앞에 엄숙히 선서합니다. 모든 국민은 통신의 비밀을 침해받지 아니한다. 국회의원은 법률이 정하는 직을 겸할 수 없다. 국회는 헌법 또는 법률에 특별한 규정이 없는 한 재적의원 과반수의 출석과 출석의원 과반수의 찬성으로 의결한다. 가부동수인 때에는 부결된 것으로 본다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;section-15&quot;&gt;5. 리스트&lt;/h2&gt;
+
+&lt;h3 id=&quot;section-16&quot;&gt;순서가 없는 리스트&lt;/h3&gt;
+
 &lt;ul&gt;
-  &lt;li&gt;&lt;em&gt;이상탐지의 기초적인 개념, 시계열 데이터의 기본적 이해, 이를 통한 시계열 이상탐지 방법 소개&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;code/ipynb provided&lt;/em&gt; - &lt;a href=&quot;http://nbviewer.jupyter.org/github/h3imdallr/Portfolio-DataAnalysis/blob/master/TimeS_Anomaly_Detection/STL_decomposition_NABdata.ipynb&quot;&gt;STL decomposition&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;국가원로자문회의의 조직·직무범위 기타 필요한 사항은 법률로 정한다.&lt;/li&gt;
+  &lt;li&gt;모든 국민은 법률이 정하는 바에 의하여 국방의 의무를 진다.&lt;/li&gt;
+  &lt;li&gt;탄핵소추의 의결을 받은 자는 탄핵심판이 있을 때까지 그 권한행사가 정지된다.
+    &lt;ol&gt;
+      &lt;li&gt;국회는 의원의 자격을 심사하며, 의원을 징계할 수 있다. 국가는 모성의 보호를 위하여 노력하여야 한다.&lt;/li&gt;
+      &lt;li&gt;공개하지 아니한 회의내용의 공표에 관하여는 법률이 정하는 바에 의한다.&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;국회는 의장 1인과 부의장 2인을 선출한다. 정부는 회계연도마다 예산안을 편성하여 회계연도 개시 90일전까지 국회에 제출하고, 국회는 회계연도 개시 30일전까지 이를 의결하여야 한다.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;reference&quot;&gt;reference&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.slideshare.net/arunkejariwal/statistical-learning-based-anomaly-detection-twitter&quot;&gt;Statistical Learning Based Anomaly Detection @Twitter&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/twitter/AnomalyDetection&quot;&gt;Anomaly Detection Twitter Github&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://blog.twitter.com/2015/introducing-practical-and-robust-anomaly-detection-in-a-time-series&quot;&gt;Twitter’s Blog on Anomaly Detection &lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;h3 id=&quot;section-17&quot;&gt;순서가 있는 리스트&lt;/h3&gt;
 
-&lt;h4 id=&quot;anomaly-definition&quot;&gt;Anomaly Definition:&lt;/h4&gt;
-&lt;p&gt;기존 관측과는 상이하여 다른 매커니즘에 의해 생성되었다고 판단할만한 관측값. (An anomaly is an observation that deviates so much from other observations so as to arouse suspicious that it is was generated by different mechanism.)&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;대통령으로 선거될 수 있는 자는 국회의원의 피선거권이 있고 선거일 현재 40세에 달하여야 한다.&lt;/li&gt;
+  &lt;li&gt;각급 선거관리위원회는 선거인명부의 작성등 선거사무와 국민투표사무에 관하여 관계 행정기관에 필요한 지시를 할 수 있다.&lt;/li&gt;
+  &lt;li&gt;예비비는 총액으로 국회의 의결을 얻어야 한다. 예비비의 지출은 차기국회의 승인을 얻어야 한다.
+    &lt;ul&gt;
+      &lt;li&gt;국가는 농지에 관하여 경자유전의 원칙이 달성될 수 있도록 노력하여야 하며, 농지의 소작제도는 금지된다.&lt;/li&gt;
+      &lt;li&gt;모든 국민은 법률이 정하는 바에 의하여 납세의 의무를 진다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;형사피의자 또는 형사피고인으로서 구금되었던 자가 법률이 정하는 불기소처분을 받거나 무죄판결을 받은 때에는 법률이 정하는 바에 의하여 국가에 정당한 보상을 청구할 수 있다.&lt;/li&gt;
+&lt;/ol&gt;
 
-&lt;h4 id=&quot;approaches-on-anomaly-detection&quot;&gt;Approaches on Anomaly Detection:&lt;/h4&gt;
-&lt;p&gt;Anomaly Detection 은 그 자체가 알고리즘이라기 보다는 ‘목표하는바/기대하는 결과’에 해당하며, 여러 알고리즘과 분석론을 활용한 ‘분석 application’ 이라고 볼 수 있다. 따라서, 해결하고자 하는 문제의 목적과 컨텍스트에 따라 이상탐지 목적은 상이해 질 수 있다. &lt;br /&gt;
-이상탐지의 문제 특징(Problem Characteristics) 파악 및 구체적 분석방법론 수립시 고려할 사항들은 아래와 같다.&lt;/p&gt;
+&lt;h3 id=&quot;section-18&quot;&gt;정의 리스트&lt;/h3&gt;
 
-&lt;p&gt;(1) 목적(Objectives)&lt;/p&gt;
+&lt;dl&gt;
+  &lt;dt&gt;대통령은 제3항과 제4&lt;/dt&gt;
+  &lt;dd&gt;국회의원은 그 지위를 남용하여 국가·공공단체 또는 기업체와의 계약이나 그 처분에 의하여 재산상의 권리·이익 또는 직위를 취득하거나 타인을 위하여 그 취득을 알선할 수 없다.&lt;/dd&gt;
+  &lt;dt&gt;체포·구속·압수 또&lt;/dt&gt;
+  &lt;dd&gt;헌법개정안은 국회가 의결한 후 30일 이내에 국민투표에 붙여 국회의원선거권자 과반수의 투표와 투표자 과반수의 찬성을 얻어야 한다.&lt;/dd&gt;
+&lt;/dl&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;기회 탐지 Chance discovery (Positive anomaly)&lt;/li&gt;
-  &lt;li&gt;오류 탐지 Fault Discovery (Negative Anomaly)&lt;/li&gt;
-  &lt;li&gt;새로움의 탐지 Novelty Detection&lt;/li&gt;
-  &lt;li&gt;노이즈 제거 Noise Removal&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;(2) 입력 데이터의 특성(Nature of input data)&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;시계열 Time-Series(sequential) vs Static&lt;/li&gt;
-  &lt;li&gt;단변량/다변량 Univariate vs Multivariate&lt;/li&gt;
-  &lt;li&gt;데이터 타입 Data Type (Binary /Categorical /Continuous /Hybrid)&lt;/li&gt;
-  &lt;li&gt;상호의존적/독립적 Relational vs Independent&lt;/li&gt;
-  &lt;li&gt;(기존 룰의 적용이 가능할 만큼) 잘 알려진/알려져 있지 않은 Well-known or not (rule existing or not)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;(3) 이상값의 종류(Type of anomaly)&lt;/p&gt;
-
-&lt;p&gt;이상값의 종류는 보는 시간에 따라 다를 수 있어 엄밀한 규정을 하긴 어렵다.&lt;br /&gt;
-미네소타 대학의 Survey paper에는 아래와 같이 규정하고 있다. (source: &lt;Anomaly Detection:=&quot;&quot; A=&quot;&quot; Survey=&quot;&quot;&gt;, 2009, Varun Chandola)&lt;/Anomaly&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/figure-post/20161123-taxonomy.png&quot; alt=&quot;taxonomy of anomaly detection&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;위의 분류를 최대한 간소화 시키면, 결국 축적된 시간동안 정적인 점분포에 초점을 맞추는 Point anomaly 와, 시계열적인 동적인 특성에 주안을 두는 Context anomaly로 구분 지을수 있다.&lt;/p&gt;
+&lt;h2 id=&quot;section-19&quot;&gt;6. 표&lt;/h2&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
     &lt;tr&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;분류&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;특징&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;상단1&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;상단2&lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;상단3&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Point anomaly&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;Statistics(Gaussian distribution) , Clustering, Classification&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;셀1&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;셀2&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;셀3&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Contextual anomaly&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;Statistics(Gaussian Process Regression, S-H-ESD …)&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;셀4&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;셀5&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;셀6&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;셀1&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;셀2&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;셀3&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;셀4&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;셀5&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;셀6&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;tfoot&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;하단1&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;하단2&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;하단3&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tfoot&gt;
 &lt;/table&gt;
 
-&lt;p&gt;앞서 밝혔듯, 이는 굉장히 단순화 시킨 구분이고, 결국 이상탐지를 위해선 ‘정상 상태’를 규정해야하고, 이는 당면한 과제, 도메인 특성에 따라 상이하게 달라진다. 아래는 다양한 방법으로 이상탐지가 분석 될 수 있음을 내포한다.&lt;/p&gt;
+&lt;h2 id=&quot;section-20&quot;&gt;7. 코드 스타일&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;/figure-post/20161123-schema.png&quot; alt=&quot;schema&quot; /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;section-21&quot;&gt;코드 하이라이팅&lt;/h3&gt;
 
-&lt;h3 id=&quot;contextual-anomaly---&quot;&gt;Contextual Anomaly 분석 방법의 이해&lt;/h3&gt;
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nf&quot;&gt;#container&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;-240px&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
-&lt;h4 id=&quot;a---&quot;&gt;A. 시계열 데이터 이해&lt;/h4&gt;
+&lt;h3 id=&quot;section-22&quot;&gt;일반적인 코드&lt;/h3&gt;
 
-&lt;p&gt;본 글에서 소개하는 이상탐지 기법(S-H-ESD)의 이해를 위해서는 시계열 패턴 요소의 선행적 이해가 요구된다.&lt;br /&gt;
-&lt;img src=&quot;/figure-post/20161123-TS_pattern.png&quot; alt=&quot;TSpattern&quot; /&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;div id=&quot;awesome&quot;&amp;gt;
+  &amp;lt;p&amp;gt;This is great isn't it?&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;이 문서는 &lt;a href=&quot;http://guny.kr/stuff/klorem/&quot;&gt;한글 Lorem Ipsum&lt;/a&gt;으로 생성되었습니다.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 19 Jan 2017 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/h3imdallr/2017-01-19/style-test-ko/</link>
+        <guid isPermaLink="true">http://localhost:4000/h3imdallr/2017-01-19/style-test-ko/</guid>
+      </item>
+    
+      <item>
+        <title>한글 문서 가독성 테스트</title>
+        <description>&lt;p&gt;정당의 목적이나 활동이 민주적 기본질서에 위배될 때에는 정부는 헌법재판소에 그 해산을 제소할 수 있고, 정당은 헌법재판소의 심판에 의하여 해산된다. 모든 국민은 고문을 받지 아니하며, 형사상 자기에게 불리한 진술을 강요당하지 아니한다. 새로운 회계연도가 개시될 때까지 예산안이 의결되지 못한 때에는 정부는 국회에서 예산안이 의결될 때까지 다음의 목적을 위한 경비는 전년도 예산에 준하여 집행할 수 있다.&lt;/p&gt;
+
+&lt;p&gt;외국인은 국제법과 조약이 정하는 바에 의하여 그 지위가 보장된다. 헌법개정안은 국회가 의결한 후 30일 이내에 국민투표에 붙여 국회의원선거권자 과반수의 투표와 투표자 과반수의 찬성을 얻어야 한다. 대통령은 국가의 독립·영토의 보전·국가의 계속성과 헌법을 수호할 책무를 진다. 국회는 정부의 동의없이 정부가 제출한 지출예산 각항의 금액을 증가하거나 새 비목을 설치할 수 없다.&lt;/p&gt;
+
+&lt;h1 id=&quot;section&quot;&gt;대통령은 법률안의 일&lt;/h1&gt;
+
+&lt;p&gt;대통령은 필요하다고 인정할 때에는 외교·국방·통일 기타 국가안위에 관한 중요정책을 국민투표에 붙일 수 있다. 한 회계연도를 넘어 계속하여 지출할 필요가 있을 때에는 정부는 연한을 정하여 계속비로서 국회의 의결을 얻어야 한다. 제3항의 승인을 얻지 못한 때에는 그 처분 또는 명령은 그때부터 효력을 상실한다. 이 경우 그 명령에 의하여 개정 또는 폐지되었던 법률은 그 명령이 승인을 얻지 못한 때부터 당연히 효력을 회복한다.&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;추세(Trend): 장기적으로 나타나는 변동 패턴&lt;/li&gt;
-  &lt;li&gt;계절성(Seasonal): 주,월,분기,반기 단위 등 이미 알려진 시간의 주기로 나타나는 패턴&lt;/li&gt;
-  &lt;li&gt;주기(Cyclic): 최소 2 년 단위로 나타나는 고정된 기간이 아닌 장기적인 변동&lt;/li&gt;
-  &lt;li&gt;랜덤요소/잔차 (Random/Residual/Remainder): 그 이외의 성분&lt;/li&gt;
+  &lt;li&gt;국무회의는 대통령·국무총리와 15인 이상 30인 이하의 국무위원으로 구성한다. 대통령은 국무총리·국무위원·행정각부의 장 기타 법률이 정하는 공사의 직을 겸할 수 없다.&lt;/li&gt;
+  &lt;li&gt;나는 헌법을 준수하고 국가를 보위하며 조국의 평화적 통일과 국민의 자유와 복리의 증진 및 민족문화의 창달에 노력하여 대통령으로서의 직책을 성실히 수행할 것을 국민 앞에 엄숙히 선서합니다.&lt;/li&gt;
+  &lt;li&gt;정당은 법률이 정하는 바에 의하여 국가의 보호를 받으며, 국가는 법률이 정하는 바에 의하여 정당운영에 필요한 자금을 보조할 수 있다. 이 헌법공포 당시의 국회의원의 임기는 제1항에 의한 국회의 최초의 집회일 전일까지로 한다.&lt;/li&gt;
+  &lt;li&gt;모든 국민의 재산권은 보장된다. 그 내용과 한계는 법률로 정한다. 감사원은 원장을 포함한 5인 이상 11인 이하의 감사위원으로 구성한다. 모든 국민은 고문을 받지 아니하며, 형사상 자기에게 불리한 진술을 강요당하지 아니한다.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;b-s-h-esd--&quot;&gt;B. S-H-ESD 기법의 이해&lt;/h4&gt;
+&lt;h2 id=&quot;section-1&quot;&gt;국회의원은 국가이익&lt;/h2&gt;
+&lt;p&gt;체포·구속·압수 또는 수색을 할 때에는 적법한 절차에 따라 검사의 신청에 의하여 법관이 발부한 영장을 제시하여야 한다. 다만, 현행범인인 경우와 장기 3년 이상의 형에 해당하는 죄를 범하고 도피 또는 증거인멸의 염려가 있을 때에는 사후에 영장을 청구할 수 있다. 모든 국민은 소급입법에 의하여 참정권의 제한을 받거나 재산권을 박탈당하지 아니한다. 감사원은 원장을 포함한 5인 이상 11인 이하의 감사위원으로 구성한다. 군인 또는 군무원이 아닌 국민은 대한민국의 영역안에서는 중대한 군사상 기밀·초병·초소·유독음식물공급·포로·군용물에 관한 죄중 법률이 정한 경우와 비상계엄이 선포된 경우를 제외하고는 군사법원의 재판을 받지 아니한다.&lt;/p&gt;
 
-&lt;p&gt;SNS 서비스인 트위터는 기존의 통계적 방법들을 조합하여 시계열의 이상값을 탐지하는 방법을 제안한다. (S-H-ESD)
-간략히 요약하면, 아래와 같이 기존 방법의 문제에 대응하는 새로운 방법을 제안한다.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;대통령은 전시·사변 또는 이에 준하는 국가비상사태에 있어서 병력으로써 군사상의 필요에 응하거나 공공의 안녕질서를 유지할 필요가 있을 때에는 법률이 정하는 바에 의하여 계엄을 선포할 수 있다.&lt;/li&gt;
+  &lt;li&gt;대통령은 국민의 보통·평등·직접·비밀선거에 의하여 선출한다. 대통령은 국무회의의 의장이 되고, 국무총리는 부의장이 된다. 대통령은 국가의 독립·영토의 보전·국가의 계속성과 헌법을 수호할 책무를 진다.&lt;/li&gt;
+  &lt;li&gt;국민경제의 발전을 위한 중요정책의 수립에 관하여 대통령의 자문에 응하기 위하여 국민경제자문회의를 둘 수 있다. 대법원과 각급법원의 조직은 법률로 정한다.&lt;/li&gt;
+  &lt;li&gt;모든 국민은 근로의 의무를 진다. 국가는 근로의 의무의 내용과 조건을 민주주의원칙에 따라 법률로 정한다. 국가는 건전한 소비행위를 계도하고 생산품의 품질향상을 촉구하기 위한 소비자보호운동을 법률이 정하는 바에 의하여 보장한다.&lt;/li&gt;
+  &lt;li&gt;국민경제자문회의의 조직·직무범위 기타 필요한 사항은 법률로 정한다. 법관은 헌법과 법률에 의하여 그 양심에 따라 독립하여 심판한다. 누구든지 체포 또는 구속의 이유와 변호인의 조력을 받을 권리가 있음을 고지받지 아니하고는 체포 또는 구속을 당하지 아니한다. 체포 또는 구속을 당한 자의 가족등 법률이 정하는 자에게는 그 이유와 일시·장소가 지체없이 통지되어야 한다.&lt;/li&gt;
+  &lt;li&gt;국가는 재해를 예방하고 그 위험으로부터 국민을 보호하기 위하여 노력하여야 한다. 법률안에 이의가 있을 때에는 대통령은 제1항의 기간내에 이의서를 붙여 국회로 환부하고, 그 재의를 요구할 수 있다. 국회의 폐회중에도 또한 같다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;section-2&quot;&gt;헌법재판소에서 법률&lt;/h3&gt;
+
+&lt;p&gt;대한민국은 민주공화국이다. 국민경제의 발전을 위한 중요정책의 수립에 관하여 대통령의 자문에 응하기 위하여 국민경제자문회의를 둘 수 있다. 모든 국민의 재산권은 보장된다. 그 내용과 한계는 법률로 정한다. 모든 국민은 신속한 재판을 받을 권리를 가진다. 형사피고인은 상당한 이유가 없는 한 지체없이 공개재판을 받을 권리를 가진다. 대법원장은 국회의 동의를 얻어 대통령이 임명한다. 대통령은 국민의 보통·평등·직접·비밀선거에 의하여 선출한다. 정당의 목적이나 활동이 민주적 기본질서에 위배될 때에는 정부는 헌법재판소에 그 해산을 제소할 수 있고, 정당은 헌법재판소의 심판에 의하여 해산된다.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;국가는 모성의 보호를 위하여 노력하여야 한다. 모든 국민은 학문과 예술의 자유를 가진다. 국가는 건전한 소비행위를 계도하고 생산품의 품질향상을 촉구하기 위한 소비자보호운동을 법률이 정하는 바에 의하여 보장한다. 국무위원은 국무총리의 제청으로 대통령이 임명한다. 국회의원은 법률이 정하는 직을 겸할 수 없다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;section-3&quot;&gt;선거운동은 각급 선거&lt;/h4&gt;
+
+&lt;p&gt;대통령은 헌법과 법률이 정하는 바에 의하여 공무원을 임면한다. 군사법원의 조직·권한 및 재판관의 자격은 법률로 정한다. 국가는 사회보장·사회복지의 증진에 노력할 의무를 진다. 모든 국민은 학문과 예술의 자유를 가진다. 국가는 과학기술의 혁신과 정보 및 인력의 개발을 통하여 국민경제의 발전에 노력하여야 한다. 모든 국민은 신체의 자유를 가진다. 누구든지 법률에 의하지 아니하고는 체포·구속·압수·수색 또는 심문을 받지 아니하며, 법률과 적법한 절차에 의하지 아니하고는 처벌·보안처분 또는 강제노역을 받지 아니한다. 학교교육 및 평생교육을 포함한 교육제도와 그 운영, 교육재정 및 교원의 지위에 관한 기본적인 사항은 법률로 정한다.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;이 문서는 &lt;a href=&quot;http://guny.kr/stuff/klorem/&quot;&gt;한글 Lorem Ipsum&lt;/a&gt;으로 생성되었습니다.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 19 Jan 2017 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/h3imdallr/2017-01-19/readability-post-ko/</link>
+        <guid isPermaLink="true">http://localhost:4000/h3imdallr/2017-01-19/readability-post-ko/</guid>
+      </item>
+    
+      <item>
+        <title>A Full and Comprehensive Style Test</title>
+        <description>&lt;p&gt;Below is just about everything you’ll need to style in the theme. Check the source code to see the many embedded elements within paragraphs.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;header&quot;&gt;1. Header&lt;/h2&gt;
+
+&lt;h1 id=&quot;header-1&quot;&gt;Header 1&lt;/h1&gt;
+
+&lt;h2 id=&quot;header-2&quot;&gt;Header 2&lt;/h2&gt;
+
+&lt;h3 id=&quot;header-3&quot;&gt;Header 3&lt;/h3&gt;
+
+&lt;h4 id=&quot;header-4&quot;&gt;Header 4&lt;/h4&gt;
+
+&lt;h5 id=&quot;header-5&quot;&gt;Header 5&lt;/h5&gt;
+
+&lt;h6 id=&quot;header-6&quot;&gt;Header 6&lt;/h6&gt;
+
+&lt;h3 id=&quot;header-alignment&quot;&gt;1-1. Header Alignment&lt;/h3&gt;
+
+&lt;h5 id=&quot;leftdefault&quot;&gt;Left(Default)&lt;/h5&gt;
+
+&lt;h5 class=&quot;center&quot; id=&quot;center&quot;&gt;Center&lt;/h5&gt;
+
+&lt;h5 class=&quot;right&quot; id=&quot;right&quot;&gt;Right&lt;/h5&gt;
+
+&lt;h2 id=&quot;body-text&quot;&gt;2. Body Text&lt;/h2&gt;
+
+&lt;p&gt;Lorem ipsum dolor sit amet, &lt;a href=&quot;#&quot;&gt;test link&lt;/a&gt; adipiscing elit. &lt;strong&gt;This is strong.&lt;/strong&gt; Nullam dignissim convallis est. Quisque aliquam. &lt;em&gt;This is emphasized.&lt;/em&gt; Donec faucibus. Nunc iaculis suscipit dui. 5&lt;sup&gt;3&lt;/sup&gt; = 125. Water is H&lt;sub&gt;2&lt;/sub&gt;O. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. &lt;u&gt;Underline&lt;/u&gt;. Maecenas ornare tortor. Donec sed tellus eget &lt;code class=&quot;highlighter-rouge&quot;&gt;COPY filename&lt;/code&gt; sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, &lt;del&gt;Dinner’s at 5:00.&lt;/del&gt; commodo vitae, feugiat in, nunc. Morbi imperdiet augue &lt;mark&gt;mark element&lt;/mark&gt; quis tellus.&lt;/p&gt;
+
+&lt;h2 id=&quot;images&quot;&gt;3. Images&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://placehold.it/800x400&quot; alt=&quot;Large example image&quot; title=&quot;Large example image&quot; /&gt;
+&lt;img src=&quot;http://placehold.it/400x200&quot; alt=&quot;Medium example image&quot; title=&quot;Medium example image&quot; /&gt;
+&lt;img src=&quot;http://placehold.it/200x200&quot; alt=&quot;Small example image&quot; title=&quot;Small example image&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;image-alignment&quot;&gt;3-1. Image Alignment&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;http://placehold.it/200x200&quot; alt=&quot;Center example image&quot; title=&quot;Center&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;blockquotes&quot;&gt;4. Blockquotes&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet, test link adipiscing elit. Nullam dignissim convallis est. Quisque aliquam.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;list-types&quot;&gt;5. List Types&lt;/h2&gt;
+
+&lt;h3 id=&quot;unordered-list&quot;&gt;Unordered List&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/li&gt;
+  &lt;li&gt;Nam ultrices nunc in nisi pellentesque ultricies. Cras scelerisque ipsum in ante laoreet viverra. Pellentesque eget quam et augue molestie tincidunt ac ut ex. Sed quis velit vulputate, rutrum nisl sit amet, molestie neque. Vivamus sed augue at turpis suscipit fringilla.&lt;/li&gt;
+  &lt;li&gt;Integer pretium nisl vitae justo aliquam, at varius nisi blandit.
+    &lt;ol&gt;
+      &lt;li&gt;Nunc vehicula nulla ac odio gravida vestibulum sed nec mauris.&lt;/li&gt;
+      &lt;li&gt;Duis at diam eget arcu dapibus consequat.&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Etiam vel elit in purus iaculis pretium.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;ordered-list&quot;&gt;Ordered List&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Quisque ullamcorper leo non ex pretium, in fermentum libero imperdiet.&lt;/li&gt;
+  &lt;li&gt;Donec eu nulla euismod, rhoncus ipsum nec, faucibus elit.&lt;/li&gt;
+  &lt;li&gt;Nam blandit purus gravida, accumsan sem in, lacinia orci.
+    &lt;ul&gt;
+      &lt;li&gt;Duis congue dui nec nisi posuere, at luctus velit semper.&lt;/li&gt;
+      &lt;li&gt;Suspendisse in lorem id lacus elementum pretium nec vel nibh.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Aliquam eget ipsum laoreet, maximus risus vitae, iaculis leo.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;definition-lists&quot;&gt;Definition Lists&lt;/h3&gt;
+
+&lt;dl&gt;
+  &lt;dt&gt;kramdown&lt;/dt&gt;
+  &lt;dd&gt;A Markdown-superset converter&lt;/dd&gt;
+  &lt;dt&gt;Maruku&lt;/dt&gt;
+  &lt;dd&gt;Another Markdown-superset converter&lt;/dd&gt;
+&lt;/dl&gt;
+
+&lt;h2 id=&quot;tables&quot;&gt;6. Tables&lt;/h2&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
     &lt;tr&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;&lt;strong&gt;기존 이상탐지 방법의 한계&lt;/strong&gt;&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;Header1&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Header2&lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;Header3&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;1. 잘못된 계산 지표 (Using Wrong Metric): 기존의 단순 평균$\mu$, 표준편차$\sigma$를 이용하는 방식 자체가 outlier를 포괄하여 계산하므로 이상값에 취약&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;cell1&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;cell2&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;cell3&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;2. Multi-modality에 취약: 평규과 표준편차가 seasonality, trend 등에 의해 변화되어 outlier를 놓치게 되는 경우가 발생&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;cell4&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;cell5&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;cell6&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;&lt;strong&gt;S-H-ESD 기법의 이상탐지 방법&lt;/strong&gt;&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;1. Use Robust Statistics/Metric: &lt;br /&gt;   a. Median Absolute Deviation(MAD) &lt;br /&gt;  b. Grubb’s Test&amp;amp; Generalized Extreme Studentized Deviate (ESD)&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;cell1&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;cell2&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;cell3&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;2. Remove impact of seasonality and trend (Multi-modality aware): &lt;br /&gt;   a. Seasonal Trend decomposition using Loess(STL)&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;cell4&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;cell5&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;cell6&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
+  &lt;tfoot&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Foot1&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Foot2&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;Foot3&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tfoot&gt;
 &lt;/table&gt;
 
-&lt;p&gt;위 표에서 밝힌 S-H-ESD 기법을 좀더 자세히 이해하려면, 다음과 같은 통계학적 개념들의 이해가 요구된다.&lt;/p&gt;
+&lt;h2 id=&quot;code-snippets&quot;&gt;7. Code Snippets&lt;/h2&gt;
+
+&lt;h3 id=&quot;highlighted-code-blocks&quot;&gt;Highlighted Code Blocks&lt;/h3&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nf&quot;&gt;#container&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;-240px&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;standard-code-block&quot;&gt;Standard code block&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;div id=&quot;awesome&quot;&amp;gt;
+  &amp;lt;p&amp;gt;This is great isn't it?&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Mon, 15 Aug 2016 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/h3imdallr/2016-08-15/style-test/</link>
+        <guid isPermaLink="true">http://localhost:4000/h3imdallr/2016-08-15/style-test/</guid>
+      </item>
+    
+      <item>
+        <title>Syntax Highlighting Post</title>
+        <description>&lt;p&gt;Syntax highlighting is a feature that displays source code, in different colors and fonts according to the category of terms. This feature facilitates writing in a structured language such as a programming language or a markup language as both structures and syntax errors are visually distinct. Highlighting does not affect the meaning of the text itself; it is intended only for human readers.&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;highlighted-code-blocks&quot;&gt;Highlighted Code Blocks&lt;/h3&gt;
+
+&lt;p&gt;To modify styling and highlight colors edit &lt;code class=&quot;highlighter-rouge&quot;&gt;/_sass/_highlighter.scss&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nf&quot;&gt;#container&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;-240px&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;nav&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;pagination&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;role=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;navigation&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    {% if page.previous %}
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{{ site.url }}{{ page.previous.url }}&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;btn&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;title=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{{ page.previous.title }}&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Previous article&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+    {% endif %}
+    {% if page.next %}
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{{ site.url }}{{ page.next.url }}&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;btn&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;title=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{{ page.next.title }}&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Next article&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+    {% endif %}
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/nav&amp;gt;&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- /.pagination --&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;Jekyll&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;TagIndex&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Page&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;initialize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;base&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tag&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;vi&quot;&gt;@site&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;site&lt;/span&gt;
+      &lt;span class=&quot;vi&quot;&gt;@base&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;base&lt;/span&gt;
+      &lt;span class=&quot;vi&quot;&gt;@dir&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dir&lt;/span&gt;
+      &lt;span class=&quot;vi&quot;&gt;@name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'index.html'&lt;/span&gt;
+      &lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;process&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;vi&quot;&gt;@name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;read_yaml&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;base&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'_layouts'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'tag_index.html'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'tag'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tag&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;tag_title_prefix&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'tag_title_prefix'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Tagged: '&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;tag_title_suffix&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'tag_title_suffix'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&amp;amp;#8211;'&lt;/span&gt;
+      &lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'title'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tag_title_prefix&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tag&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+      &lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'description'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;An archive of posts tagged &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tag&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;.&quot;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;standard-code-block&quot;&gt;Standard Code Block&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;nav class=&quot;pagination&quot; role=&quot;navigation&quot;&amp;gt;
+    {% if page.previous %}
+        &amp;lt;a href=&quot;{{ site.url }}{{ page.previous.url }}&quot; class=&quot;btn&quot; title=&quot;{{ page.previous.title }}&quot;&amp;gt;Previous article&amp;lt;/a&amp;gt;
+    {% endif %}
+    {% if page.next %}
+        &amp;lt;a href=&quot;{{ site.url }}{{ page.next.url }}&quot; class=&quot;btn&quot; title=&quot;{{ page.next.title }}&quot;&amp;gt;Next article&amp;lt;/a&amp;gt;
+    {% endif %}
+&amp;lt;/nav&amp;gt;&amp;lt;!-- /.pagination --&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;github-gist-embed&quot;&gt;GitHub Gist Embed&lt;/h3&gt;
+
+&lt;p&gt;An example of a Gist embed below.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/mmistakes/43a355923921d22cd993.js&quot;&gt;&lt;/script&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Syntax_highlighting&quot;&gt;http://en.wikipedia.org/wiki/Syntax_highlighting&lt;/a&gt; &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Fri, 16 Aug 2013 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/h3imdallr/2013-08-16/code-highlighting-post/</link>
+        <guid isPermaLink="true">http://localhost:4000/h3imdallr/2013-08-16/code-highlighting-post/</guid>
+      </item>
+    
+      <item>
+        <title>Sample Link Post</title>
+        <description>
+</description>
+        <pubDate>Mon, 12 Aug 2013 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/h3imdallr/2013-08-12/sample-link-post/</link>
+        <guid isPermaLink="true">http://localhost:4000/h3imdallr/2013-08-12/sample-link-post/</guid>
+      </item>
+    
+      <item>
+        <title>Testing Readability with a Bunch of Text</title>
+        <description>&lt;p&gt;Portland in shoreditch Vice, labore typewriter pariatur hoodie fap sartorial Austin. Pinterest literally occupy Schlitz forage. Odio ad blue bottle vinyl, 90’s narwhal commodo bitters pour-over nostrud. Ugh est hashtag in, fingerstache adipisicing laboris esse Pinterest shabby chic Portland. Shoreditch bicycle rights anim, flexitarian laboris put a bird on it vinyl cupidatat narwhal. Hashtag artisan skateboard, flannel Bushwick nesciunt salvia aute fixie do plaid post-ironic dolor McSweeney’s. Cliche pour-over chambray nulla four loko skateboard sapiente hashtag.&lt;/p&gt;
+
+&lt;p&gt;Vero laborum commodo occupy. Semiotics voluptate mumblecore pug. Cosby sweater ullamco quinoa ennui assumenda, sapiente occupy delectus lo-fi. Ea fashion axe Marfa cillum aliquip. Retro Bushwick keytar cliche. Before they sold out sustainable gastropub Marfa readymade, ethical Williamsburg skateboard brunch qui consectetur gentrify semiotics. Mustache cillum irony, fingerstache magna pour-over keffiyeh tousled selfies.&lt;/p&gt;
+
+&lt;h2 id=&quot;cupidatat-90s-lo-fi-authentic-try-hard&quot;&gt;Cupidatat 90’s lo-fi authentic try-hard&lt;/h2&gt;
+
+&lt;p&gt;In pug Portland incididunt mlkshk put a bird on it vinyl quinoa. Terry Richardson shabby chic +1, scenester Tonx excepteur tempor fugiat voluptate fingerstache aliquip nisi next level. Farm-to-table hashtag Truffaut, Odd Future ex meggings gentrify single-origin coffee try-hard 90’s.&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Median Absolute Deviation(MAD)&lt;/li&gt;
-  &lt;li&gt;Student t-distribution&lt;/li&gt;
-  &lt;li&gt;Extreme Studentized Deviate (ESD) test&lt;/li&gt;
-  &lt;li&gt;Generalized ESD&lt;/li&gt;
-  &lt;li&gt;Seasonal Trend decomposition using Loess(STL)&lt;/li&gt;
+  &lt;li&gt;Sartorial hoodie&lt;/li&gt;
+  &lt;li&gt;Labore viral forage&lt;/li&gt;
+  &lt;li&gt;Tote bag selvage&lt;/li&gt;
+  &lt;li&gt;DIY exercitation et id ugh tumblr church-key&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;Median Absolute Deviation(MAD)&lt;/strong&gt; - 중위수(중앙값) 절대 편차 : &lt;br /&gt;
-중위수 절대 편차는 표본그룹의 중앙값( $𝑋$ )과 각 표본( $ \bar { X } $ )의 차이값의 절대값을 취해서 중앙값을 추출하는 방법. 양적 자료의 퍼짐을 알고 싶을 때, 표본분산과 표준편차 보다 이상치에 덜 영향을 받는 강건성 robustness 있는 분산 측정 방법.&lt;/p&gt;
+&lt;p&gt;Incididunt umami sriracha, ethical fugiat VHS ex assumenda yr irure direct trade. Marfa Truffaut bicycle rights, kitsch placeat Etsy kogi asymmetrical. Beard locavore flexitarian, kitsch photo booth hoodie plaid ethical readymade leggings yr.&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;MAD = median_{i} |X_{i} - \bar{X}|
-\\ \sigma_{MAD} = K \cdot MAD
-\\ \text{where } K = 1.4826 \text{ for normal distributed data}&lt;/script&gt;
+&lt;p&gt;Aesthetic odio dolore, meggings disrupt qui readymade stumptown brunch Terry Richardson pour-over gluten-free. Banksy american apparel in selfies, biodiesel flexitarian organic meh wolf quinoa gentrify banjo kogi. Readymade tofu ex, scenester dolor umami fingerstache occaecat fashion axe Carles jean shorts minim. Keffiyeh fashion axe nisi Godard mlkshk dolore. Lomo you probably haven’t heard of them eu non, Odd Future Truffaut pug keytar meggings McSweeney’s Pinterest cred. Etsy literally aute esse, eu bicycle rights qui meggings fanny pack. Gentrify leggings pug flannel duis.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Student t-distribution:&lt;/strong&gt;&lt;br /&gt;
-t-분포는 정규분포 &lt;script type=&quot;math/tex&quot;&gt;(\mu, {\sigma}^{2})&lt;/script&gt;에서 &lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt; 개의 표본들을 확률변수로 정의 &lt;script type=&quot;math/tex&quot;&gt;(\bar{X} = 𝑋_{1},...𝑋_{n})&lt;/script&gt;한 확률 분포이다. 이 확률 분포 또한 정규분포&lt;script type=&quot;math/tex&quot;&gt;(\mu, {\sigma}^{2}/n)&lt;/script&gt;이며, 이를 수식으로 나타내면 아래와 같다.&lt;/p&gt;
+&lt;h2 id=&quot;forage-occaecat-cardigan-qui&quot;&gt;Forage occaecat cardigan qui&lt;/h2&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\bar{X} \sim  N(\mu, {\sigma}^{2}/n )&lt;/script&gt;
+&lt;p&gt;Fashion axe hella gastropub lo-fi kogi 90’s aliquip +1 veniam delectus tousled. Cred sriracha locavore gastropub kale chips, iPhone mollit sartorial. Anim dolore 8-bit, pork belly dolor photo booth aute flannel small batch. Dolor disrupt ennui, tattooed whatever salvia Banksy sartorial roof party selfies raw denim sint meh pour-over. Ennui eu cardigan sint, gentrify iPhone cornhole.&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\\ T = \frac { \bar{X} - /mu }{ S/\sqrt{n}  }&lt;/script&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Whatever velit occaecat quis deserunt gastropub, leggings elit tousled roof party 3 wolf moon kogi pug blue bottle ea. Fashion axe shabby chic Austin quinoa pickled laborum bitters next level, disrupt deep v accusamus non fingerstache.&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;p&gt;&lt;strong&gt;Grubb’s test(=ESD test)&lt;/strong&gt;&lt;br /&gt;
-단일 이상치를 테스트 하는데 ESD test 방법은 널리 알려진 기법이다. ESD 검증 방법의 상세한 설명은 본 보고서에서 생략하며, 주요 수식표현은 아래와 같다. - &lt;a href=&quot;https://en.wikipedia.org/wiki/Grubbs%27_test_for_outliers&quot;&gt;참고:wiki&lt;/a&gt;&lt;br /&gt;
-ESD 검정은 아래와 같은 귀무가설/대립가설을 통해 검정한다.&lt;/p&gt;
+&lt;p&gt;Tote bag asymmetrical elit sunt. Occaecat authentic Marfa, hella McSweeney’s next level irure veniam master cleanse. Sed hoodie letterpress artisan wolf leggings, 3 wolf moon commodo ullamco. Anim occupy ea labore Terry Richardson. Tofu ex master cleanse in whatever pitchfork banh mi, occupy fugiat fanny pack Austin authentic. Magna fugiat 3 wolf moon, labore McSweeney’s sustainable vero consectetur. Gluten-free disrupt enim, aesthetic fugiat jean shorts trust fund keffiyeh magna try-hard.&lt;/p&gt;
 
-&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;H_{0}: \text{데이터 셋에 이상치가 없다}&lt;/script&gt;
-&lt;script type=&quot;math/tex&quot;&gt;H_{\alpha}: \text{ 데이터 셋에 최소한 하나의 이상치가 존재한다.}&lt;/script&gt;&lt;/p&gt;
+&lt;h2 id=&quot;hoodie-duis&quot;&gt;Hoodie Duis&lt;/h2&gt;
 
-&lt;p&gt;아래 정의와 같은 G 값을 통해 outlier 인지 판별한다.&lt;/p&gt;
+&lt;p&gt;Actually salvia consectetur, hoodie duis lomo YOLO sunt sriracha. Aute pop-up brunch farm-to-table odio, salvia irure occaecat. Sriracha small batch literally skateboard. Echo Park nihil hoodie, aliquip forage artisan laboris. Trust fund reprehenderit nulla locavore. Stumptown raw denim kitsch, keffiyeh nulla twee dreamcatcher fanny pack ullamco 90’s pop-up est culpa farm-to-table. Selfies 8-bit do pug odio.&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;G = max |Y_{i} - \bar{Y}|/s \\ Y: sample mean, s: standard deviation&lt;/script&gt;
+&lt;h3 id=&quot;thundercats-ho&quot;&gt;Thundercats Ho!&lt;/h3&gt;
 
-&lt;p&gt;최대값과 최소값을 둘 다 검정하는 two-sided test 에서, 이상치가 없다는 귀무가설은 significance level( $\alpha$ ) 가 아래를 만족할시 기각된다.&lt;/p&gt;
+&lt;p&gt;Fingerstache thundercats Williamsburg, deep v scenester Banksy ennui vinyl selfies mollit biodiesel duis odio pop-up. Banksy 3 wolf moon try-hard, sapiente enim stumptown deep v ad letterpress. Squid beard brunch, exercitation raw denim yr sint direct trade. Raw denim narwhal id, flannel DIY McSweeney’s seitan. Letterpress artisan bespoke accusamus, meggings laboris consequat Truffaut qui in seitan. Sustainable cornhole Schlitz, twee Cosby sweater banh mi deep v forage letterpress flannel whatever keffiyeh. Sartorial cred irure, semiotics ethical sed blue bottle nihil letterpress.&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;G &gt; \frac{N-1}{\sqrt{N}} \sqrt{\frac{t^{2}_{\alpha(2N), N-2}}{N-2+t^{2}_{\alpha(2N), N-2}}}
-\\ t^{2}_{\alpha(2N), N-2}: \text{upper critical value of the 't-test' with}
-\\ \text{ N-2 degrees of freedom and significance level of} \alpha/{2N}&lt;/script&gt;
+&lt;p&gt;Occupy et selvage squid, pug brunch blog nesciunt hashtag mumblecore skateboard yr kogi. Ugh small batch swag four loko. Fap post-ironic qui tote bag farm-to-table american apparel scenester keffiyeh vero, swag non pour-over gentrify authentic pitchfork. Schlitz scenester lo-fi voluptate, tote bag irony bicycle rights pariatur vero Vice freegan wayfarers exercitation nisi shoreditch. Chambray tofu vero sed. Street art swag literally leggings, Cosby sweater mixtape PBR lomo Banksy non in pitchfork ennui McSweeney’s selfies. Odd Future Banksy non authentic.&lt;/p&gt;
 
-&lt;p&gt;ESD 테스트는 정상성 (normality) 를 가정하고, 단일 이상치를 탐지하는데 적합하다는 한계 때문에, 시계열과 같은 연속적 데이터에서 지속적으로 이상탐지를 해야하는 경우, 아래와 같은 Generalized ESD 의 사용이 권장된다.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Generalized Extreme Studentized Deviate (Generalized ESD):&lt;/strong&gt;&lt;br /&gt;
-Generalized ESD 는 Grubb’s test와 달리 여러개의 outlier를 가정한 검정방법임. 가장 높은 G 밸류를 제거해 나가면서 지속적으로 순회하여 평균과 표준편차를 업데이트해나가는 방식.&lt;/p&gt;
-
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;R_{i} = max |x_{i} -\bar{x}|/s
-\\ \lambda_{i} &gt; \frac{(N-1)\cdot t_{p,n-i-1}}{\sqrt{(N-i-1+t^{2}_{p,n-i-1}) (n-i+1)}}&lt;/script&gt;
-
-&lt;p&gt;위에 명시된 Critical Value($\lambda_{i}$) 또한 지속적으로 업데이트 되며, $R_{i} &amp;gt; \lambda_{i} $를 만족하는 $i$ 가 이상값의 개수를 결정하게됨. 본 검정방법은 앞선 Grubb’s test 보다 여러개의 outlier를 검출 할 수 있다는 장점이 있으나, 여전히 정규성을 가정하고 있으므로, 정규성 테스트 선행이 되어야 하고, 계절성(seasonality)을 고려하지 않는 단점이 있다.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Seasonal Trend decomposition using Loess(STL):&lt;/strong&gt; &lt;br /&gt;
-STL은 시계열 데이터에서 계절성, 추세, 잔차 세가지 패턴요소로 분해하는 기법으로 (본문 전반부 참조), seasonality와 trend를 제거하면, 이상탐지에 적합한 residual만 남게 된다.
-&lt;a href=&quot;http://nbviewer.jupyter.org/github/h3imdallr/Portfolio-DataAnalysis/blob/master/TimeS_Anomaly_Detection/STL_decomposition_NABdata.ipynb&quot;&gt;(github code)&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;구현&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;twitter R code&lt;/li&gt;
-  &lt;li&gt;Pyculiarity&lt;/li&gt;
-  &lt;li&gt;Example&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>h3imdallr</name></author><category term="data_science," /><category term="anomaly_detection" /><summary type="html">abstract
-
-  이상탐지의 기초적인 개념, 시계열 데이터의 기본적 이해, 이를 통한 시계열 이상탐지 방법 소개
-  code/ipynb provided - STL decomposition</summary></entry></feed>
+&lt;p&gt;Aliquip enim artisan dolor post-ironic. Pug tote bag Marfa, deserunt pour-over Portland wolf eu odio intelligentsia american apparel ugh ea. Sunt viral et, 3 wolf moon gastropub pug id. Id fashion axe est typewriter, mlkshk Portland art party aute brunch. Sint pork belly Cosby sweater, deep v mumblecore kitsch american apparel. Try-hard direct trade tumblr sint skateboard. Adipisicing bitters excepteur biodiesel, pickled gastropub aute veniam.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 22 May 2012 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/h3imdallr/2012-05-22/readability-post/</link>
+        <guid isPermaLink="true">http://localhost:4000/h3imdallr/2012-05-22/readability-post/</guid>
+      </item>
+    
+  </channel>
+</rss>
