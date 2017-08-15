@@ -1,4 +1,17 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-06-20T17:19:44+09:00</updated><id>http://localhost:4000//</id><title type="html">After Image</title><subtitle>Technology, Data Science and Investment</subtitle><entry><title type="html">Anomaly Detection</title><link href="http://localhost:4000/data_science/2017/06/20/anomaly_detection/" rel="alternate" type="text/html" title="Anomaly Detection" /><published>2017-06-20T09:00:00+09:00</published><updated>2017-06-20T09:00:00+09:00</updated><id>http://localhost:4000/data_science/2017/06/20/anomaly_detection</id><content type="html" xml:base="http://localhost:4000/data_science/2017/06/20/anomaly_detection/">&lt;h4 id=&quot;abstract&quot;&gt;abstract&lt;/h4&gt;
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>gradient descent</title>
+    <description>Data-Driven Journal</description>
+    <link>https://h3imdallr.github.io/</link>
+    <atom:link href="https://h3imdallr.github.io/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Tue, 15 Aug 2017 15:04:51 +0900</pubDate>
+    <lastBuildDate>Tue, 15 Aug 2017 15:04:51 +0900</lastBuildDate>
+    <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>이상탐지 Anomaly Detection</title>
+        <description>&lt;h4 id=&quot;abstract&quot;&gt;abstract&lt;/h4&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;em&gt;이상탐지의 기초적인 개념, 시계열 데이터의 기본적 이해, 이를 통한 시계열 이상탐지 방법 소개&lt;/em&gt;&lt;/li&gt;
   &lt;li&gt;&lt;em&gt;code/ipynb provided&lt;/em&gt; - &lt;a href=&quot;http://nbviewer.jupyter.org/github/h3imdallr/Portfolio-DataAnalysis/blob/master/TimeS_Anomaly_Detection/STL_decomposition_NABdata.ipynb&quot;&gt;STL decomposition&lt;/a&gt;&lt;/li&gt;
@@ -8,7 +21,7 @@
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://www.slideshare.net/arunkejariwal/statistical-learning-based-anomaly-detection-twitter&quot;&gt;Statistical Learning Based Anomaly Detection @Twitter&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/twitter/AnomalyDetection&quot;&gt;Anomaly Detection Twitter Github&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://blog.twitter.com/2015/introducing-practical-and-robust-anomaly-detection-in-a-time-series&quot;&gt;Twitter’s Blog on Anomaly Detection &lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blog.twitter.com/2015/introducing-practical-and-robust-anomaly-detection-in-a-time-series&quot;&gt;Twitter’s Blog on Anomaly Detection &lt;/a&gt;  &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h4 id=&quot;anomaly-definition&quot;&gt;Anomaly Definition:&lt;/h4&gt;
@@ -18,7 +31,7 @@
 &lt;p&gt;Anomaly Detection 은 그 자체가 알고리즘이라기 보다는 ‘목표하는바/기대하는 결과’에 해당하며, 여러 알고리즘과 분석론을 활용한 ‘분석 application’ 이라고 볼 수 있다. 따라서, 해결하고자 하는 문제의 목적과 컨텍스트에 따라 이상탐지 목적은 상이해 질 수 있다. &lt;br /&gt;
 이상탐지의 문제 특징(Problem Characteristics) 파악 및 구체적 분석방법론 수립시 고려할 사항들은 아래와 같다.&lt;/p&gt;
 
-&lt;p&gt;(1) 목적(Objectives)&lt;/p&gt;
+&lt;p&gt;(1) 목적(Objectives)  &lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;기회 탐지 Chance discovery (Positive anomaly)&lt;/li&gt;
@@ -27,7 +40,7 @@
   &lt;li&gt;노이즈 제거 Noise Removal&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;(2) 입력 데이터의 특성(Nature of input data)&lt;/p&gt;
+&lt;p&gt;(2) 입력 데이터의 특성(Nature of input data)  &lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;시계열 Time-Series(sequential) vs Static&lt;/li&gt;
@@ -37,12 +50,12 @@
   &lt;li&gt;(기존 룰의 적용이 가능할 만큼) 잘 알려진/알려져 있지 않은 Well-known or not (rule existing or not)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;(3) 이상값의 종류(Type of anomaly)&lt;/p&gt;
+&lt;p&gt;(3) 이상값의 종류(Type of anomaly)  &lt;/p&gt;
 
 &lt;p&gt;이상값의 종류는 보는 시간에 따라 다를 수 있어 엄밀한 규정을 하긴 어렵다.&lt;br /&gt;
-미네소타 대학의 Survey paper에는 아래와 같이 규정하고 있다. (source: &lt;Anomaly Detection:=&quot;&quot; A=&quot;&quot; Survey=&quot;&quot;&gt;, 2009, Varun Chandola)&lt;/Anomaly&gt;&lt;/p&gt;
+미네소타 대학의 Survey paper에는 아래와 같이 규정하고 있다. (source: &lt;anomaly detection:=&quot;&quot; a=&quot;&quot; survey=&quot;&quot;&gt;, 2009, Varun Chandola)&lt;/anomaly&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/figure-post/20161123-taxonomy.png&quot; alt=&quot;taxonomy of anomaly detection&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/figures-h3imdallr/20161123-taxonomy.png&quot; alt=&quot;taxonomy of anomaly detection&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;위의 분류를 최대한 간소화 시키면, 결국 축적된 시간동안 정적인 점분포에 초점을 맞추는 Point anomaly 와, 시계열적인 동적인 특성에 주안을 두는 Context anomaly로 구분 지을수 있다.&lt;/p&gt;
 
@@ -65,22 +78,23 @@
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;앞서 밝혔듯, 이는 굉장히 단순화 시킨 구분이고, 결국 이상탐지를 위해선 ‘정상 상태’를 규정해야하고, 이는 당면한 과제, 도메인 특성에 따라 상이하게 달라진다. 아래는 다양한 방법으로 이상탐지가 분석 될 수 있음을 내포한다.&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
+앞서 밝혔듯, 이는 굉장히 단순화 시킨 구분이고, 결국 이상탐지를 위해선 ‘정상 상태’를 규정해야하고, 이는 당면한 과제, 도메인 특성에 따라 상이하게 달라진다. 아래는 다양한 방법으로 이상탐지가 분석 될 수 있음을 내포한다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/figure-post/20161123-schema.png&quot; alt=&quot;schema&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/figures-h3imdallr/20161123-schema.png&quot; alt=&quot;schema&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;contextual-anomaly---&quot;&gt;Contextual Anomaly 분석 방법의 이해&lt;/h3&gt;
 
 &lt;h4 id=&quot;a---&quot;&gt;A. 시계열 데이터 이해&lt;/h4&gt;
 
 &lt;p&gt;본 글에서 소개하는 이상탐지 기법(S-H-ESD)의 이해를 위해서는 시계열 패턴 요소의 선행적 이해가 요구된다.&lt;br /&gt;
-&lt;img src=&quot;/figure-post/20161123-TS_pattern.png&quot; alt=&quot;TSpattern&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;/figures-h3imdallr/20161123-TS_pattern.png&quot; alt=&quot;TSpattern&quot; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;추세(Trend): 장기적으로 나타나는 변동 패턴&lt;/li&gt;
   &lt;li&gt;계절성(Seasonal): 주,월,분기,반기 단위 등 이미 알려진 시간의 주기로 나타나는 패턴&lt;/li&gt;
   &lt;li&gt;주기(Cyclic): 최소 2 년 단위로 나타나는 고정된 기간이 아닌 장기적인 변동&lt;/li&gt;
-  &lt;li&gt;랜덤요소/잔차 (Random/Residual/Remainder): 그 이외의 성분&lt;/li&gt;
+  &lt;li&gt;랜덤요소/잔차 (Random/Residual/Remainder): 그 이외의 성분  &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h4 id=&quot;b-s-h-esd--&quot;&gt;B. S-H-ESD 기법의 이해&lt;/h4&gt;
@@ -120,7 +134,8 @@
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;위 표에서 밝힌 S-H-ESD 기법을 좀더 자세히 이해하려면, 다음과 같은 통계학적 개념들의 이해가 요구된다.&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;
+위 표에서 밝힌 S-H-ESD 기법을 좀더 자세히 이해하려면, 다음과 같은 통계학적 개념들의 이해가 요구된다.&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Median Absolute Deviation(MAD)&lt;/li&gt;
@@ -131,7 +146,7 @@
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;strong&gt;Median Absolute Deviation(MAD)&lt;/strong&gt; - 중위수(중앙값) 절대 편차 : &lt;br /&gt;
-중위수 절대 편차는 표본그룹의 중앙값( $𝑋$ )과 각 표본( $ \bar { X } $ )의 차이값의 절대값을 취해서 중앙값을 추출하는 방법. 양적 자료의 퍼짐을 알고 싶을 때, 표본분산과 표준편차 보다 이상치에 덜 영향을 받는 강건성 robustness 있는 분산 측정 방법.&lt;/p&gt;
+중위수 절대 편차는 표본그룹의 중앙값( $𝑋$ )과 각 표본( $ \bar { X } $ )의 차이값의 절대값을 취해서 중앙값을 추출하는 방법. 양적 자료의 퍼짐을 알고 싶을 때, 표본분산과 표준편차 보다 이상치에 덜 영향을 받는 강건성 robustness 있는 분산 측정 방법.   &lt;/p&gt;
 
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;MAD = median_{i} |X_{i} - \bar{X}|
 \\ \sigma_{MAD} = K \cdot MAD
@@ -140,47 +155,270 @@
 &lt;p&gt;&lt;strong&gt;Student t-distribution:&lt;/strong&gt;&lt;br /&gt;
 t-분포는 정규분포 &lt;script type=&quot;math/tex&quot;&gt;(\mu, {\sigma}^{2})&lt;/script&gt;에서 &lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt; 개의 표본들을 확률변수로 정의 &lt;script type=&quot;math/tex&quot;&gt;(\bar{X} = 𝑋_{1},...𝑋_{n})&lt;/script&gt;한 확률 분포이다. 이 확률 분포 또한 정규분포&lt;script type=&quot;math/tex&quot;&gt;(\mu, {\sigma}^{2}/n)&lt;/script&gt;이며, 이를 수식으로 나타내면 아래와 같다.&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\bar{X} \sim  N(\mu, {\sigma}^{2}/n )&lt;/script&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt; \bar{X} \sim  N(\mu, {\sigma}^{2}/n ) &lt;/script&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\\ T = \frac { \bar{X} - /mu }{ S/\sqrt{n}  }&lt;/script&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\\ T = \frac { \bar{X} - /mu }{ S/\sqrt{n}  } &lt;/script&gt;
 
 &lt;p&gt;&lt;strong&gt;Grubb’s test(=ESD test)&lt;/strong&gt;&lt;br /&gt;
 단일 이상치를 테스트 하는데 ESD test 방법은 널리 알려진 기법이다. ESD 검증 방법의 상세한 설명은 본 보고서에서 생략하며, 주요 수식표현은 아래와 같다. - &lt;a href=&quot;https://en.wikipedia.org/wiki/Grubbs%27_test_for_outliers&quot;&gt;참고:wiki&lt;/a&gt;&lt;br /&gt;
-ESD 검정은 아래와 같은 귀무가설/대립가설을 통해 검정한다.&lt;/p&gt;
+ESD 검정은 아래와 같은 귀무가설/대립가설을 통해 검정한다.  &lt;/p&gt;
 
-&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;H_{0}: \text{데이터 셋에 이상치가 없다}&lt;/script&gt;
-&lt;script type=&quot;math/tex&quot;&gt;H_{\alpha}: \text{ 데이터 셋에 최소한 하나의 이상치가 존재한다.}&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt; H_{0}: \text{데이터 셋에 이상치가 없다} &lt;/script&gt;
+&lt;script type=&quot;math/tex&quot;&gt; H_{\alpha}: \text{ 데이터 셋에 최소한 하나의 이상치가 존재한다.}&lt;/script&gt;  &lt;/p&gt;
 
 &lt;p&gt;아래 정의와 같은 G 값을 통해 outlier 인지 판별한다.&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;G = max |Y_{i} - \bar{Y}|/s \\ Y: sample mean, s: standard deviation&lt;/script&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt; G = max |Y_{i} - \bar{Y}|/s \\ Y: sample mean, s: standard deviation&lt;/script&gt;
 
-&lt;p&gt;최대값과 최소값을 둘 다 검정하는 two-sided test 에서, 이상치가 없다는 귀무가설은 significance level( $\alpha$ ) 가 아래를 만족할시 기각된다.&lt;/p&gt;
+&lt;p&gt;최대값과 최소값을 둘 다 검정하는 two-sided test 에서, 이상치가 없다는 귀무가설은 significance level( $\alpha$ ) 가 아래를 만족할시 기각된다.  &lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;G &gt; \frac{N-1}{\sqrt{N}} \sqrt{\frac{t^{2}_{\alpha(2N), N-2}}{N-2+t^{2}_{\alpha(2N), N-2}}}
-\\ t^{2}_{\alpha(2N), N-2}: \text{upper critical value of the 't-test' with}
-\\ \text{ N-2 degrees of freedom and significance level of} \alpha/{2N}&lt;/script&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt; G &gt; \frac{N-1}{\sqrt{N}} \sqrt{\frac{t^{2}_{\alpha(2N), N-2}}{N-2+t^{2}_{\alpha(2N), N-2}}}
+\\ t^{2}_{\alpha(2N), N-2}: \text{upper critical value of the &#39;t-test&#39; with}
+\\ \text{ N-2 degrees of freedom and significance level of} \alpha/{2N} &lt;/script&gt;
 
 &lt;p&gt;ESD 테스트는 정상성 (normality) 를 가정하고, 단일 이상치를 탐지하는데 적합하다는 한계 때문에, 시계열과 같은 연속적 데이터에서 지속적으로 이상탐지를 해야하는 경우, 아래와 같은 Generalized ESD 의 사용이 권장된다.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Generalized Extreme Studentized Deviate (Generalized ESD):&lt;/strong&gt;&lt;br /&gt;
 Generalized ESD 는 Grubb’s test와 달리 여러개의 outlier를 가정한 검정방법임. 가장 높은 G 밸류를 제거해 나가면서 지속적으로 순회하여 평균과 표준편차를 업데이트해나가는 방식.&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;R_{i} = max |x_{i} -\bar{x}|/s
+&lt;script type=&quot;math/tex; mode=display&quot;&gt; R_{i} = max |x_{i} -\bar{x}|/s
 \\ \lambda_{i} &gt; \frac{(N-1)\cdot t_{p,n-i-1}}{\sqrt{(N-i-1+t^{2}_{p,n-i-1}) (n-i+1)}}&lt;/script&gt;
 
-&lt;p&gt;위에 명시된 Critical Value($\lambda_{i}$) 또한 지속적으로 업데이트 되며, $R_{i} &amp;gt; \lambda_{i} $를 만족하는 $i$ 가 이상값의 개수를 결정하게됨. 본 검정방법은 앞선 Grubb’s test 보다 여러개의 outlier를 검출 할 수 있다는 장점이 있으나, 여전히 정규성을 가정하고 있으므로, 정규성 테스트 선행이 되어야 하고, 계절성(seasonality)을 고려하지 않는 단점이 있다.&lt;/p&gt;
+&lt;p&gt;위에 명시된 Critical Value($\lambda&lt;em&gt;{i}$) 또한 지속적으로 업데이트 되며, $R&lt;/em&gt;{i} &amp;gt; \lambda_{i} $를 만족하는 $i$ 가 이상값의 개수를 결정하게됨. 본 검정방법은 앞선 Grubb’s test 보다 여러개의 outlier를 검출 할 수 있다는 장점이 있으나, 여전히 정규성을 가정하고 있으므로, 정규성 테스트 선행이 되어야 하고, 계절성(seasonality)을 고려하지 않는 단점이 있다.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Seasonal Trend decomposition using Loess(STL):&lt;/strong&gt; &lt;br /&gt;
 STL은 시계열 데이터에서 계절성, 추세, 잔차 세가지 패턴요소로 분해하는 기법으로 (본문 전반부 참조), seasonality와 trend를 제거하면, 이상탐지에 적합한 residual만 남게 된다.
-&lt;a href=&quot;http://nbviewer.jupyter.org/github/h3imdallr/Portfolio-DataAnalysis/blob/master/TimeS_Anomaly_Detection/STL_decomposition_NABdata.ipynb&quot;&gt;(github code)&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&quot;http://nbviewer.jupyter.org/github/h3imdallr/Portfolio-DataAnalysis/blob/master/Anomaly_Detection/anom_output.ipynb&quot;&gt;(github code)&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;구현&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Python 을 이용한 S-H-ESD 알고리즘 구현&lt;/strong&gt;  &lt;/p&gt;
+
 &lt;ul&gt;
-  &lt;li&gt;twitter R code&lt;/li&gt;
-  &lt;li&gt;Pyculiarity&lt;/li&gt;
-  &lt;li&gt;Example&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>h3imdallr</name></author><category term="data_science," /><category term="anomaly_detection" /><summary type="html">abstract
+  &lt;li&gt;&lt;a href=&quot;http://nbviewer.jupyter.org/github/h3imdallr/Portfolio-DataAnalysis/blob/master/Anomaly_Detection/anom_output.ipynb&quot;&gt;구현예시: jupyter notebook&lt;/a&gt;  &lt;/li&gt;
+&lt;/ul&gt;
 
-  이상탐지의 기초적인 개념, 시계열 데이터의 기본적 이해, 이를 통한 시계열 이상탐지 방법 소개
-  code/ipynb provided - STL decomposition</summary></entry></feed>
+&lt;p&gt;앞서 소개하였듯이, 이상탐지를 위한 S-H-ESD 알고리즘은 Twitter 사가 처음 제안하였으며, 이를 실제 구현한 R 코드 또한 Twitter 공식 깃헙(Github) 페이지에 오픈소스로 공개되어 있다. (GNU Public License) (&lt;a href=&quot;https://github.com/twitter/AnomalyDetection&quot;&gt;링크&lt;/a&gt; 본 포스팅에서는 이를 좀더 시스템 친화적인 프로그래밍 언어인 Python 으로 변환 구현해 Times Series상에서 이상값 검출 유즈케이스를 소개한다.&lt;/p&gt;
+
+&lt;p&gt;Python 으로 S-H-ESD 기반의 Anomaly Detection 기능을 변환(porting)한 오픈 소스 패키지 또한 존재하므로, ( &lt;a href=&quot;https://github.com/nicolasmiller/pyculiarity&quot;&gt;pyculiarity / github&lt;/a&gt; ) 본 사례연구/구현에서는 해당 패키지를 기반으로 구현되어 있다. 다만 해당 패키지에서는 순수 Python 라이브러리 외에 R 의 인스톨을 요구하는 rpy2 라는 다소 불편하고 시스템 이식성이 떨어지는 라이브러리를 중심적으로 활용한다. 이에 본 사례적용 케이스에서는 Python 친화적이고 기계학습/통계에서 major 한 패키지(statsmodel) 를 활용하여 성능을 좀더 업그레이드 하였다. 아래는 패키지 구성과 기능 상세와 구현 방법에 대한 설명이다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/figures-h3imdallr/20161123-packages.png&quot; alt=&quot;package&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;“detect_ts.py” 는 anomaly detection 분석의 최상위 모듈로, 후에 resampling을 위해 시계열 데이터 granularity check을 (분/시간/일/월) 하고 기타 여러 옵션기능들에 대한 파라미터 값들의 에러핸들링(parameter sanity check)을 기본적으로 수행한다. 그리고 “detect_anoms.py”를 호출해 이상검출을 실시한다. 실제로 이상탐지에 가장 중요한 기능들은 이 “detect_anoms.py”에서 수행되는데, 다양한 주기/단위 ( e.g. 30초, 1분, 3분,1일 )로 수집된 시계열 데이터를 모두 수용할 수 있기 위해 데이터 시계열 단위를 지정하여 새로 변환하는 resampling 기능을 우선적으로 수행한다. 그리고 S-H-ESD 알고리즘의 핵심적 세가지 기능을 수행하는데, 첫째로 시계열 데이터의 multi- modality로 인한 오차를 줄이기 위해 seasonal, trend, residual로 분해한다. 이 분해된 decomposed data에서 residual을 추출하여 이 데이터의 MAD 값을 얻어낸 후, Generalized ESD를 통해 이상치를 검출한다. (STL, MAD, Generalized ESD의 이론적 이해는 본문 윗절 참조.)  &lt;/p&gt;
+
+&lt;p&gt;STL를 통해 decomposing을 하는 방법에서, 앞서 언급하였듯이 기존 Twitter를 그대로 Porting한 pyculiarity 패키지에서는 R함수를 Python을 위해 포팅 해주는 rpy2라는 외부 패키지를 활용해 구현하였다. 하지만 rpy2는 R의 설치를 요구하고 R이 실행된 상태를 가정하기 때문에, 추가적인 종속성과 시스템 자원을 요구한다. 때문에 시스템 호환성/이식성/ 성능 등에 영향을 필연적으로 미치게 되어있다. 이러한 문제 때문에, 본 프로젝트 및 사례연구를 위해서 rpy2의 패키지를 대체하는 라이브러리를 statsmodel을 기반으로 새로 작성하였다.(ym_stl.py, ym_seasonal.py, ym_freq_to_period.py)&lt;/p&gt;
+
+&lt;p&gt;Anomaly Detection 기능을 이용하기 위해서는 detect_ts.py를 호출하는 스크립트를 실행하면 된다. 아래는 detect_ts.py를 호출하여 anomaly를 검출하는 스크립트 예시이다. 단순히 anomaly를 검출하는데 벗어나, 검출값들을 시각화 하고자 하면, 본 절 젤 상위 예시코드 참조.&lt;/p&gt;
+
+&lt;p&gt;```python&lt;br /&gt;
+  from pyculiarity import detect_ts import pandas as pd
+  n_file = ‘filename’
+  timeS_DF = pd.read_csv(‘./data/%s.csv’% n_file, usecols = [‘col1(time)’, ‘col2(value)’])
+  results = detect_ts(timeS_DF, max_anoms=0.02, direction=’pos’, only_last=None)&lt;/p&gt;
+
+&lt;p&gt;print ‘»&amp;gt; the number of anomaly: ‘, len(results[‘anoms’]) print results[‘anoms’]
+  ```&lt;/p&gt;
+
+&lt;p&gt;아래는 MAD와 generalized ESD으로 S-H-ESD 기능을 구현한 부분이다.&lt;/p&gt;
+
+&lt;p&gt;```python&lt;br /&gt;
+  for i in range(1, max_outliers + 1):
+      if one_tail:
+          if upper_tail:
+              ares = data.value - data.value.median()
+          else:
+              ares = data.value.median() - data.value
+      else:
+          ares = (data.value - data.value.median()).abs()      &lt;br /&gt;
+      data_sigma = mad(data.value)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;  if data_sigma == 0:
+      break
+
+  ares = ares/float(data_sigma)
+  R = ares.max()
+  temp_max_idx = ares[ares == R].index.tolist()[0]
+  R_idx[i - 1] = temp_max_idx
+  data = data[data.index != R_idx[i - 1]]
+  if one_tail:
+      p = 1 - alpha / float(n - i + 1)
+  else:
+      p = 1 - alpha / float(2 * (n - i + 1))
+  t = student_t.ppf(p, (n - i - 1))
+  lam = t * (n - i) / float(sqrt((n - i - 1 + t**2) * (n - i + 1)))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;if R &amp;gt; lam:
+      num_anoms = i
+```
+&lt;strong&gt;성능평가 및 검증&lt;/strong&gt;  &lt;/p&gt;
+
+&lt;p&gt;현재 Twitter 사에서 개방한 R 기반 S-H-ESD 패키지에 대해서 성능평가는 다수 진행되었고, 대체로 공개 솔루션 중 가장 좋은 평가를 받는다.
+Twitter 의 Anomaly Detection 은 우선 아래와 같은 주요 특징적 기능들이 있다.(파라미터이기도 함)&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;&lt;strong&gt;Key Features&lt;/strong&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;- 이상치의 방향 (direction = positive/negative ) &lt;br /&gt; - 전역적&amp;amp;지역적 이상치 (global/local anomaly) &lt;br /&gt; - 최근 하루/한시간(last day/hour) &lt;br /&gt; - 기대값(expected value) &lt;br /&gt; 장기적 추세에 따른 이상탐지(long term)&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;br /&gt;
+아래는 twitter 사의 이상탐지 패키지의 성능 벤치마크를 진행한 내용에 대한 링크이다.
+-  Anomali.io: https://anomaly.io/anomaly-detection-twitter-r/
+-  NUMENTA: Evaluating Real-time Anomaly Detection Algorithms – the Numenta Anomaly
+Benchmark (논문)  &lt;/p&gt;
+
+&lt;p&gt;위 벤치마크에 따르면, 이상치를 잘 탐지하거나 그렇지 못한 경우는 아래와 같다.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;&lt;strong&gt;Detected&lt;/strong&gt;&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;&lt;strong&gt;Not Detected&lt;/strong&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;- 노이즈의 증가 (More noise) &lt;br /&gt; - 급작스런 상승, 급등점 (Sudden grow; spike) &lt;br /&gt; - 하강(Break down) &lt;br /&gt; - 보이지 않던 희귀 값 (Activity when usually none)&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;- 점진적 증가 신호(seasonal grow) &lt;br /&gt; - 평면적 신호 (Flat signal) &lt;br /&gt; - 점진적 증가하는 신호에서의 음의방향 이상치 (Negative seasonal anomaly)&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;아래는 NUMENTA에서 제공한 데이타 셋을 통해 잘 동작하는 경우의 예시이다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/figures-h3imdallr/20161123-test-working.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;그러나 위 벤치마킹 연구에서 알려진 사실과 같이, 아래는 잘 동작하지 않았던 경우에 대한 예임.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/figures-h3imdallr/20161123-test-notworking.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;references&quot;&gt;References&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Varun Chandola, 2009, &lt;anomaly detection:=&quot;&quot; a=&quot;&quot; survey=&quot;&quot;&gt;, ACM Computing Survey 09 2009 p1-72  &lt;/anomaly&gt;&lt;/li&gt;
+  &lt;li&gt;Arindam Banerjee, &lt;anomaly detection:=&quot;&quot; a=&quot;&quot; tutorial=&quot;&quot;&gt;, United Technology Research Center  &lt;/anomaly&gt;&lt;/li&gt;
+  &lt;li&gt;이기천 한양대 교수, 2013, &lt;시계열 데이터의=&quot;&quot; 통계적=&quot;&quot; 분석방법=&quot;&quot;&gt;, 강의자료  &lt;/시계열&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.analyticsvidhya.com/blog/2015/12/complete-tutorial-time-series-modeling/&quot;&gt;A Complete Tutorial on Time Series Modeling&lt;/a&gt;  &lt;/li&gt;
+  &lt;li&gt;C. E. Rasmussen &amp;amp; C. K. I. Williams, Gaussian Processes for Machine Learning, the MIT Press, 2006  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://warrenmar.wordpress.com/tag/seasonal-hybrid-esd/&quot;&gt;Problem of the Month: Anomaly Detection&lt;/a&gt;  &lt;/li&gt;
+  &lt;li&gt;Arun Kejariwal, Statistical Learning Based Anomaly Detection @ Twitter, Nov 2014  &lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        <pubDate>Tue, 20 Jun 2017 09:00:00 +0900</pubDate>
+        <link>https://h3imdallr.github.io/data_science/2017/06/20/anomaly_detection.html</link>
+        <guid isPermaLink="true">https://h3imdallr.github.io/data_science/2017/06/20/anomaly_detection.html</guid>
+        
+        <category>data_science,</category>
+        
+        <category>anomaly_detection,</category>
+        
+        <category>featured</category>
+        
+        
+        <category>data_science</category>
+        
+      </item>
+    
+      <item>
+        <title>Mediator Features</title>
+        <description>&lt;h1 id=&quot;mediator-formats-and-css-features&quot;&gt;Mediator Formats and CSS features&lt;/h1&gt;
+
+&lt;p&gt;Examples for different formats and css features&lt;/p&gt;
+
+&lt;h1 id=&quot;header-formats&quot;&gt;Header Formats&lt;/h1&gt;
+&lt;p&gt;#Header1
+##Header2&lt;/p&gt;
+
+&lt;h1 id=&quot;blockquotes&quot;&gt;Blockquotes&lt;/h1&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;lists&quot;&gt;Lists&lt;/h1&gt;
+&lt;p&gt;##orderd lists
+1. one
+2. two
+3. three&lt;/p&gt;
+
+&lt;h2 id=&quot;unorderd-lists&quot;&gt;unorderd lists&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Apple&lt;/li&gt;
+  &lt;li&gt;Banana&lt;/li&gt;
+  &lt;li&gt;Plum&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;links&quot;&gt;Links&lt;/h1&gt;
+&lt;p&gt;This is an &lt;a href=&quot;http://example.com/&quot; title=&quot;With a Title&quot;&gt;example link&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h1 id=&quot;combinations&quot;&gt;Combinations&lt;/h1&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus&lt;/p&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;Apple&lt;/li&gt;
+    &lt;li&gt;Banana&lt;/li&gt;
+    &lt;li&gt;Plum&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+</description>
+        <pubDate>Sun, 30 Nov 2014 23:34:25 +0900</pubDate>
+        <link>https://h3imdallr.github.io/mediator/feature/2014/11/30/mediator_features.html</link>
+        <guid isPermaLink="true">https://h3imdallr.github.io/mediator/feature/2014/11/30/mediator_features.html</guid>
+        
+        <category>featured</category>
+        
+        
+        <category>mediator</category>
+        
+        <category>feature</category>
+        
+      </item>
+    
+      <item>
+        <title>Welcome to Jekyll!</title>
+        <description>&lt;p&gt;You’ll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code&gt;jekyll serve --watch&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+
+&lt;p&gt;To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Tom&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &amp;#39;Hi, Tom&amp;#39; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://github.com/jekyll/jekyll-help&quot;&gt;Jekyll’s dedicated Help repository&lt;/a&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;footer&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;site-footer&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+ &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;subscribe&amp;quot;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;href&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;/feed.xml&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;span&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;tooltip&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;fa fa-rss&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;/i&amp;gt; Subscribe!&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;inner&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;
+   &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;section&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;copyright&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;All&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;content&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;copyright&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;href&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;mailto:ymjung.joshua@gmail.com&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Josh&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Yongmin&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Jung&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;/a&amp;gt; &amp;amp;copy; 2017 &amp;amp;bull; All rights reserved.&amp;lt;/section&amp;gt;&lt;/span&gt;
+   &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;section&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;poweredby&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Made&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;href&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;http://jekyllrb.com&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Jekyll&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;/a&amp;gt;&amp;lt;/section&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;/div&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;/footer&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+</description>
+        <pubDate>Fri, 29 Aug 2014 23:34:25 +0900</pubDate>
+        <link>https://h3imdallr.github.io/jekyll/update/2014/08/29/welcome-to-jekyll.html</link>
+        <guid isPermaLink="true">https://h3imdallr.github.io/jekyll/update/2014/08/29/welcome-to-jekyll.html</guid>
+        
+        <category>featured</category>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+  </channel>
+</rss>

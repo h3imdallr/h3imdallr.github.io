@@ -4,11 +4,12 @@ published: True
 title:      "이상탐지 Anomaly Detection"
 subtitle:   "시계열 이상탐지 중심으로 time series anomaly detection"
 date:   2017-06-20 00:00:00
-author:     "h3imdallr"
+author:     "Josh Yongmin Jung"
 categories: data_science
-tags: data_science, anomaly_detection
-header-img: "figures-h3imdallr/20161123-header-anomaly.jpg"
+tags: data_science, anomaly_detection, featured
+image: "/figures-h3imdallr/20161123-header-anomaly.jpg"
 ---
+
 
 
 #### abstract
@@ -57,7 +58,7 @@ Anomaly Detection 은 그 자체가 알고리즘이라기 보다는 ‘목표하
 | Contextual anomaly  | Statistics(Gaussian Process Regression, S-H-ESD ...) |  
 
 
-
+<br>  
 앞서 밝혔듯, 이는 굉장히 단순화 시킨 구분이고, 결국 이상탐지를 위해선 '정상 상태'를 규정해야하고, 이는 당면한 과제, 도메인 특성에 따라 상이하게 달라진다. 아래는 다양한 방법으로 이상탐지가 분석 될 수 있음을 내포한다.
 
 ![schema](/figures-h3imdallr/20161123-schema.png)
@@ -91,8 +92,7 @@ SNS 서비스인 트위터는 기존의 통계적 방법들을 조합하여 시�
 | 1. Use Robust Statistics/Metric: <br/> &nbsp; a. Median Absolute Deviation(MAD) <br/>&nbsp; b. Grubb’s Test& Generalized Extreme Studentized Deviate (ESD)|
 | 2. Remove impact of seasonality and trend (Multi-modality aware): <br/> &nbsp; a. Seasonal Trend decomposition using Loess(STL) |
 
-
-
+<br>
 위 표에서 밝힌 S-H-ESD 기법을 좀더 자세히 이해하려면, 다음과 같은 통계학적 개념들의 이해가 요구된다.
 
 
@@ -170,46 +170,46 @@ STL를 통해 decomposing을 하는 방법에서, 앞서 언급하였듯이 기�
 
 Anomaly Detection 기능을 이용하기 위해서는 detect_ts.py를 호출하는 스크립트를 실행하면 된다. 아래는 detect_ts.py를 호출하여 anomaly를 검출하는 스크립트 예시이다. 단순히 anomaly를 검출하는데 벗어나, 검출값들을 시각화 하고자 하면, 본 절 젤 상위 예시코드 참조.
 
-```python
-from pyculiarity import detect_ts import pandas as pd
-n_file = 'filename'
-timeS_DF = pd.read_csv('./data/%s.csv'% n_file, usecols = ['col1(time)', 'col2(value)'])
-results = detect_ts(timeS_DF, max_anoms=0.02, direction='pos', only_last=None)
+  ```python  
+  from pyculiarity import detect_ts import pandas as pd
+  n_file = 'filename'
+  timeS_DF = pd.read_csv('./data/%s.csv'% n_file, usecols = ['col1(time)', 'col2(value)'])
+  results = detect_ts(timeS_DF, max_anoms=0.02, direction='pos', only_last=None)
 
-print '>>> the number of anomaly: ', len(results['anoms']) print results['anoms']
-```
+  print '>>> the number of anomaly: ', len(results['anoms']) print results['anoms']
+  ```
 
-아래는 MAD와 generalized ESD으로 S-H-ESD 기능을 구현한 부분이다.
+  아래는 MAD와 generalized ESD으로 S-H-ESD 기능을 구현한 부분이다.
 
 
-```python
-for i in range(1, max_outliers + 1):
-    if one_tail:
-        if upper_tail:
-            ares = data.value - data.value.median()
-        else:
-            ares = data.value.median() - data.value
-    else:
-        ares = (data.value - data.value.median()).abs()        
-    data_sigma = mad(data.value)
+  ```python  
+  for i in range(1, max_outliers + 1):
+      if one_tail:
+          if upper_tail:
+              ares = data.value - data.value.median()
+          else:
+              ares = data.value.median() - data.value
+      else:
+          ares = (data.value - data.value.median()).abs()        
+      data_sigma = mad(data.value)
 
-    if data_sigma == 0:
-        break
+      if data_sigma == 0:
+          break
 
-    ares = ares/float(data_sigma)
-    R = ares.max()
-    temp_max_idx = ares[ares == R].index.tolist()[0]
-    R_idx[i - 1] = temp_max_idx
-    data = data[data.index != R_idx[i - 1]]
-    if one_tail:
-        p = 1 - alpha / float(n - i + 1)
-    else:
-        p = 1 - alpha / float(2 * (n - i + 1))
-    t = student_t.ppf(p, (n - i - 1))
-    lam = t * (n - i) / float(sqrt((n - i - 1 + t**2) * (n - i + 1)))
+      ares = ares/float(data_sigma)
+      R = ares.max()
+      temp_max_idx = ares[ares == R].index.tolist()[0]
+      R_idx[i - 1] = temp_max_idx
+      data = data[data.index != R_idx[i - 1]]
+      if one_tail:
+          p = 1 - alpha / float(n - i + 1)
+      else:
+          p = 1 - alpha / float(2 * (n - i + 1))
+      t = student_t.ppf(p, (n - i - 1))
+      lam = t * (n - i) / float(sqrt((n - i - 1 + t**2) * (n - i + 1)))
 
-if R > lam:
-    num_anoms = i
+  if R > lam:
+      num_anoms = i
 ```
 **성능평가 및 검증**  
 
@@ -220,7 +220,7 @@ Twitter 의 Anomaly Detection 은 우선 아래와 같은 주요 특징적 기�
 | :------------ |
 | - 이상치의 방향 (direction = positive/negative ) <br/> - 전역적&지역적 이상치 (global/local anomaly) <br/> - 최근 하루/한시간(last day/hour) <br/> - 기대값(expected value) <br/> 장기적 추세에 따른 이상탐지(long term)  |
 
-
+<br/>
 아래는 twitter 사의 이상탐지 패키지의 성능 벤치마크를 진행한 내용에 대한 링크이다.
 -  Anomali.io: https://anomaly.io/anomaly-detection-twitter-r/
 -  NUMENTA: Evaluating Real-time Anomaly Detection Algorithms – the Numenta Anomaly
@@ -231,6 +231,8 @@ Benchmark (논문)
 | **Detected** | **Not Detected** |
 | :------------ | :------------ |
 | - 노이즈의 증가 (More noise) <br/> - 급작스런 상승, 급등점 (Sudden grow; spike) <br/> - 하강(Break down) <br/> - 보이지 않던 희귀 값 (Activity when usually none) | - 점진적 증가 신호(seasonal grow) <br/> - 평면적 신호 (Flat signal) <br/> - 점진적 증가하는 신호에서의 음의방향 이상치 (Negative seasonal anomaly)|
+
+<br>
 
 아래는 NUMENTA에서 제공한 데이타 셋을 통해 잘 동작하는 경우의 예시이다.
 
@@ -244,14 +246,9 @@ Benchmark (논문)
 #### References
 
 1. Varun Chandola, 2009, <Anomaly Detection: A Survey>, ACM Computing Survey 09 2009 p1-72  
-
 2. Arindam Banerjee, <Anomaly Detection: A Tutorial>, United Technology Research Center  
-
 3. 이기천 한양대 교수, 2013, <시계열 데이터의 통계적 분석방법>, 강의자료  
-
 4. [A Complete Tutorial on Time Series Modeling](https://www.analyticsvidhya.com/blog/2015/12/complete-tutorial-time-series-modeling/)  
-
 5. C. E. Rasmussen & C. K. I. Williams, Gaussian Processes for Machine Learning, the MIT Press, 2006  
-
 6. [Problem of the Month: Anomaly Detection](https://warrenmar.wordpress.com/tag/seasonal-hybrid-esd/)  
 7. Arun Kejariwal, Statistical Learning Based Anomaly Detection @ Twitter, Nov 2014  

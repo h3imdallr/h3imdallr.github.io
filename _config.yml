@@ -1,25 +1,62 @@
-# Site settings
-title: gradient descent
-header-img: img/home-bg.jpg
-email: ymjung.joshua@gmail.com
-copyright_name: Josh Yongmin Jung
-description: "Tech/Investment/Datascience"
-baseurl: ""
-url: "http://h3imdallr.github.io"
-twitter_username:
-github_username:  h3imdallr
-facebook_username: josh.jung.1986
-email_username:
-
-# Google Analytics
-# To enable google analytics, uncomment below line with a valid Google Tracking ID
-# google_tracking_id:
-
 # Build settings
-markdown: kramdown
-highlighter: rouge
-permalink: pretty
-paginate: 5
-exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+gems:
+  - jemoji
+  - jekyll-paginate
 
-gems: [jekyll-paginate, jekyll-feed]
+# Site settings
+title: "gradient descent"
+description:  Data-Driven Journal
+
+email: ymjung.joshua@gmail.com
+#blog logo
+logo: "/assets/images/df_logo.jpg"
+float_logo: true # true, false (default)
+
+# blog cover
+cover: "/assets/images/cA4aKEIPQrerBnp1yGHv_IMG_9534-3-2.jpg"
+
+name: 'Josh Yongmin Jung'
+author: 'Josh Yongmin Jung'
+author_image: "/assets/images/author.jpg"
+
+paginate:	5
+
+url: "https://h3imdallr.github.io" # the base hostname & protocol for your site
+baseurl: ""
+#used to display twitter cards
+# twitter_handle: ''
+
+#fill in disqus shortname to use disqus
+#disqus: disqus-shortname
+
+#google_analytics: UA-XXXXX-X
+
+# social icons and sharing options
+social:
+ #  - icon:	twitter
+ #    url:	https://twitter.com/dirkfabisch
+ #    desc: Follow me on twitter
+ #    share_url: http://twitter.com/share
+ #    share_title: ?text=
+ #    share_link: "&amp;url="
+ #
+ # - icon:	facebook
+ #   url:	https://facebook.com/josh.jung.1986
+ #   desc: Connect with me facebook
+ #   share_url: https://www.facebook.com/sharer.php
+ #   share_title: ?t=
+ #   share_link: "&amp;u="
+
+  - icon:	github
+    url:	https://github.com/h3imdallr
+    desc:	Fork me on github
+    share_url:
+    share_title:
+    share_link:
+
+#  - icon:	google-plus
+#    url:	https://google.com/???
+#    desc:	Add me on google+
+#    share_url:
+#    share_title:
+#    share_link:
