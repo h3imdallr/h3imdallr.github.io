@@ -134,7 +134,8 @@
   </tbody>
 </table>
 
-<p>앞서 밝혔듯, 이는 굉장히 단순화 시킨 구분이고, 결국 이상탐지를 위해선 ‘정상 상태’를 규정해야하고, 이는 당면한 과제, 도메인 특성에 따라 상이하게 달라진다. 아래는 다양한 방법으로 이상탐지가 분석 될 수 있음을 내포한다.</p>
+<p><br />
+앞서 밝혔듯, 이는 굉장히 단순화 시킨 구분이고, 결국 이상탐지를 위해선 ‘정상 상태’를 규정해야하고, 이는 당면한 과제, 도메인 특성에 따라 상이하게 달라진다. 아래는 다양한 방법으로 이상탐지가 분석 될 수 있음을 내포한다.</p>
 
 <p><img src="/figures-h3imdallr/20161123-schema.png" alt="schema" /></p>
 
@@ -189,7 +190,8 @@
   </tbody>
 </table>
 
-<p>위 표에서 밝힌 S-H-ESD 기법을 좀더 자세히 이해하려면, 다음과 같은 통계학적 개념들의 이해가 요구된다.</p>
+<p><br />
+위 표에서 밝힌 S-H-ESD 기법을 좀더 자세히 이해하려면, 다음과 같은 통계학적 개념들의 이해가 요구된다.</p>
 
 <ul>
   <li>Median Absolute Deviation(MAD)</li>
@@ -302,8 +304,10 @@ print results['anoms'] ``` &lt;br/&gt; 아래는 MAD와 generalized ESD으로 S-
     lam = t * (n - i) / float(sqrt((n - i - 1 + t**2) * (n - i + 1)))
 
 if R &gt; lam:
-    num_anoms = i ``` **성능평가 및 검증**  
+    num_anoms = i ```
 </code></pre>
+
+<p><strong>성능평가 및 검증</strong>  </p>
 
 <p>현재 Twitter 사에서 개방한 R 기반 S-H-ESD 패키지에 대해서 성능평가는 다수 진행되었고, 대체로 공개 솔루션 중 가장 좋은 평가를 받는다.
 Twitter 의 Anomaly Detection 은 우선 아래와 같은 주요 특징적 기능들이 있다.(파라미터이기도 함)</p>
@@ -321,7 +325,8 @@ Twitter 의 Anomaly Detection 은 우선 아래와 같은 주요 특징적 기�
   </tbody>
 </table>
 
-<p>아래는 twitter 사의 이상탐지 패키지의 성능 벤치마크를 진행한 내용에 대한 링크이다.
+<p><br />
+아래는 twitter 사의 이상탐지 패키지의 성능 벤치마크를 진행한 내용에 대한 링크이다.
 -  Anomali.io: https://anomaly.io/anomaly-detection-twitter-r/
 -  NUMENTA: Evaluating Real-time Anomaly Detection Algorithms – the Numenta Anomaly
 Benchmark (논문)  </p>
@@ -355,21 +360,11 @@ Benchmark (논문)  </p>
 <h4 id="references">References</h4>
 
 <ol>
-  <li>
-    <p>Varun Chandola, 2009, <anomaly detection:="" a="" survey="">, ACM Computing Survey 09 2009 p1-72  </anomaly></p>
-  </li>
-  <li>
-    <p>Arindam Banerjee, <anomaly detection:="" a="" tutorial="">, United Technology Research Center  </anomaly></p>
-  </li>
-  <li>
-    <p>이기천 한양대 교수, 2013, <시계열 데이터의="" 통계적="" 분석방법="">, 강의자료  </시계열></p>
-  </li>
-  <li>
-    <p><a href="https://www.analyticsvidhya.com/blog/2015/12/complete-tutorial-time-series-modeling/">A Complete Tutorial on Time Series Modeling</a>  </p>
-  </li>
-  <li>
-    <p>C. E. Rasmussen &amp; C. K. I. Williams, Gaussian Processes for Machine Learning, the MIT Press, 2006  </p>
-  </li>
+  <li>Varun Chandola, 2009, <anomaly detection:="" a="" survey="">, ACM Computing Survey 09 2009 p1-72  </anomaly></li>
+  <li>Arindam Banerjee, <anomaly detection:="" a="" tutorial="">, United Technology Research Center  </anomaly></li>
+  <li>이기천 한양대 교수, 2013, <시계열 데이터의="" 통계적="" 분석방법="">, 강의자료  </시계열></li>
+  <li><a href="https://www.analyticsvidhya.com/blog/2015/12/complete-tutorial-time-series-modeling/">A Complete Tutorial on Time Series Modeling</a>  </li>
+  <li>C. E. Rasmussen &amp; C. K. I. Williams, Gaussian Processes for Machine Learning, the MIT Press, 2006  </li>
   <li><a href="https://warrenmar.wordpress.com/tag/seasonal-hybrid-esd/">Problem of the Month: Anomaly Detection</a>  </li>
   <li>Arun Kejariwal, Statistical Learning Based Anomaly Detection @ Twitter, Nov 2014  </li>
 </ol>

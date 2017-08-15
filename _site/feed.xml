@@ -5,8 +5,8 @@
     <description>Data-Driven Journal</description>
     <link>https://h3imdallr.github.io/</link>
     <atom:link href="https://h3imdallr.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 15 Aug 2017 15:54:44 +0900</pubDate>
-    <lastBuildDate>Tue, 15 Aug 2017 15:54:44 +0900</lastBuildDate>
+    <pubDate>Tue, 15 Aug 2017 15:59:26 +0900</pubDate>
+    <lastBuildDate>Tue, 15 Aug 2017 15:59:26 +0900</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -78,7 +78,8 @@
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;앞서 밝혔듯, 이는 굉장히 단순화 시킨 구분이고, 결국 이상탐지를 위해선 ‘정상 상태’를 규정해야하고, 이는 당면한 과제, 도메인 특성에 따라 상이하게 달라진다. 아래는 다양한 방법으로 이상탐지가 분석 될 수 있음을 내포한다.&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;
+앞서 밝혔듯, 이는 굉장히 단순화 시킨 구분이고, 결국 이상탐지를 위해선 ‘정상 상태’를 규정해야하고, 이는 당면한 과제, 도메인 특성에 따라 상이하게 달라진다. 아래는 다양한 방법으로 이상탐지가 분석 될 수 있음을 내포한다.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/figures-h3imdallr/20161123-schema.png&quot; alt=&quot;schema&quot; /&gt;&lt;/p&gt;
 
@@ -133,7 +134,8 @@
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;위 표에서 밝힌 S-H-ESD 기법을 좀더 자세히 이해하려면, 다음과 같은 통계학적 개념들의 이해가 요구된다.&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;
+위 표에서 밝힌 S-H-ESD 기법을 좀더 자세히 이해하려면, 다음과 같은 통계학적 개념들의 이해가 요구된다.&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Median Absolute Deviation(MAD)&lt;/li&gt;
@@ -246,8 +248,10 @@ print results[&#39;anoms&#39;] ``` &amp;lt;br/&amp;gt; 아래는 MAD와 generali
     lam = t * (n - i) / float(sqrt((n - i - 1 + t**2) * (n - i + 1)))
 
 if R &amp;gt; lam:
-    num_anoms = i ``` **성능평가 및 검증**  
+    num_anoms = i ```
 &lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;성능평가 및 검증&lt;/strong&gt;  &lt;/p&gt;
 
 &lt;p&gt;현재 Twitter 사에서 개방한 R 기반 S-H-ESD 패키지에 대해서 성능평가는 다수 진행되었고, 대체로 공개 솔루션 중 가장 좋은 평가를 받는다.
 Twitter 의 Anomaly Detection 은 우선 아래와 같은 주요 특징적 기능들이 있다.(파라미터이기도 함)&lt;/p&gt;
@@ -265,7 +269,8 @@ Twitter 의 Anomaly Detection 은 우선 아래와 같은 주요 특징적 기�
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;아래는 twitter 사의 이상탐지 패키지의 성능 벤치마크를 진행한 내용에 대한 링크이다.
+&lt;p&gt;&lt;br /&gt;
+아래는 twitter 사의 이상탐지 패키지의 성능 벤치마크를 진행한 내용에 대한 링크이다.
 -  Anomali.io: https://anomaly.io/anomaly-detection-twitter-r/
 -  NUMENTA: Evaluating Real-time Anomaly Detection Algorithms – the Numenta Anomaly
 Benchmark (논문)  &lt;/p&gt;
@@ -299,21 +304,11 @@ Benchmark (논문)  &lt;/p&gt;
 &lt;h4 id=&quot;references&quot;&gt;References&lt;/h4&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;Varun Chandola, 2009, &lt;anomaly detection:=&quot;&quot; a=&quot;&quot; survey=&quot;&quot;&gt;, ACM Computing Survey 09 2009 p1-72  &lt;/anomaly&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Arindam Banerjee, &lt;anomaly detection:=&quot;&quot; a=&quot;&quot; tutorial=&quot;&quot;&gt;, United Technology Research Center  &lt;/anomaly&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;이기천 한양대 교수, 2013, &lt;시계열 데이터의=&quot;&quot; 통계적=&quot;&quot; 분석방법=&quot;&quot;&gt;, 강의자료  &lt;/시계열&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://www.analyticsvidhya.com/blog/2015/12/complete-tutorial-time-series-modeling/&quot;&gt;A Complete Tutorial on Time Series Modeling&lt;/a&gt;  &lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;C. E. Rasmussen &amp;amp; C. K. I. Williams, Gaussian Processes for Machine Learning, the MIT Press, 2006  &lt;/p&gt;
-  &lt;/li&gt;
+  &lt;li&gt;Varun Chandola, 2009, &lt;anomaly detection:=&quot;&quot; a=&quot;&quot; survey=&quot;&quot;&gt;, ACM Computing Survey 09 2009 p1-72  &lt;/anomaly&gt;&lt;/li&gt;
+  &lt;li&gt;Arindam Banerjee, &lt;anomaly detection:=&quot;&quot; a=&quot;&quot; tutorial=&quot;&quot;&gt;, United Technology Research Center  &lt;/anomaly&gt;&lt;/li&gt;
+  &lt;li&gt;이기천 한양대 교수, 2013, &lt;시계열 데이터의=&quot;&quot; 통계적=&quot;&quot; 분석방법=&quot;&quot;&gt;, 강의자료  &lt;/시계열&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.analyticsvidhya.com/blog/2015/12/complete-tutorial-time-series-modeling/&quot;&gt;A Complete Tutorial on Time Series Modeling&lt;/a&gt;  &lt;/li&gt;
+  &lt;li&gt;C. E. Rasmussen &amp;amp; C. K. I. Williams, Gaussian Processes for Machine Learning, the MIT Press, 2006  &lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://warrenmar.wordpress.com/tag/seasonal-hybrid-esd/&quot;&gt;Problem of the Month: Anomaly Detection&lt;/a&gt;  &lt;/li&gt;
   &lt;li&gt;Arun Kejariwal, Statistical Learning Based Anomaly Detection @ Twitter, Nov 2014  &lt;/li&gt;
 &lt;/ol&gt;

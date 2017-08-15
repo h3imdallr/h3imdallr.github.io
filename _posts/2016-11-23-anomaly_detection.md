@@ -56,8 +56,7 @@ Anomaly Detection 은 그 자체가 알고리즘이라기 보다는 ‘목표하
 | Point anomaly   | Statistics(Gaussian distribution) , Clustering, Classification         
 | Contextual anomaly  | Statistics(Gaussian Process Regression, S-H-ESD ...) |  
 
-
-
+<br/>
 앞서 밝혔듯, 이는 굉장히 단순화 시킨 구분이고, 결국 이상탐지를 위해선 '정상 상태'를 규정해야하고, 이는 당면한 과제, 도메인 특성에 따라 상이하게 달라진다. 아래는 다양한 방법으로 이상탐지가 분석 될 수 있음을 내포한다.
 
 ![schema](/figures-h3imdallr/20161123-schema.png)
@@ -91,8 +90,7 @@ SNS 서비스인 트위터는 기존의 통계적 방법들을 조합하여 시�
 | 1. Use Robust Statistics/Metric: <br/> &nbsp; a. Median Absolute Deviation(MAD) <br/>&nbsp; b. Grubb’s Test& Generalized Extreme Studentized Deviate (ESD)|
 | 2. Remove impact of seasonality and trend (Multi-modality aware): <br/> &nbsp; a. Seasonal Trend decomposition using Loess(STL) |
 
-
-
+<br/>
 위 표에서 밝힌 S-H-ESD 기법을 좀더 자세히 이해하려면, 다음과 같은 통계학적 개념들의 이해가 요구된다.
 
 
@@ -215,6 +213,7 @@ Anomaly Detection 기능을 이용하기 위해서는 detect_ts.py를 호출하�
     if R > lam:
         num_anoms = i
 ```
+
 **성능평가 및 검증**  
 
 현재 Twitter 사에서 개방한 R 기반 S-H-ESD 패키지에 대해서 성능평가는 다수 진행되었고, 대체로 공개 솔루션 중 가장 좋은 평가를 받는다.
@@ -224,7 +223,7 @@ Twitter 의 Anomaly Detection 은 우선 아래와 같은 주요 특징적 기�
 | :------------ |
 | - 이상치의 방향 (direction = positive/negative ) <br/> - 전역적&지역적 이상치 (global/local anomaly) <br/> - 최근 하루/한시간(last day/hour) <br/> - 기대값(expected value) <br/> 장기적 추세에 따른 이상탐지(long term)  |
 
-
+<br/>
 아래는 twitter 사의 이상탐지 패키지의 성능 벤치마크를 진행한 내용에 대한 링크이다.
 -  Anomali.io: https://anomaly.io/anomaly-detection-twitter-r/
 -  NUMENTA: Evaluating Real-time Anomaly Detection Algorithms – the Numenta Anomaly
@@ -249,14 +248,9 @@ Benchmark (논문)
 #### References
 
 1. Varun Chandola, 2009, <Anomaly Detection: A Survey>, ACM Computing Survey 09 2009 p1-72  
-
 2. Arindam Banerjee, <Anomaly Detection: A Tutorial>, United Technology Research Center  
-
 3. 이기천 한양대 교수, 2013, <시계열 데이터의 통계적 분석방법>, 강의자료  
-
 4. [A Complete Tutorial on Time Series Modeling](https://www.analyticsvidhya.com/blog/2015/12/complete-tutorial-time-series-modeling/)  
-
 5. C. E. Rasmussen & C. K. I. Williams, Gaussian Processes for Machine Learning, the MIT Press, 2006  
-
 6. [Problem of the Month: Anomaly Detection](https://warrenmar.wordpress.com/tag/seasonal-hybrid-esd/)  
 7. Arun Kejariwal, Statistical Learning Based Anomaly Detection @ Twitter, Nov 2014  
