@@ -1,15 +1,15 @@
 # Site settings
-title: After Image
+title: gradient descent
 header-img: img/home-bg.jpg
-email: ymjung@hotmail.com
-copyright_name: Your/Project/Corporate Name
-description: "Technology, Data Science and Investment"
+email: ymjung.joshua@gmail.com
+copyright_name: Josh Yongmin Jung
+description: "Tech/Investment/Datascience"
 baseurl: ""
 url: "http://h3imdallr.github.io"
 twitter_username:
 github_username:  h3imdallr
 facebook_username: josh.jung.1986
-email_username:  ymjung@hotmail.com
+email_username:
 
 # Google Analytics
 # To enable google analytics, uncomment below line with a valid Google Tracking ID
