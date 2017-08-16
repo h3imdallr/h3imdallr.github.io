@@ -307,6 +307,34 @@ if R &gt; lam:
     num_anoms = i ```
 </code></pre>
 
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">max_outliers</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+      <span class="k">if</span> <span class="n">one_tail</span><span class="p">:</span>
+          <span class="k">if</span> <span class="n">upper_tail</span><span class="p">:</span>
+              <span class="n">ares</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">value</span> <span class="o">-</span> <span class="n">data</span><span class="o">.</span><span class="n">value</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
+          <span class="k">else</span><span class="p">:</span>
+              <span class="n">ares</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">value</span><span class="o">.</span><span class="n">median</span><span class="p">()</span> <span class="o">-</span> <span class="n">data</span><span class="o">.</span><span class="n">value</span>
+      <span class="k">else</span><span class="p">:</span>
+          <span class="n">ares</span> <span class="o">=</span> <span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">value</span> <span class="o">-</span> <span class="n">data</span><span class="o">.</span><span class="n">value</span><span class="o">.</span><span class="n">median</span><span class="p">())</span><span class="o">.</span><span class="n">abs</span><span class="p">()</span>        
+      <span class="n">data_sigma</span> <span class="o">=</span> <span class="n">mad</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+      <span class="k">if</span> <span class="n">data_sigma</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+          <span class="k">break</span>
+
+      <span class="n">ares</span> <span class="o">=</span> <span class="n">ares</span><span class="o">/</span><span class="nb">float</span><span class="p">(</span><span class="n">data_sigma</span><span class="p">)</span>
+      <span class="n">R</span> <span class="o">=</span> <span class="n">ares</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+      <span class="n">temp_max_idx</span> <span class="o">=</span> <span class="n">ares</span><span class="p">[</span><span class="n">ares</span> <span class="o">==</span> <span class="n">R</span><span class="p">]</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">tolist</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+      <span class="n">R_idx</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">temp_max_idx</span>
+      <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">data</span><span class="o">.</span><span class="n">index</span> <span class="o">!=</span> <span class="n">R_idx</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]]</span>
+      <span class="k">if</span> <span class="n">one_tail</span><span class="p">:</span>
+          <span class="n">p</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">alpha</span> <span class="o">/</span> <span class="nb">float</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+      <span class="k">else</span><span class="p">:</span>
+          <span class="n">p</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">alpha</span> <span class="o">/</span> <span class="nb">float</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
+      <span class="n">t</span> <span class="o">=</span> <span class="n">student_t</span><span class="o">.</span><span class="n">ppf</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span>
+      <span class="n">lam</span> <span class="o">=</span> <span class="n">t</span> <span class="o">*</span> <span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="n">i</span><span class="p">)</span> <span class="o">/</span> <span class="nb">float</span><span class="p">(</span><span class="n">sqrt</span><span class="p">((</span><span class="n">n</span> <span class="o">-</span> <span class="n">i</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">t</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)))</span>
+
+  <span class="k">if</span> <span class="n">R</span> <span class="o">&gt;</span> <span class="n">lam</span><span class="p">:</span>
+      <span class="n">num_anoms</span> <span class="o">=</span> <span class="n">i</span></code></pre></div>
+
 <p><strong>성능평가 및 검증</strong>  </p>
 
 <p>현재 Twitter 사에서 개방한 R 기반 S-H-ESD 패키지에 대해서 성능평가는 다수 진행되었고, 대체로 공개 솔루션 중 가장 좋은 평가를 받는다.
@@ -478,6 +506,10 @@ Benchmark (논문)  </p>
         src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script -->
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+<!-- CODE STYLE - YMJUNG -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
 
   </body>
 </html>

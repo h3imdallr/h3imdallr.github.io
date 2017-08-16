@@ -214,6 +214,36 @@ Anomaly Detection 기능을 이용하기 위해서는 detect_ts.py를 호출하�
         num_anoms = i
 ```
 
+{% highlight python %}
+  for i in range(1, max_outliers + 1):
+      if one_tail:
+          if upper_tail:
+              ares = data.value - data.value.median()
+          else:
+              ares = data.value.median() - data.value
+      else:
+          ares = (data.value - data.value.median()).abs()        
+      data_sigma = mad(data.value)
+
+      if data_sigma == 0:
+          break
+
+      ares = ares/float(data_sigma)
+      R = ares.max()
+      temp_max_idx = ares[ares == R].index.tolist()[0]
+      R_idx[i - 1] = temp_max_idx
+      data = data[data.index != R_idx[i - 1]]
+      if one_tail:
+          p = 1 - alpha / float(n - i + 1)
+      else:
+          p = 1 - alpha / float(2 * (n - i + 1))
+      t = student_t.ppf(p, (n - i - 1))
+      lam = t * (n - i) / float(sqrt((n - i - 1 + t**2) * (n - i + 1)))
+
+  if R > lam:
+      num_anoms = i
+{% endhighlight %}
+
 **성능평가 및 검증**  
 
 현재 Twitter 사에서 개방한 R 기반 S-H-ESD 패키지에 대해서 성능평가는 다수 진행되었고, 대체로 공개 솔루션 중 가장 좋은 평가를 받는다.
