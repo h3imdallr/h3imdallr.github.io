@@ -2,8 +2,6 @@
 gems:
   - jemoji
   - jekyll-paginate
-#highligher - ymjung
-highlighter: rouge
 
 # Site settings
 title: "gradient descent"
