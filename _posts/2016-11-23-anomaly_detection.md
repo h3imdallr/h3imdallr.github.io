@@ -4,7 +4,7 @@ published: True
 title:      "이상탐지 Anomaly Detection"
 subtitle:   "시계열 이상탐지 중심으로 time series anomaly detection"
 date:   2017-06-20 00:00:00
-author:     "h3imdallr"
+author:     "Josh Yongmin Jung"
 categories: data_science
 tags: data_science, anomaly_detection
 header-img: "figures-h3imdallr/20161123-header-anomaly.jpg"
