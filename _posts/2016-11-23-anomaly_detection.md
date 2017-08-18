@@ -7,7 +7,7 @@ date:   2017-06-20 00:00:00
 author:     "Josh Yongmin Jung"
 categories: data_science
 tags: data_science, anomaly_detection
-header-img: "figures-h3imdallr/20161123-header-anomaly.jpg"
+header-img: "/figures-h3imdallr/20161123-header-anomaly.jpg"
 ---
 
 
