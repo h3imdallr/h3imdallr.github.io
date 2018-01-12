@@ -54,6 +54,18 @@ social:
     share_title:
     share_link:
 
+#ymung
+# http://www.boxnwhis.kr/2015/02/10/blogging_with_python.html
+# https://jekyllrb.com/docs/plugins/
+plugins:
+  - jekyll-gist
+  - jekyll-coffeescript
+  - jekyll-assets
+  - another-jekyll-plugin
+
+# plugins:
+#   - ipynb_convert-ymjung
+
 #  - icon:	google-plus
 #    url:	https://google.com/???
 #    desc:	Add me on google+

@@ -1,0 +1,13 @@
+
+---
+layout:     post
+published: True
+title:      "test"
+subtitle:   "test "
+date:   2019-01-01 00:00:00
+author:     "Josh Yongmin Jung"
+categories: data_science
+tags: data_science, time_series
+image: "/figures-h3imdallr/20161123-header-anomaly.jpg"
+---
+house_price_prediction.ipynb
