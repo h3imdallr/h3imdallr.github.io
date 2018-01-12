@@ -2,7 +2,7 @@
 layout:     post
 published: True
 title:      "House Price Prediction (kaggle)"
-subtitle:   ""
+subtitle:   "Regularized Regression & XGBoost"
 date:   2017-12-01 00:00:00
 author:     "Josh Yongmin Jung"
 categories: data_science
