@@ -7,6 +7,8 @@ date:   2017-12-01 00:00:00
 author:     "Josh Yongmin Jung"
 tags: [data_science, time_series]
 image: "/figures-h3imdallr/20161123-header-anomaly.jpg"
+comments: false
+share: false
 ---
 
 
