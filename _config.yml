@@ -2,21 +2,21 @@
 name:               "Gradient Descent"
 
 author:
-  facebook:         your-id
-  youtubeUser:      your-id
-  youtubeChannel:   your-id
-  twitter:          your-id
+  # facebook:         your-id
+  # youtubeUser:      your-id
+  # youtubeChannel:   your-id
+  # twitter:          your-id
   github:           h3imdallr
-  stackoverflow:    your-id
-  quora:            your-id
+  # stackoverflow:    your-id
+  # quora:            your-id
   linkedin:         joshjung
-  pinterest:        your-id
-  googlePlus:       your-id
-  instagram:        your-id
-  reddit:           your-id
-  medium:           your-id
-  tumblr:           your-id
-  email:            your-id@your-email.com
+  # pinterest:        your-id
+  # googlePlus:       your-id
+  # instagram:        your-id
+  # reddit:           your-id
+  # medium:           your-id
+  # tumblr:           your-id
+  # email:            your-id@your-email.com
 
 copyright:
   year:             2017
