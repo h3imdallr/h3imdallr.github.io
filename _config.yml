@@ -3,17 +3,17 @@
 # # # # # # # # # # # # #
 
 # Basic
-name:               "Kiko Plus"
+name:               "Gradient Descent"
 
 author:
   facebook:         your-id
   youtubeUser:      your-id
   youtubeChannel:   your-id
   twitter:          your-id
-  github:           your-id
+  github:           h3imdallr
   stackoverflow:    your-id
   quora:            your-id
-  linkedin:         your-id
+  linkedin:         joshjung
   pinterest:        your-id
   googlePlus:       your-id
   instagram:        your-id
@@ -24,7 +24,7 @@ author:
 
 copyright:
   year:             2017
-  name:             Kiko
+  name:             Josh Yongmin Jung
 
 # Google-analytics
 google-analytics:
@@ -32,12 +32,12 @@ google-analytics:
 
 # Disqus
 disqus:
-  id:               "kiko-plus"
+  id:               "h3imdallr"
 
 # URL
 url:                "https://h3imdallr.github.io" # the base hostname & protocol for your site
 # url:                "http://localhost:4000" # use this url when you develop
-baseurl:            "/" # the subpath of your site, e.g. /blog
+baseurl:            "/blog" # the subpath of your site, e.g. /blog
 
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
