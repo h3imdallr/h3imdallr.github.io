@@ -6,7 +6,7 @@ subtitle:   "some basic metric for startups"
 date:   2018-01-12 00:00:00
 author:     "Josh Yongmin Jung"
 categories: data_science
-tags: data_science, time_series
+tags: venture_capital
 image: "/figures-h3imdallr/20161123-header-anomaly.jpg"
 ---
 
