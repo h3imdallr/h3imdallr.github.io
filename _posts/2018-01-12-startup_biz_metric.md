@@ -2,7 +2,7 @@
 layout:     post
 published: True
 title:      "Start-up Business Metric"
-subtitle:   "some basic metric for startups"
+description:   "some basic metric for startups"
 date:   2018-01-12 00:00:00
 author:     "Josh Yongmin Jung"
 tags: [venture_capital]
