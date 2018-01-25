@@ -5,8 +5,7 @@ title:      "House Price Prediction (kaggle)"
 subtitle:   "Regularized Regression & XGBoost"
 date:   2017-12-01 00:00:00
 author:     "Josh Yongmin Jung"
-categories: data_science
-tags: data_science, time_series
+tags: [data_science, time_series]
 image: "/figures-h3imdallr/20161123-header-anomaly.jpg"
 ---
 
