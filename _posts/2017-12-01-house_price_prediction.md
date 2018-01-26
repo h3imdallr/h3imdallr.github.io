@@ -63,7 +63,7 @@ df = pd.read_csv('./train.csv')
 ## 1. EDA
 
 
-** a. Histogram **
+**a. Histogram**
 check out histogram for some features
 
 
@@ -93,7 +93,7 @@ plt.figure(); sns.distplot(df['OverallCond'],kde=False)
 ![png](/figures-h3imdallr/house_price_prediction_files/house_price_prediction_4_3.png)
 
 
-** b. Normality Check **
+**b. Normality Check**
 
 
 ```python
@@ -158,7 +158,7 @@ plt.figure(figsize=(10,10)); stats.probplot(np.log(df['SalePrice']), plot=plt)
 
 as the 'OverallQual(categorical value)' seems to be the easiest guess for the predictor for 'SalePrice', we can check the relation between them by boxplot. you can see the price gets higer with better overall quality.
 
-** c. Correlations **
+**c. Correlations**
 
 
 ```python
@@ -210,7 +210,7 @@ plt.figure(); sns.boxplot(df['OverallQual'], df['SalePrice'])
 ![png](/figures-h3imdallr/house_price_prediction_files/house_price_prediction_14_3.png)
 
 
-** d. Missing Values **
+**d. Missing Values**
 
 
 ```python
@@ -298,7 +298,7 @@ df = df.fillna(df.mean())
 
 ## 2.  Feature Selection
 
-** a. Correlation Matrix **  
+**a. Correlation Matrix**  
 -  high correlation among predictors --> room for feature reduction
 - high correlation between predictors and dependant variable --> important feature
 
@@ -379,7 +379,7 @@ plt.xticks(rotation=45, fontsize= 7);plt.yticks(rotation=45, fontsize= 7);
 ![png](/figures-h3imdallr/house_price_prediction_files/house_price_prediction_21_0.png)
 
 
-** b. K-Best **  
+**b. K-Best**  
 reference: http://scikit-learn.org/stable/modules/feature_selection.html
 
 
@@ -430,7 +430,7 @@ print ("- Most relavant features by selectKbest(sklearn): \n", selected_features
 ![png](/figures-h3imdallr/house_price_prediction_files/house_price_prediction_24_1.png)
 
 
-** c. ANOVA test for "CATEGORICAL data" **  
+**c. ANOVA test for "CATEGORICAL data"**  
 - The one-way ANOVA tests the null hypothesis that two or more groups have the same population mean.
 - 해당 feature내의 범주값/그룹 간의 차이가 서로 다른 성격의 그룹이라고 볼 수 있을 정도인지 확인 할 수 있음  
 - The ANOVA test has important assumptions that must be satisfied in order for the associated p-value to be valid.  
@@ -485,8 +485,8 @@ plt.xticks(rotation=90); plt.tight_layout()
 
 ## 3. Modeling & 4. Evaluation / Regularized Regression & XGBoost Regression
 
-** a. Preprocessing**
-- normalize skewed data --> *** note that log1p is used otherwise it will result in "infinite" in the table***
+**a. Preprocessing**
+- normalize skewed data --> ***note that log1p is used otherwise it will result in "infinite" in the table***
 - deal with missing values
 - deal with outliers
 
@@ -551,7 +551,7 @@ X_train  = num_df_norm.drop('SalePrice', axis=1)
 y = num_df_norm['SalePrice']
 ```
 
-** a. LASSO regressoin **  
+**a. LASSO regressoin**  
 
 note that R^2 score is used as evaluation matrix. If we splited data for test set, RMSE can be used.
 
@@ -576,7 +576,7 @@ print("LASSO/R^2 Score: ",model_lasso.score(X_train,y))
     LASSO/R^2 Score:  0.746881679139
 
 
-** b. ElasticNet **
+**b. ElasticNet**
 
 
 ```python
@@ -595,7 +595,7 @@ print("ElasticNet/R^2 Score: ",model_elastic.score(X_train,y))
     ElasticNet/R^2 Score:  0.745316818387
 
 
-** c. XGBoost**  
+** c. XGBoost**
 note that thise time test set (with SalePrice known) is prepared and the RMSE is also used for evaluation matrix.
 
 
@@ -660,7 +660,7 @@ To improve the model, among lots of methods, you can take following steps:
 [referece(KOR)](https://datascienceschool.net/view-notebook/7dda1bc9ad1c435fb309ea88f672eff9/)
 - another exmaple finding a categorical feature to improve the model [example](https://www.kaggle.io/svf/1353045/81ffe596e9a69d92e19c83a2209e270f/__results__.html#4.-Categoric-to-Numeric)
 
-** // End of the document **
+**// End of the document**
 
 
 ```python
