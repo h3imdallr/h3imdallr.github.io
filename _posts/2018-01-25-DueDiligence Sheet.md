@@ -1,7 +1,7 @@
 ---
 layout:     post
 published: True
-title:      "Due Diligence Check List"
+title:      "(VC MEMO) Due Diligence Check List"
 description:   "Basic framework for Company Due Diligence"
 date:   2018-01-26 00:00:00
 author:     "Josh Yongmin Jung"
