@@ -1,8 +1,8 @@
 ---
 layout:     post
 published: True
-title:      "(VC MEMO) Start-up Business Metric"
-description:   "some basic metric for startups"
+title:      "Start-up Business Metric"
+description:   "[VC MEMO] Basic metric/KPIs to consider startup's business growth"
 date:   2018-01-12 00:00:00
 author:     "Josh Yongmin Jung"
 tags: [venture_capital]
