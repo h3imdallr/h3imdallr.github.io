@@ -10,6 +10,10 @@ image: "/figures-h3imdallr/20161123-header-anomaly.jpg"
 comments: false
 share: false
 ---
+[direct doc link] (https://docs.google.com/spreadsheets/d/1EGfgI1b5Vpv1OakpVerAQdJAqAqWulJGmz_Zy9WC_8A/edit?usp=sharing) for mobile viewers.
+
+  
+
 
 <iframe width='120%' height='1200' src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSm9DSKYT1idecZlZQ1SLQqi2RTWNWw3j-CxE5N9jLm9_ow_eYjjh91efNsmD6c5yML7dMIYqJUO3-g/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
 
