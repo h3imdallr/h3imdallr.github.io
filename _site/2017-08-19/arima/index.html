@@ -145,14 +145,14 @@ ga('send', 'pageview');
 
 <p><a href="https://www.datascienceschool.net/view-notebook/0ddd47967585403ab8b4cb60d0e420f6/">상세설명 참고</a></p>
 
-<p>** i.시간 추이에 따른 평균값의 불변여부**<br />
+<p><strong>i.시간 추이에 따른 평균값의 불변여부</strong><br />
 정상과정 - 평균은 시간에 따라 변화하는 함수가 아니다.;일정한 평균 else 비정상과정</p>
 
 <script type="math/tex; mode=display">E(y_{t}) = \mu</script>
 
 <p><img src="https://www.analyticsvidhya.com/wp-content/uploads/2015/02/Mean_nonstationary.png" alt="" /></p>
 
-<p>** ii.시간추이에 따른 분산의 불변여부**<br />
+<p><strong>ii.시간추이에 따른 분산의 불변여부</strong><br />
 정상과정 - 분산은 시간에 따라 변화하는 함수가 아니다.;일정한 분산  else 비정상과정</p>
 
 <script type="math/tex; mode=display">var(y_{t}) = \sigma^{2}</script>
@@ -247,7 +247,7 @@ ga('send', 'pageview');
 2016-09-30 -2.080606  0.987770  1.649980 -1.058814
 </code></pre></div></div>
 
-<p>** Basic methods: **</p>
+<p><strong>Basic methods:</strong></p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># index values</span>
 <span class="n">fun_df</span><span class="o">.</span><span class="n">index</span>
@@ -291,7 +291,7 @@ ga('send', 'pageview');
 </table>
 </div>
 
-<p>** LAMBDA func, apply()** - <a href="https://wikidocs.net/64">lambda - 참고</a>, <a href="http://chrisalbon.com/python/pandas_apply_operations_to_dataframes.html">apply - 참고</a></p>
+<p><strong>LAMBDA func, apply()</strong> - <a href="https://wikidocs.net/64">lambda - 참고</a>, <a href="http://chrisalbon.com/python/pandas_apply_operations_to_dataframes.html">apply - 참고</a></p>
 
 <p><img src="http://nbviewer.jupyter.org/github/h3imdallr/TIL-datascience/blob/master/ipynb_gitHub/images/non-builtin.png" alt="" /></p>
 
@@ -584,7 +584,7 @@ ga('send', 'pageview');
 
 <p><img src="/figures-h3imdallr/timeseries_forecast_files/timeseries_forecast_14_1.png" alt="png" /></p>
 
-<p>** Groupby Operations **</p>
+<p><strong>Groupby Operations</strong></p>
 
 <p>SQL의 group select , 엑셀의 pivot table과 비슷한 기능</p>
 
@@ -964,8 +964,8 @@ dtype: object
 <p>일반적으로 데이터가 stationary한 경우는 거의 없음.
 정상성을 Test하기 위해서 두가지 방법 사용</p>
 
-<p>**(1) 눈으로 직관적 확인 ~ STL, Rolling statistics(moving average)  <br />
-(2) Dickey-FUller test <a href="https://www.datascienceschool.net/view-notebook/ebb638fc880145b9adeef8dfa630f067/">링크</a>  **</p>
+<p><strong>(1) 눈으로 직관적 확인 ~ STL, Rolling statistics(moving average)  <br />
+(2) Dickey-FUller test <a href="https://www.datascienceschool.net/view-notebook/ebb638fc880145b9adeef8dfa630f067/">링크</a></strong></p>
 
 <p>아래는  Dickey-Fuller test 와 더불어  trend를 추출하는 방법중 하나인 rolling statistics를 이용해서 동시에 정상성을 검사하는 방법이다</p>
 
@@ -1103,7 +1103,7 @@ dtype: float64
   <li>출처: <a href="https://www.datascienceschool.net/view-notebook/d5226389a8414583a45fb47e1e1cf6fb/">데이터 사이언스 스쿨</a></li>
 </ul>
 
-<p>** a. 정상과정 확률 모형(1/2) - General Linear Process Model **<br />
+<p><strong>a. 정상과정 확률 모형(1/2) - General Linear Process Model</strong><br />
 정상확률 과정에서 가장 일반적으로 사용되는 모형은 일반선형 확률 과정 모형(General Linear Process Model)이다. 해당 모형은 시계열이 <a href="https://www.datascienceschool.net/view-notebook/6b963e771dc54f8c8cb23437274a86d6/">가우시안 백색잡음</a> ($e_{t}$)의 현재값과 과거값들의 선형조합으로 이루어져 있다고 가정. $\psi $ 는 가중계수(weight coefficient).</p>
 
 <script type="math/tex; mode=display">Y_t = e_t + \psi_1 e_{t-1}  + \psi_2 e_{t-2}  + \psi_1 e_{t-3}  + \cdots</script>
@@ -1112,7 +1112,7 @@ dtype: float64
 
 <p><img src="figure/glpm.png" alt="" /></p>
 
-<p>** b. 정상과정 확률 모형 (2/2) MA, AR, ARMA **</p>
+<p><strong>b. 정상과정 확률 모형 (2/2) MA, AR, ARMA</strong></p>
 
 <p>일반 선형 확률 과정 모형은 계수의 특성에 따라 다음과 같은 하위 모형으로 분류된다.</p>
 
@@ -1151,7 +1151,7 @@ Y_t
 
 <script type="math/tex; mode=display">Y_t = \phi_1 Y_{t-1} + \phi_2 Y_{t-2} + \cdots + \phi_p Y_{t-p} + e_t - \theta_1 e_{t-1} - \theta_2 e_{t-2} \cdots  - \theta_q e_{t-q}</script>
 
-<p>** c. 비정상과정확률모형 -  ARIMA **</p>
+<p>**c. 비정상과정확률모형 -  ARIMA **</p>
 
 <p>비정상 과정 모형 중 가장 대표적인 모형으로,  ARMA 모형을 누적한 모형이다. 시계열  $Y_{t}$ 을 차분한 결과로 만들어진 시계열 $\nabla Y_t = Y_t - Y_{t-1}$  이 ARMA 모형을 따르면 원래의 시계열 $Y_{t}$ 를 ARIMA(Autoregressive Integrated Moving Average) 모형이라고 한다.</p>
 
@@ -1194,7 +1194,7 @@ s의 값은 월별 계절성을 나타낼 때는  $s=12$ 가 되고 분기별 �
 
 <p>12번째에서 +-&gt;- SAR(1), SMA(1)</p>
 
-<p>최종적으로 **SARIMA (0,1,0)X(1,1,1,12) **</p>
+<p>최종적으로 <strong>SARIMA (0,1,0)X(1,1,1,12)</strong></p>
 
 <p>SARIMA 모형추정 <a href="https://www.datascienceschool.net/view-notebook/602e62fc1c544ffcb43c2c7e1484dc14/">예시</a></p>
 

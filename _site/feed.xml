@@ -6,8 +6,77 @@
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
-        <title>Investment Due Diligence Sheet</title>
-        <description>&lt;iframe width=&quot;120%&quot; height=&quot;1200&quot; src=&quot;https://docs.google.com/document/d/e/2PACX-1vRMyHti9RZFiJ_eHLiEaVrE7IxP5iojb70ZZ0PfyeT4M0zXilb6G9thS_IFswXPDS8k5RWNV-ixvI7c/pub?embedded=true&quot;&gt;&lt;/iframe&gt;
+        <title>Checklists for lending startups due diligence</title>
+        <description>&lt;p&gt;As reviewing multiple numbers of lending companies (including P2P marketplace model or simple lending platform backed by relevant institutes), I could summarize a basic checklist and set of metrics for company due diligence from VC perspective(not from a P2P investor nor a borrower).&lt;/p&gt;
+
+&lt;p&gt;Although the specific activities and flow can vary from several different lending models, many platforms may fall into two types of categories, based on who actually gives loans to borrowers (from the lending platform or capital partner).&lt;/p&gt;
+
+&lt;p&gt;As remarked in the figure, you can imagine checkpoints/metrics through specifying the chains of activities, which is the first step in coming up with relevant business metrics. Again, this two diagrams may not be the most representative model.&lt;/p&gt;
+
+&lt;p&gt;Reviewing the checklists by following those business activities can be a good way if you’re a novice like me, but here is the compiled one.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;User metrics of platform/service (in blue)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Traffic/registration/downloads, the number of active users(MAU/WAU/DAU), stickiness(DAU/MAU) retention(with cohort analysis), avg time spending(or session duration), conversion rate to whatever important activity( in this case, loan applications or capital commitment), channel mix, user acquisition related metrics (CAC, CPI, CPM, CTR)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Note that only partial metrics are noted in the figure and the details/meanings won’t be covered here. you can find many great explanations of user metrics in ‘lean analytics(link)’ or google. There’s another post on my blog that I listed up as many metrics as I can (link).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Onboarding/Underwrite&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Onboarding channels &amp;amp; process details: how the system onboard lenders? you can see various cases of lending models.&lt;/li&gt;
+  &lt;li&gt;Credit analysis(for credit loan) details &amp;amp; feasibility: for tech startups, this would be the part that the company wants to emphasize on - data source, data amount, data quality, credit analysis models/algorithms, model performance, model validation, …&lt;/li&gt;
+  &lt;li&gt;Underwrite process(usually for collateral based): what’s the collateral? how/who evaluate the loan?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Loan Origination/disbursement&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Total volume/# of loans (outstanding/accumulated), Monthly volume/# of loan origination Avg/min/max/median loan value: these are more straightforward points to check the business’ growth&lt;/li&gt;
+  &lt;li&gt;Who takes the money risks? (e.g. off-balance sheet model or not?): This simple question can have us distinguish the diverse models of lending businesses(pure P2P platform, capital institute backed P2P models,  balance sheet lending business, etc. ) As the risk management is one of the most significant matters in lending business, money source &amp;amp; risk structure &amp;amp; risk management need to be checked.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Collection&lt;/strong&gt;&lt;br /&gt;
+Money collection is the other critical element since it can affect many metrics related to the healthiness of business.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Money collection process detail &amp;amp; feasibility: startups may be less competent in money collection process versus traditional lending businesses since it is mainly manual and takes lots of resources(e.g. door walking process).&lt;/li&gt;
+  &lt;li&gt;NPL(none performing loan) rate (default): NPL should be one of the primary metrics to check the overall soundness of the business.&lt;/li&gt;
+  &lt;li&gt;strategies/actions to reduce NPL rate: If the company is suffering from high NPL and yet doesn’t have a proper answer to this, you want to test their initial thesis/value proposition since it’s a ‘lending’ business.&lt;/li&gt;
+  &lt;li&gt;% of 30/60/90+ DPD (days past due) loans: more detailed checkpoints regarding NPL&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Return:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Effective return rate&lt;/li&gt;
+  &lt;li&gt;Cost of capital&lt;/li&gt;
+  &lt;li&gt;Commission rate / resulting margin&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Others:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Compliance (KYC, AML and any other regulations)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;[Figures]&lt;/strong&gt;&lt;br /&gt;
+As noted in the post, there can be many variations in the model.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;/case-1&lt;/strong&gt;: Loan originated by &amp;amp; being offered by  lending platform.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/figures-h3imdallr/vc/20180503-lending demysified-001-resize.png&quot; alt=&quot;png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;/case-2&lt;/strong&gt;: Lending Platform is only in charge of loan origination.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/figures-h3imdallr/vc/20180503-lending demysified-002-resize.png&quot; alt=&quot;png&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Thu, 03 May 2018 09:00:00 +0900</pubDate>
+        <link>http://localhost:4000/2018-05-03/lending_demystified/</link>
+        <guid isPermaLink="true">http://localhost:4000/2018-05-03/lending_demystified/</guid>
+      </item>
+    
+      <item>
+        <title>Due Diligence Check List</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://docs.google.com/document/d/1XoI9z7zB1olhzc3VjWWpg0lZN4USZB6nMEnjiP8rxkg/edit?usp=sharing&quot;&gt;Direct link to the doc&lt;/a&gt; for mobile users.&lt;/p&gt;
+
+&lt;iframe width=&quot;120%&quot; height=&quot;1200&quot; src=&quot;https://docs.google.com/document/d/e/2PACX-1vRMyHti9RZFiJ_eHLiEaVrE7IxP5iojb70ZZ0PfyeT4M0zXilb6G9thS_IFswXPDS8k5RWNV-ixvI7c/pub?embedded=true&quot;&gt;&lt;/iframe&gt;
 </description>
         <pubDate>Fri, 26 Jan 2018 09:00:00 +0900</pubDate>
         <link>http://localhost:4000/2018-01-26/DueDiligence-Sheet/</link>
@@ -16,7 +85,9 @@
     
       <item>
         <title>Start-up Business Metric</title>
-        <description>&lt;iframe width=&quot;120%&quot; height=&quot;1200&quot; src=&quot;https://docs.google.com/spreadsheets/d/e/2PACX-1vSm9DSKYT1idecZlZQ1SLQqi2RTWNWw3j-CxE5N9jLm9_ow_eYjjh91efNsmD6c5yML7dMIYqJUO3-g/pubhtml?gid=0&amp;amp;single=true&amp;amp;widget=true&amp;amp;headers=false&quot;&gt;&lt;/iframe&gt;
+        <description>&lt;p&gt;&lt;a href=&quot;https://docs.google.com/spreadsheets/d/1EGfgI1b5Vpv1OakpVerAQdJAqAqWulJGmz_Zy9WC_8A/edit?usp=sharing&quot;&gt;Direct link to the doc&lt;/a&gt; for mobile viewers.&lt;/p&gt;
+
+&lt;iframe width=&quot;120%&quot; height=&quot;1200&quot; src=&quot;https://docs.google.com/spreadsheets/d/e/2PACX-1vSm9DSKYT1idecZlZQ1SLQqi2RTWNWw3j-CxE5N9jLm9_ow_eYjjh91efNsmD6c5yML7dMIYqJUO3-g/pubhtml?gid=0&amp;amp;single=true&amp;amp;widget=true&amp;amp;headers=false&quot;&gt;&lt;/iframe&gt;
 
 &lt;!-- | CATEGORY                     | METRIC/INDEX                                       | ABBV.      | NOTES                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 |------------------------------|----------------------------------------------------|------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -165,7 +236,7 @@
 
 &lt;h2 id=&quot;1-eda&quot;&gt;1. EDA&lt;/h2&gt;
 
-&lt;p&gt;** a. Histogram **
+&lt;p&gt;&lt;strong&gt;a. Histogram&lt;/strong&gt;
 check out histogram for some features&lt;/p&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#histogram&lt;/span&gt;
@@ -183,7 +254,7 @@ check out histogram for some features&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/figures-h3imdallr/house_price_prediction_files/house_price_prediction_4_3.png&quot; alt=&quot;png&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;** b. Normality Check **&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;b. Normality Check&lt;/strong&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# - check with skewness and kurtosi&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;- Skewness of SalePrice histogram: &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;f&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'SalePrice'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;skew&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
@@ -227,7 +298,7 @@ check out histogram for some features&lt;/p&gt;
 
 &lt;p&gt;as the ‘OverallQual(categorical value)’ seems to be the easiest guess for the predictor for ‘SalePrice’, we can check the relation between them by boxplot. you can see the price gets higer with better overall quality.&lt;/p&gt;
 
-&lt;p&gt;** c. Correlations **&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;c. Correlations&lt;/strong&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;figure&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;figsize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;sns&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;boxplot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'OverallQual'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'SalePrice'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;color&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'steelblue'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
@@ -262,7 +333,7 @@ check out histogram for some features&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/figures-h3imdallr/house_price_prediction_files/house_price_prediction_14_3.png&quot; alt=&quot;png&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;** d. Missing Values **&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;d. Missing Values&lt;/strong&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; - Missinv Value portion: &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isnull&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sort_values&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ascending&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -345,7 +416,7 @@ Length: 81, dtype: float64
 
 &lt;h2 id=&quot;2--feature-selection&quot;&gt;2.  Feature Selection&lt;/h2&gt;
 
-&lt;p&gt;** a. Correlation Matrix **&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;a. Correlation Matrix&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;high correlation among predictors –&amp;gt; room for feature reduction&lt;/li&gt;
   &lt;li&gt;high correlation between predictors and dependant variable –&amp;gt; important feature&lt;/li&gt;
@@ -422,7 +493,7 @@ Name: SalePrice, dtype: float64
 
 &lt;p&gt;&lt;img src=&quot;/figures-h3imdallr/house_price_prediction_files/house_price_prediction_21_0.png&quot; alt=&quot;png&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;** b. K-Best **&lt;br /&gt;
+&lt;p&gt;&lt;strong&gt;b. K-Best&lt;/strong&gt;&lt;br /&gt;
 reference: http://scikit-learn.org/stable/modules/feature_selection.html&lt;/p&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;&quot; (2) feature select by K-Best &quot;&quot;&quot;&lt;/span&gt;
@@ -466,7 +537,7 @@ reference: http://scikit-learn.org/stable/modules/feature_selection.html&lt;/p&g
 
 &lt;p&gt;&lt;img src=&quot;/figures-h3imdallr/house_price_prediction_files/house_price_prediction_24_1.png&quot; alt=&quot;png&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;** c. ANOVA test for “CATEGORICAL data” **&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;c. ANOVA test for “CATEGORICAL data”&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;The one-way ANOVA tests the null hypothesis that two or more groups have the same population mean.&lt;/li&gt;
   &lt;li&gt;해당 feature내의 범주값/그룹 간의 차이가 서로 다른 성격의 그룹이라고 볼 수 있을 정도인지 확인 할 수 있음&lt;/li&gt;
@@ -521,9 +592,9 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 &lt;h2 id=&quot;3-modeling--4-evaluation--regularized-regression--xgboost-regression&quot;&gt;3. Modeling &amp;amp; 4. Evaluation / Regularized Regression &amp;amp; XGBoost Regression&lt;/h2&gt;
 
-&lt;p&gt;** a. Preprocessing**&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;a. Preprocessing&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;normalize skewed data –&amp;gt; &lt;strong&gt;* note that log1p is used otherwise it will result in “infinite” in the table&lt;/strong&gt;*&lt;/li&gt;
+  &lt;li&gt;normalize skewed data –&amp;gt; &lt;strong&gt;&lt;em&gt;note that log1p is used otherwise it will result in “infinite” in the table&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
   &lt;li&gt;deal with missing values&lt;/li&gt;
   &lt;li&gt;deal with outliers&lt;/li&gt;
 &lt;/ul&gt;
@@ -584,7 +655,7 @@ dtype: float64
 &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num_df_norm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'SalePrice'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;** a. LASSO regressoin **&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;a. LASSO regressoin&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;note that R^2 score is used as evaluation matrix. If we splited data for test set, RMSE can be used.&lt;/p&gt;
 
@@ -607,7 +678,7 @@ LASSO/Coef:  [ 0.02133863  0.06319689  0.01107165  0.01133217 -0.01055398 -0.004
 LASSO/R^2 Score:  0.746881679139
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;** b. ElasticNet **&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;b. ElasticNet&lt;/strong&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;&quot; (1)-b Regularized Regression : Elastic Net &quot;&quot;&quot;&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;model_elastic&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ElasticNetCV&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cv&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;random_state&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;X_train&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
@@ -624,7 +695,7 @@ ElasticNet/Coef:  [ 0.01897788  0.06288092  0.01173252  0.01134066 -0.0105054  -
 ElasticNet/R^2 Score:  0.745316818387
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;** c. XGBoost**&lt;br /&gt;
+&lt;p&gt;** c. XGBoost**
 note that thise time test set (with SalePrice known) is prepared and the RMSE is also used for evaluation matrix.&lt;/p&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sklearn.model_selection&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;train_test_split&lt;/span&gt;
@@ -687,7 +758,7 @@ note that thise time test set (with SalePrice known) is prepared and the RMSE is
   &lt;li&gt;another exmaple finding a categorical feature to improve the model &lt;a href=&quot;https://www.kaggle.io/svf/1353045/81ffe596e9a69d92e19c83a2209e270f/__results__.html#4.-Categoric-to-Numeric&quot;&gt;example&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;** // End of the document **&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;// End of the document&lt;/strong&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -761,14 +832,14 @@ note that thise time test set (with SalePrice known) is prepared and the RMSE is
 
 &lt;p&gt;&lt;a href=&quot;https://www.datascienceschool.net/view-notebook/0ddd47967585403ab8b4cb60d0e420f6/&quot;&gt;상세설명 참고&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;** i.시간 추이에 따른 평균값의 불변여부**&lt;br /&gt;
+&lt;p&gt;&lt;strong&gt;i.시간 추이에 따른 평균값의 불변여부&lt;/strong&gt;&lt;br /&gt;
 정상과정 - 평균은 시간에 따라 변화하는 함수가 아니다.;일정한 평균 else 비정상과정&lt;/p&gt;
 
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;E(y_{t}) = \mu&lt;/script&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://www.analyticsvidhya.com/wp-content/uploads/2015/02/Mean_nonstationary.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;** ii.시간추이에 따른 분산의 불변여부**&lt;br /&gt;
+&lt;p&gt;&lt;strong&gt;ii.시간추이에 따른 분산의 불변여부&lt;/strong&gt;&lt;br /&gt;
 정상과정 - 분산은 시간에 따라 변화하는 함수가 아니다.;일정한 분산  else 비정상과정&lt;/p&gt;
 
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;var(y_{t}) = \sigma^{2}&lt;/script&gt;
@@ -863,7 +934,7 @@ note that thise time test set (with SalePrice known) is prepared and the RMSE is
 2016-09-30 -2.080606  0.987770  1.649980 -1.058814
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;** Basic methods: **&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Basic methods:&lt;/strong&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# index values&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;fun_df&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;
@@ -907,7 +978,7 @@ note that thise time test set (with SalePrice known) is prepared and the RMSE is
 &lt;/table&gt;
 &lt;/div&gt;
 
-&lt;p&gt;** LAMBDA func, apply()** - &lt;a href=&quot;https://wikidocs.net/64&quot;&gt;lambda - 참고&lt;/a&gt;, &lt;a href=&quot;http://chrisalbon.com/python/pandas_apply_operations_to_dataframes.html&quot;&gt;apply - 참고&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;LAMBDA func, apply()&lt;/strong&gt; - &lt;a href=&quot;https://wikidocs.net/64&quot;&gt;lambda - 참고&lt;/a&gt;, &lt;a href=&quot;http://chrisalbon.com/python/pandas_apply_operations_to_dataframes.html&quot;&gt;apply - 참고&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;http://nbviewer.jupyter.org/github/h3imdallr/TIL-datascience/blob/master/ipynb_gitHub/images/non-builtin.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
@@ -1200,7 +1271,7 @@ note that thise time test set (with SalePrice known) is prepared and the RMSE is
 
 &lt;p&gt;&lt;img src=&quot;/figures-h3imdallr/timeseries_forecast_files/timeseries_forecast_14_1.png&quot; alt=&quot;png&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;** Groupby Operations **&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Groupby Operations&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;SQL의 group select , 엑셀의 pivot table과 비슷한 기능&lt;/p&gt;
 
@@ -1580,8 +1651,8 @@ dtype: object
 &lt;p&gt;일반적으로 데이터가 stationary한 경우는 거의 없음.
 정상성을 Test하기 위해서 두가지 방법 사용&lt;/p&gt;
 
-&lt;p&gt;**(1) 눈으로 직관적 확인 ~ STL, Rolling statistics(moving average)  &lt;br /&gt;
-(2) Dickey-FUller test &lt;a href=&quot;https://www.datascienceschool.net/view-notebook/ebb638fc880145b9adeef8dfa630f067/&quot;&gt;링크&lt;/a&gt;  **&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;(1) 눈으로 직관적 확인 ~ STL, Rolling statistics(moving average)  &lt;br /&gt;
+(2) Dickey-FUller test &lt;a href=&quot;https://www.datascienceschool.net/view-notebook/ebb638fc880145b9adeef8dfa630f067/&quot;&gt;링크&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;아래는  Dickey-Fuller test 와 더불어  trend를 추출하는 방법중 하나인 rolling statistics를 이용해서 동시에 정상성을 검사하는 방법이다&lt;/p&gt;
 
@@ -1719,7 +1790,7 @@ dtype: float64
   &lt;li&gt;출처: &lt;a href=&quot;https://www.datascienceschool.net/view-notebook/d5226389a8414583a45fb47e1e1cf6fb/&quot;&gt;데이터 사이언스 스쿨&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;** a. 정상과정 확률 모형(1/2) - General Linear Process Model **&lt;br /&gt;
+&lt;p&gt;&lt;strong&gt;a. 정상과정 확률 모형(1/2) - General Linear Process Model&lt;/strong&gt;&lt;br /&gt;
 정상확률 과정에서 가장 일반적으로 사용되는 모형은 일반선형 확률 과정 모형(General Linear Process Model)이다. 해당 모형은 시계열이 &lt;a href=&quot;https://www.datascienceschool.net/view-notebook/6b963e771dc54f8c8cb23437274a86d6/&quot;&gt;가우시안 백색잡음&lt;/a&gt; ($e_{t}$)의 현재값과 과거값들의 선형조합으로 이루어져 있다고 가정. $\psi $ 는 가중계수(weight coefficient).&lt;/p&gt;
 
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;Y_t = e_t + \psi_1 e_{t-1}  + \psi_2 e_{t-2}  + \psi_1 e_{t-3}  + \cdots&lt;/script&gt;
@@ -1728,7 +1799,7 @@ dtype: float64
 
 &lt;p&gt;&lt;img src=&quot;figure/glpm.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;** b. 정상과정 확률 모형 (2/2) MA, AR, ARMA **&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;b. 정상과정 확률 모형 (2/2) MA, AR, ARMA&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;일반 선형 확률 과정 모형은 계수의 특성에 따라 다음과 같은 하위 모형으로 분류된다.&lt;/p&gt;
 
@@ -1767,7 +1838,7 @@ Y_t
 
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;Y_t = \phi_1 Y_{t-1} + \phi_2 Y_{t-2} + \cdots + \phi_p Y_{t-p} + e_t - \theta_1 e_{t-1} - \theta_2 e_{t-2} \cdots  - \theta_q e_{t-q}&lt;/script&gt;
 
-&lt;p&gt;** c. 비정상과정확률모형 -  ARIMA **&lt;/p&gt;
+&lt;p&gt;**c. 비정상과정확률모형 -  ARIMA **&lt;/p&gt;
 
 &lt;p&gt;비정상 과정 모형 중 가장 대표적인 모형으로,  ARMA 모형을 누적한 모형이다. 시계열  $Y_{t}$ 을 차분한 결과로 만들어진 시계열 $\nabla Y_t = Y_t - Y_{t-1}$  이 ARMA 모형을 따르면 원래의 시계열 $Y_{t}$ 를 ARIMA(Autoregressive Integrated Moving Average) 모형이라고 한다.&lt;/p&gt;
 
@@ -1810,7 +1881,7 @@ s의 값은 월별 계절성을 나타낼 때는  $s=12$ 가 되고 분기별 �
 
 &lt;p&gt;12번째에서 +-&amp;gt;- SAR(1), SMA(1)&lt;/p&gt;
 
-&lt;p&gt;최종적으로 **SARIMA (0,1,0)X(1,1,1,12) **&lt;/p&gt;
+&lt;p&gt;최종적으로 &lt;strong&gt;SARIMA (0,1,0)X(1,1,1,12)&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;SARIMA 모형추정 &lt;a href=&quot;https://www.datascienceschool.net/view-notebook/602e62fc1c544ffcb43c2c7e1484dc14/&quot;&gt;예시&lt;/a&gt;&lt;/p&gt;
 
