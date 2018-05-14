@@ -1,7 +1,7 @@
 ---
 layout:     post
 published: True
-title:      "Checklists for lending startups (on Due Diligence)"
+title:      "Metrics for lending startups (on Due Diligence)"
 description:   "[VC MEMO] Checklists for lending startups"
 date:   2018-05-03 00:00:00
 author:     "Josh Yongmin Jung"
