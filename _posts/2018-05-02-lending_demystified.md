@@ -10,13 +10,15 @@ comments: false
 share: false
 ---
 
-As reviewing multiple numbers of lending companies (including P2P marketplace model or simple lending platform backed by relevant institutes), I could summarize a basic checklist and set of metrics for company due diligence from VC perspective(not from a P2P investor nor a borrower).  
+As reviewing multiple numbers of lending companies in SE Asia (including P2P marketplace model or simple lending platform backed by relevant institutes), I could summarize a basic checklist and set of metrics for company due diligence from VC perspective(not from a P2P investor nor a borrower).  
 
 Although the specific activities and flow can vary from several different lending models, many platforms may fall into two types of categories, based on who actually gives loans to borrowers (from the lending platform or capital partner).  
 
 As remarked in the figure, you can imagine checkpoints/metrics through specifying the chains of activities, which is the first step in coming up with relevant business metrics. Again, this two diagrams may not be the most representative model.  
 
 Reviewing the checklists by following those business activities can be a good way if you're a novice like me, but here is the compiled one.  
+
+Note that this list of metrics can't be the only measure for judging whether it's a good business or not. Check my other DD frameworks - [link1](https://h3imdallr.github.io/2018-01-26/DueDiligence-Sheet/), [link2](https://h3imdallr.github.io/2018-01-12/startup_biz_metric/).  
 
 
 **User metrics of platform/service (in blue)**  
@@ -40,12 +42,12 @@ Money collection is the other critical element since it can affect many metrics 
 - strategies/actions to reduce NPL rate: If the company is suffering from high NPL and yet doesn't have a proper answer to this, you want to test their initial thesis/value proposition since it's a 'lending' business.
 - % of 30/60/90+ DPD (days past due) loans: more detailed checkpoints regarding NPL
 
-Return:
+**Return:**
 - Effective return rate
 - Cost of capital
 - Commission rate / resulting margin
 
-Others:
+**Others:**
 - Compliance (KYC, AML and any other regulations)
 
 **[Figures]**  
